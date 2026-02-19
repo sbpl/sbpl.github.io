@@ -1,0 +1,32 @@
+{{/* 
+  Member Card Partial
+  Usage: {{ partial "member-card.html" (dict "member" $member "site" $.Site) }}
+  Renders a card for a single lab member with photo, bio, links, and auto-linked publications.
+*/}}
+{{ $member := .member }}
+{{ $site := .site }}
+
+<article class="member-card">
+  <a href="/people/{{ $member.slug }}/" class="member-card-link">
+    <div class="member-card-inner">
+      <div class="member-photo-wrapper">
+        <img src="{{ $member.photo }}" alt="{{ $member.name }}" class="member-photo" loading="lazy"
+             onerror="this.src='/images/members/placeholder.svg'">
+      </div>
+      <div class="member-info">
+        <h3 class="member-name">{{ $member.name }}</h3>
+        {{ if $member.year }}
+          <span class="member-category badge">{{ $member.category | humanize }} · {{ $member.year }}</span>
+        {{ else }}
+          <span class="member-category badge">{{ $member.category | humanize }}</span>
+        {{ end }}
+
+        {{ if $member.now_at }}
+          <p class="member-now-at"><em>Now: {{ $member.now_at }}</em></p>
+        {{ end }}
+
+        <p class="member-bio">{{ $member.bio }}</p>
+      </div>
+    </div>
+  </a>
+</article>

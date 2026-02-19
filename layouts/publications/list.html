@@ -1,0 +1,27 @@
+{{ define "main" }}
+<h1>Publications</h1>
+
+{{/* Group publications by year, reverse chronological */}}
+{{ $pages := where .Site.RegularPages "Section" "publications" }}
+{{ $years := slice }}
+{{ range $pages }}
+  {{ $year := .Date.Format "2006" }}
+  {{ if not (in $years $year) }}
+    {{ $years = $years | append $year }}
+  {{ end }}
+{{ end }}
+{{ $years = sort $years "value" "desc" }}
+
+{{ range $year := $years }}
+  <h2 class="pub-year">{{ $year }}</h2>
+  <div class="publication-list">
+    {{ range where $pages "Date.Year" (int $year) }}
+      {{ partial "publication-card.html" . }}
+    {{ end }}
+  </div>
+{{ end }}
+
+{{ if eq (len $pages) 0 }}
+  <p>No publications yet. Check back soon!</p>
+{{ end }}
+{{ end }}

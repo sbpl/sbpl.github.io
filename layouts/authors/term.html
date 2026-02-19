@@ -1,0 +1,50 @@
+{{ define "main" }}
+<h1>Publications by {{ .Title }}</h1>
+
+{{/* Check if this author is a current member or alumni and show their info */}}
+{{ $authorName := .Title }}
+{{ $found := false }}
+
+{{/* Check PI */}}
+{{ with $.Site.Data.members.pi }}
+  {{ if eq (lower .name) (lower $authorName) }}
+    <p class="author-affiliation">
+      <strong>{{ .title }}</strong> — Principal Investigator
+      {{ with .links.website }}· <a href="{{ . }}" target="_blank">Website</a>{{ end }}
+    </p>
+    {{ $found = true }}
+  {{ end }}
+{{ end }}
+
+{{/* Check current members */}}
+{{ if not $found }}
+  {{ range $.Site.Data.members.current }}
+    {{ if eq (lower .name) (lower $authorName) }}
+      <p class="author-affiliation">
+        <strong>{{ .category | humanize }}</strong>
+        {{ with .year }}· {{ . }}{{ end }}
+        {{ with .links.website }}· <a href="{{ . }}" target="_blank">Website</a>{{ end }}
+      </p>
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Check alumni */}}
+{{ range $.Site.Data.members.alumni }}
+  {{ if eq (lower .name) (lower $authorName) }}
+    <p class="author-affiliation">
+      <strong>Alumni</strong> · Now: {{ .now_at }}
+      {{ with .links.website }}· <a href="{{ . }}" target="_blank">Website</a>{{ end }}
+    </p>
+  {{ end }}
+{{ end }}
+
+<div class="publication-list">
+  {{ range .Pages.ByDate.Reverse }}
+    {{ partial "publication-card.html" . }}
+  {{ end }}
+</div>
+
+<hr>
+<p><a href="/people/">← Back to People</a> · <a href="/publications/">All Publications</a></p>
+{{ end }}

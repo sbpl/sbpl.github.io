@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1>Authors</h1>
+<p>Browse publications by author.</p>
+
+<div class="author-list">
+  {{ range .Data.Terms.Alphabetical }}
+    <a href="{{ .Page.RelPermalink }}" class="author-tag">
+      {{ .Page.Title }} <span class="author-count">({{ .Count }})</span>
+    </a>
+  {{ end }}
+</div>
+{{ end }}

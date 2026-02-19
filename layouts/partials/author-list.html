@@ -1,0 +1,27 @@
+{{/*
+  Author List Partial
+  Usage: {{ partial "author-list.html" . }}
+  Expects a Page object with .Params.authors (list of names)
+  and optionally .Params.first_authors (number of co-first authors, default 0).
+
+  - Links to /people/<slug>/ if that page exists, otherwise /authors/<slug>/
+  - Marks co-first authors with * superscript
+*/}}
+<span class="author-list-inner">
+  {{ $lastIdx := sub (len .Params.authors) 1 }}
+  {{ $firstAuthors := .Params.first_authors | default 0 }}
+  {{ range $i, $author := .Params.authors }}
+    {{- $slug := $author | urlize -}}
+    {{- $memberPage := site.GetPage (printf "/people/%s" $slug) -}}
+    {{- if $memberPage -}}
+      <a href="{{ $memberPage.RelPermalink }}" class="author-link">{{ $author }}</a>
+    {{- else -}}
+      <a href="/authors/{{ $slug }}/" class="author-link">{{ $author }}</a>
+    {{- end -}}
+    {{- if and (gt $firstAuthors 1) (lt $i (int $firstAuthors)) -}}<sup>*</sup>{{- end -}}
+    {{- if lt $i $lastIdx }}, {{ end -}}
+  {{ end }}
+  {{- if gt ($firstAuthors) 1 -}}
+    <span class="co-first-note"><sup>*</sup>Equal contribution</span>
+  {{- end -}}
+</span>

@@ -1,0 +1,19 @@
+# =============================================================================
+# Alumni
+# =============================================================================
+# When a student graduates or leaves, move their entry from current.yaml here
+# and add the "now_at" field indicating their current position.
+# Their publications will continue to be linked automatically.
+# =============================================================================
+
+- name: "Ramkumar Natarajan"
+  slug: "ramkumar-natarajan"
+  category: "phd"
+  graduated: "2024"
+  now_at: "Research Scientist at Amazon Robotics"
+  photo: "/images/members/ramkumar-natarajan.jpg"
+  bio: >
+    Ram worked on marrying graph search methods with trajectory optimization.
+  links:
+    website: "https://www.drramkumar.me/"
+

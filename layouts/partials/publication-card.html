@@ -1,0 +1,43 @@
+{{/*
+  Publication Card Partial
+  Usage: {{ partial "publication-card.html" . }}
+  Renders a card for a single publication with thumbnail, description, author list, and links.
+  Expects a Page object from the publications section.
+*/}}
+<article class="publication-card">
+  <div class="publication-card-inner">
+    {{ with .Params.thumbnail }}
+    <div class="publication-thumbnail">
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"
+           onerror="this.style.display='none'">
+    </div>
+    {{ end }}
+    <div class="publication-info">
+      <h3 class="publication-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+
+      <p class="publication-authors">
+        {{ partial "author-list.html" . }}
+      </p>
+
+      <p class="publication-venue">
+        <strong>{{ .Params.venue }}</strong>
+      </p>
+
+      <p class="publication-description">{{ .Params.description }}</p>
+
+      <div class="publication-links">
+        {{ with .Params.arxiv }}
+          <a href="{{ . }}" target="_blank" class="pub-link">📄 arXiv</a>
+        {{ end }}
+        {{ with .Params.project_page }}
+          <a href="{{ . }}" target="_blank" class="pub-link">🔗 Project Page</a>
+        {{ end }}
+        {{ with .Params.code }}
+          <a href="{{ . }}" target="_blank" class="pub-link">💻 Code</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</article>

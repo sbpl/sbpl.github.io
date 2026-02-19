@@ -1,0 +1,60 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+  {{ with .Site.Params.labLogo }}
+    <img src="{{ . }}" alt="Lab Logo" class="hero-logo">
+  {{ end }}
+  <hgroup>
+    <h1>{{ .Site.Params.labFullName }}</h1>
+    <p>{{ .Site.Params.department }}, {{ .Site.Params.university }}</p>
+  </hgroup>
+  {{ with .Site.Params.labBlurb }}
+  <p class="hero-description">{{ . }}</p>
+  {{ end }}
+</section>
+
+<!-- Recent Publications -->
+<section>
+  <h2>Recent Publications</h2>
+  <div class="publication-list">
+    {{ range first 3 (where .Site.RegularPages "Section" "publications").ByDate.Reverse }}
+      {{ partial "publication-card.html" . }}
+    {{ end }}
+  </div>
+  <p style="text-align: center; margin-top: 1rem;">
+    <a href="/publications/" role="button" class="outline">View All Publications →</a>
+  </p>
+</section>
+
+<!-- Our Team -->
+<section>
+  <h2>Our Team</h2>
+  <div class="team-preview">
+    {{/* PI */}}
+    {{ with .Site.Data.members.pi }}
+    <a href="/people/{{ .name | urlize }}/" class="pi-preview" style="text-decoration:none; color:inherit;">
+      <img src="{{ .photo }}" alt="{{ .name }}" class="member-photo-small" onerror="this.src='/images/members/placeholder.svg'">
+      <div>
+        <strong>{{ .name }}</strong><br>
+        <small>{{ .title }} — Principal Investigator</small>
+      </div>
+    </a>
+    {{ end }}
+
+    {{/* All current members */}}
+    <div class="team-grid">
+      {{ range .Site.Data.members.current }}
+      <a href="/people/{{ .slug }}/" class="team-member-mini">
+        <img src="{{ .photo }}" alt="{{ .name }}" class="member-photo-small" onerror="this.src='/images/members/placeholder.svg'">
+        <span>{{ .name }}</span>
+      </a>
+      {{ end }}
+    </div>
+
+    <p style="margin-top: 1rem;">
+      {{ len .Site.Data.members.alumni }} alumni
+    </p>
+    <a href="/people/" role="button" class="outline">Meet the Full Team →</a>
+  </div>
+</section>
+{{ end }}

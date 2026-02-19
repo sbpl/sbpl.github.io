@@ -1,0 +1,57 @@
+{{/*
+  Auto-generate individual member pages from data files.
+  This means new members only need to add themselves to data/members/current.yaml
+  (or alumni.yaml) — no stub content file needed.
+*/}}
+
+{{/* PI */}}
+{{ with site.Data.members.pi }}
+  {{ $slug := .name | urlize }}
+  {{ $content := dict
+    "mediaType" "text/markdown"
+    "value" ""
+  }}
+  {{ $dates := dict "date" (time.AsTime "2020-01-01") }}
+  {{ $params := dict "member_slug" $slug }}
+  {{ $.AddPage (dict
+    "path" $slug
+    "title" .name
+    "content" $content
+    "dates" $dates
+    "params" $params
+  ) }}
+{{ end }}
+
+{{/* Current members */}}
+{{ range site.Data.members.current }}
+  {{ $content := dict
+    "mediaType" "text/markdown"
+    "value" ""
+  }}
+  {{ $dates := dict "date" (time.AsTime "2020-01-01") }}
+  {{ $params := dict "member_slug" .slug }}
+  {{ $.AddPage (dict
+    "path" .slug
+    "title" .name
+    "content" $content
+    "dates" $dates
+    "params" $params
+  ) }}
+{{ end }}
+
+{{/* Alumni */}}
+{{ range site.Data.members.alumni }}
+  {{ $content := dict
+    "mediaType" "text/markdown"
+    "value" ""
+  }}
+  {{ $dates := dict "date" (time.AsTime "2020-01-01") }}
+  {{ $params := dict "member_slug" .slug }}
+  {{ $.AddPage (dict
+    "path" .slug
+    "title" .name
+    "content" $content
+    "dates" $dates
+    "params" $params
+  ) }}
+{{ end }}

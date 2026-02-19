@@ -1,0 +1,61 @@
+{{ define "main" }}
+
+<!-- Principal Investigator -->
+{{ with .Site.Data.members.pi }}
+<section class="pi-section">
+  <div class="pi-card">
+    <div class="pi-photo-wrapper">
+      <img src="{{ .photo }}" alt="{{ .name }}" class="pi-photo"
+           onerror="this.src='/images/members/placeholder.svg'">
+    </div>
+    <div class="pi-info">
+      <h1 class="pi-name">{{ .name }}</h1>
+      <p class="pi-title">{{ .title }} — Principal Investigator</p>
+      <p class="pi-bio">{{ .bio }}</p>
+
+      <div class="pi-links">
+        {{ with .links }}
+          {{ with .website }}<a href="{{ . }}" target="_blank">🌐 Website</a>{{ end }}
+          {{ with .scholar }}<a href="{{ . }}" target="_blank">🎓 Scholar</a>{{ end }}
+          {{ with .email }}<a href="mailto:{{ . }}">✉️ Email</a>{{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Current Members -->
+<section>
+  <h2>Current Members</h2>
+
+  {{/* Group members by category in desired order */}}
+  {{ $categories := slice "postdoc" "phd" "masters" "undergraduate" }}
+  {{ $categoryLabels := dict "postdoc" "Post-Doctoral Researchers" "phd" "PhD Students" "masters" "Master's Students" "undergraduate" "Undergraduate Researchers" }}
+
+  {{ range $cat := $categories }}
+    {{ $members := where $.Site.Data.members.current "category" $cat }}
+    {{ if $members }}
+      <h3>{{ index $categoryLabels $cat }}</h3>
+      <div class="member-grid">
+        {{ range $members }}
+          {{ partial "member-card.html" (dict "member" . "site" $.Site) }}
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+</section>
+
+<!-- Alumni -->
+{{ with .Site.Data.members.alumni }}
+<section>
+  <h2>Alumni</h2>
+  <div class="member-grid">
+    {{ range . }}
+      {{ partial "member-card.html" (dict "member" . "site" $.Site) }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

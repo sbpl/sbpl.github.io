@@ -1,0 +1,47 @@
+# =============================================================================
+# Current Lab Members
+# =============================================================================
+# To add yourself:
+#   1. Copy one of the entries below
+#   2. Fill in your details
+#   3. Place your square headshot (400x400px) in static/images/members/
+#      named firstname-lastname.jpg
+#   4. Make sure your "name" field EXACTLY matches how your name appears in
+#      publication files (content/publications/*.md) so your pubs auto-link.
+#
+# Categories: phd | masters | undergraduate | postdoc
+# =============================================================================
+
+- name: "Yorai Shaoul"
+  slug: "yorai-shaoul"
+  category: "phd"
+  photo: "/images/members/yorai-shaoul.jpg"
+  bio: >
+    Yorai earned a B.Sc. in Electrical Engineering and Computer Science from the Massachusetts Institute of Technology in 2021. His research interests span multi-robot task and motion planning, robotic manipulation, generative models, and computer vision. He works to harness insights from established planning algorithms to address messy real-world challenges in manipulation.
+  links:
+    github: "https://github.com/yoraish"
+    website: "https://yoraish.com"
+    scholar: "https://scholar.google.com/citations?user=aJHtbd4AAAAJ&hl=en"
+
+
+- name: "Itamar Mishani"
+  slug: "itamar-mishani"
+  category: "phd"
+  photo: "/images/members/itamar-mishani.jpg"
+  bio: >
+    Itamar is a PhD student in the Search-Based Planning Lab. His research interests include multi-robot task and motion planning, robotic manipulation, and generative models.
+
+  links:
+    github: "https://github.com/imishani"
+    website: "https://imishani.github.io"
+    # scholar: "https://scholar.google.com/citations?user=aJHtbd4AAAAJ&hl=en"
+
+- name: "Example Master"
+  slug: "example-master"
+  category: "masters"
+  graduated: "2023"
+  photo: "/images/members/example-master.jpg"
+  bio: >
+    Some description.
+  links:
+    website: "https://student.example.com"

@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+{{/* Find the member from data files by matching the URL slug */}}
+{{ $slug := .Params.member_slug | default (path.BaseName .RelPermalink) }}
+{{ $member := false }}
+{{ $isAlumni := false }}
+
+{{/* Check PI */}}
+{{ with .Site.Data.members.pi }}
+  {{ $piSlug := .name | urlize }}
+  {{ if eq $piSlug $slug }}
+    {{ $member = . }}
+  {{ end }}
+{{ end }}
+
+{{/* Check current members */}}
+{{ if not $member }}
+  {{ range .Site.Data.members.current }}
+    {{ if eq .slug $slug }}
+      {{ $member = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Check alumni */}}
+{{ if not $member }}
+  {{ range .Site.Data.members.alumni }}
+    {{ if eq .slug $slug }}
+      {{ $member = . }}
+      {{ $isAlumni = true }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $member }}
+<section class="member-profile">
+  <div class="member-profile-header">
+    <div class="member-profile-photo-wrapper">
+      <img src="{{ .photo }}" alt="{{ .name }}" class="member-profile-photo"
+           onerror="this.src='/images/members/placeholder.svg'">
+    </div>
+    <div class="member-profile-info">
+      <h1>{{ .name }}</h1>
+      {{ if .title }}
+        <p class="member-profile-title">{{ .title }}</p>
+      {{ else }}
+        <span class="badge">{{ .category | humanize }}{{ with .year }} · {{ . }}{{ end }}</span>
+      {{ end }}
+
+      {{ if $isAlumni }}
+        <p class="member-now-at"><em>Alumni — Now: {{ .now_at }}</em></p>
+      {{ end }}
+
+      {{ with .links }}
+        <div class="member-profile-links">
+          {{ with .website }}<a href="{{ . }}" target="_blank">🌐 Website</a>{{ end }}
+          {{ with .scholar }}<a href="{{ . }}" target="_blank">🎓 Google Scholar</a>{{ end }}
+          {{ with .github }}<a href="{{ . }}" target="_blank">💻 GitHub</a>{{ end }}
+          {{ with .email }}<a href="mailto:{{ . }}">✉️ Email</a>{{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="member-profile-bio">
+    <h2>About</h2>
+    <p>{{ .bio }}</p>
+  </div>
+
+  {{/* Publications */}}
+  {{ $authorSlug := .slug | default (.name | urlize) }}
+  {{ $authorPage := site.GetPage (printf "/authors/%s" $authorSlug) }}
+  {{ with $authorPage }}
+    {{ if gt (len .Pages) 0 }}
+    <div class="member-profile-publications">
+      <h2>Publications</h2>
+      <div class="publication-list">
+        {{ range .Pages.ByDate.Reverse }}
+          {{ partial "publication-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+
+  {{ with $member.links.scholar }}
+  <p class="scholar-note">For a full list of publications, see <a href="{{ . }}" target="_blank">Google Scholar</a>.</p>
+  {{ end }}
+</section>
+{{ else }}
+<p>Member not found.</p>
+{{ end }}
+
+<hr>
+<p><a href="/people/">← Back to People</a></p>
+{{ end }}

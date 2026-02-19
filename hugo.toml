@@ -1,0 +1,34 @@
+baseURL = 'https://sbpl.github.io/'
+languageCode = 'en-us'
+title = 'SBPL — Search-Based Planning Lab'
+
+[taxonomies]
+  author = "authors"
+
+[params]
+  description = "Search-Based Planning Lab at Carnegie Mellon University"
+  labName = "SBPL"
+  labFullName = "Search-Based Planning Lab"
+  labLogo = "/images/lab-logo.png"
+  labBlurb = "The Search-Based Planning Lab develops algorithms and systems that enable robots and autonomous agents to plan and act intelligently in complex, real-world environments. Our research spans motion planning, task planning, planning under uncertainty, and machine learning, with a focus on principled approaches that provide theoretical guarantees while remaining practical for real-world deployment."
+  university = "Carnegie Mellon University"
+  department = "Robotics Institute"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "People"
+    url = "/people/"
+    weight = 2
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 3
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

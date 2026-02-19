@@ -1,0 +1,38 @@
+{{ define "main" }}
+<article class="publication-single">
+  <h1>{{ .Title }}</h1>
+
+  <p class="publication-meta">
+    <strong>{{ .Params.venue }}</strong>
+  </p>
+
+  <p class="publication-authors">
+    {{ partial "author-list.html" . }}
+  </p>
+
+  {{ with .Params.thumbnail }}
+  <div class="publication-hero-image">
+    <img src="{{ . }}" alt="{{ $.Title }}">
+  </div>
+  {{ end }}
+
+  <div class="publication-content">
+    {{ .Content }}
+  </div>
+
+  <div class="publication-links-large">
+    {{ with .Params.arxiv }}
+      <a href="{{ . }}" target="_blank" role="button" class="outline">📄 arXiv Paper</a>
+    {{ end }}
+    {{ with .Params.project_page }}
+      <a href="{{ . }}" target="_blank" role="button" class="outline">🔗 Project Page</a>
+    {{ end }}
+    {{ with .Params.code }}
+      <a href="{{ . }}" target="_blank" role="button" class="outline">💻 Code</a>
+    {{ end }}
+  </div>
+</article>
+
+<hr>
+<p><a href="/publications/">← Back to all publications</a></p>
+{{ end }}

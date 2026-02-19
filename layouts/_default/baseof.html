@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container">
+      <ul>
+        <li><a href="/" class="lab-logo"><strong>{{ .Site.Params.labName }}</strong></a></li>
+      </ul>
+      <ul>
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>{{ .Site.Params.labFullName }}</strong><br>
+        {{ .Site.Params.department }}, {{ .Site.Params.university }}
+      </p>
+      <p><small>&copy; {{ now.Year }} {{ .Site.Params.labName }}. All rights reserved.</small></p>
+    </div>
+  </footer>
+</body>
+</html>

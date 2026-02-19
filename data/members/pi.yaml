@@ -1,0 +1,12 @@
+name: "Maxim Likhachev"
+title: "Professor"
+photo: "/images/members/maxim-likhachev.jpg"
+email: "maxim@cs.cmu.edu"
+bio: >
+  Maxim Likhachev is a Professor in the Robotics Institute at
+  Carnegie Mellon University. His research focuses on planning and decision-making
+  for autonomous systems, with particular emphasis on search-based planning
+  algorithms that provide guarantees on completeness and solution quality.
+links:
+  website: "https://www.cs.cmu.edu/~maxim/"
+  scholar: "https://scholar.google.com/citations?user=Ic8NqXwAAAAJ&hl=en"
