@@ -9,7 +9,7 @@ authors:
   - "Jiaoyang Li"
 first_authors: 3
 venue: "ICLR 2025"
-description: "Coordinating generative models with search-based planning algorithms to solve complex multi-robot motion planning problems under implicit objectives."
+description: "Coordinating robots planning using generative models through search-based planning algorithms. We show that this method can be used to solve complex multi-robot motion planning problems under implicit objectives."
 thumbnail: "/images/publications/mmd.gif"
 arxiv: "https://arxiv.org/abs/2410.03072"
 project_page: "https://multi-robot-diffusion.github.io/"
