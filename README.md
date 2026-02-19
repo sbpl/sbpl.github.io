@@ -103,41 +103,6 @@ Edit `data/members/pi.yaml`. Fields:
 - `name`, `title`, `photo`, `email`, `bio`, `research_vision`, `links`
 
 ---
-
-## Project Structure
-
-```
-sbpl/
-├── hugo.toml                         # Site configuration
-├── content/
-│   ├── _index.md                     # Homepage
-│   ├── people/_index.md              # People page
-│   └── publications/                 # One .md file per publication
-│       ├── _index.md
-│       └── paper-name.md
-├── data/members/                     # Member data (YAML)
-│   ├── pi.yaml                       # Principal Investigator
-│   ├── current.yaml                  # Current lab members
-│   └── alumni.yaml                   # Alumni with "now_at" field
-├── layouts/                          # HTML templates
-│   ├── _default/baseof.html          # Base template (nav, footer)
-│   ├── index.html                    # Homepage layout
-│   ├── people/list.html              # People page layout
-│   ├── publications/list.html        # Publications listing
-│   ├── publications/single.html      # Single publication page
-│   ├── authors/taxonomy.html         # Per-author publication list
-│   ├── authors/terms.html            # All authors index
-│   └── partials/                     # Reusable components
-│       ├── member-card.html
-│       └── publication-card.html
-├── static/
-│   ├── css/custom.css                # Custom styles (on top of Pico.css)
-│   └── images/
-│       ├── members/                  # Headshot photos
-│       └── publications/             # Thumbnail GIFs
-└── .github/workflows/deploy.yml     # Auto-deploy to GitHub Pages
-```
-
 ## How Cross-Referencing Works
 
 Publications and members are linked automatically via Hugo's **taxonomy** system:
