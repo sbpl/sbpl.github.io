@@ -36,6 +36,17 @@
     website: "https://imishani.github.io"
     # scholar: "https://scholar.google.com/citations?user=aJHtbd4AAAAJ&hl=en"
 
+- name: "Aditya Pujara"
+  slug: "aditya-pujara"
+  category: "phd"
+  photo: "/images/members/aditya-pujara.jpg"
+  bio: >
+    Aditya is a researcher in SBPL while he is completing his PhD at Monash University in Australia. He is also currently working at Microsoft as Mid-Senior Machine Learning Researcher.
+
+  links:
+    github: "https://github.com/a0x1ab"
+    scholar: "https://scholar.google.is/citations?user=ECl7VAsAAAAJ&hl=en"
+
 - name: "Example Master"
   slug: "example-master"
   category: "masters"
