@@ -4,6 +4,11 @@
 # When a student graduates or leaves, move their entry from current.yaml here
 # and add the "now_at" field indicating their current position.
 # Their publications will continue to be linked automatically.
+#
+# Entries below the "Legacy (sbpl.net, ~2012-2015)" marker were imported from
+# the old Drupal sbpl.net site. Many have only the brief bios that existed on
+# the old site and no current "now_at" status; please update if you have
+# better information about where these alumni are today.
 # =============================================================================
 
 - name: "Ramkumar Natarajan"
@@ -17,3 +22,262 @@
   links:
     website: "https://www.drramkumar.me/"
 
+# -----------------------------------------------------------------------------
+# Legacy (sbpl.net, ~2012-2015)
+# -----------------------------------------------------------------------------
+# Sourced from the old Drupal site (`archive/legacy-drupal/content/pages/`).
+# Bios are verbatim from the original member pages. Photos are only present
+# for the handful of members who had user avatars in the old site.
+
+- name: "Andrew Dornbush"
+  slug: "andrew-dornbush"
+  category: "research-staff"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Research Staff at SBPL (sbpl.net era).
+
+- name: "Brian MacAllister"
+  slug: "brian-macallister"
+  category: "research-staff"
+  photo: "/images/members/legacy/brian-macallister.jpg"
+  bio: >
+    Research staff member at CMU.
+
+- name: "Ben Cohen"
+  slug: "ben-cohen"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania.
+  links:
+    website: "http://bcohen.info"
+
+- name: "Subhrajit Bhattacharya"
+  slug: "subhrajit-bhattacharya"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in MEAM at the University of Pennsylvania,
+    co-advised with V. Kumar.
+
+- name: "Jonathan Butzke"
+  slug: "jonathan-butzke"
+  category: "phd"
+  photo: "/images/members/legacy/jonathan-butzke.jpg"
+  bio: >
+    PhD student in the SBP Lab at CMU (as of Spring 2015). Interests in
+    Robot Design, System Integration, Path Planning, Exploration,
+    Navigation, and High-level Control. Previously 19 years as a Navy
+    Officer, qualified Ship's Engineer on USS Oklahoma City (SSN-723)
+    and division officer on USS Toledo (SSN-769). Past projects include
+    the lab Segbot and the Hexacopter UAV.
+  links:
+    website: "http://www.jbutzke.com"
+
+- name: "Chris Clingerman"
+  slug: "chris-clingerman"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania,
+    co-advised with B. Taskar.
+
+- name: "John Drake"
+  slug: "john-drake"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania,
+    co-advised with A. Safonova.
+
+- name: "Steven Gray"
+  slug: "steven-gray"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in MEAM at the University of Pennsylvania,
+    co-advised with V. Kumar.
+
+- name: "Kalin Gochev"
+  slug: "kalin-gochev"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania.
+
+- name: "Bradford Neuman"
+  slug: "bradford-neuman"
+  category: "phd"
+  photo: "/images/members/legacy/bradford-neuman.jpg"
+  bio: >
+    PhD student in Robotics at CMU, co-advised with A. Stentz.
+
+- name: "Aline Normoyle"
+  slug: "aline-normoyle"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania,
+    co-advised with A. Safonova.
+
+- name: "Mike Phillips"
+  slug: "mike-phillips"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in Robotics at CMU.
+  links:
+    website: "https://sites.google.com/site/robotman0/"
+
+- name: "Aram Ebtekar"
+  slug: "aram-ebtekar"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in Computer Science.
+
+- name: "Sung-Kyun Kim"
+  slug: "sung-kyun-kim"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student.
+
+- name: "Soonkyum Kim"
+  slug: "soonkyum-kim"
+  category: "postdoc"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Post-doctoral researcher at SBPL.
+
+- name: "Venkatraman Narayanan"
+  slug: "venkatraman-narayanan"
+  category: "masters"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student in Robotics at CMU. Later worked on
+    Discriminatively-guided Deliberative Perception (D2P) for
+    pose estimation of multiple 3D object instances.
+  links:
+    website: "http://www.cs.cmu.edu/~venkatrn/"
+
+- name: "Siddharth Swaminathan"
+  slug: "siddharth-swaminathan"
+  category: "masters"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student at SBPL.
+
+- name: "Chen Gao"
+  slug: "chen-gao"
+  category: "masters"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student at SBPL.
+
+- name: "Hao Wang"
+  slug: "hao-wang"
+  category: "masters"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student at SBPL.
+
+- name: "Victor Hwang"
+  slug: "victor-hwang"
+  category: "masters"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student at SBPL.
+
+- name: "Alex Kushleyev"
+  slug: "alex-kushleyev"
+  category: "research-staff"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Research staff at SBPL.
+
+- name: "Kush Prasad"
+  slug: "kush-prasad"
+  category: "research-staff"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Research staff at SBPL.
+
+- name: "Margarite Safonova"
+  slug: "margarite-safonova"
+  category: "developer"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Software developer at SBPL.
+
+- name: "Arjun Menon"
+  slug: "arjun-menon"
+  category: "research-staff"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Research staff at SBPL.
+
+- name: "Sandip Aine"
+  slug: "sandip-aine"
+  category: "phd"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Visiting researcher / collaborator at SBPL.
+  links:
+    website: "https://sites.google.com/site/sandipaine/"
+
+- name: "Ellis Ratner"
+  slug: "ellis-ratner"
+  category: "intern"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern / off-site developer at SBPL.
+
+- name: "Harsh Pandey"
+  slug: "harsh-pandey"
+  category: "intern"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Kavan McEachern"
+  slug: "kavan-mceachern"
+  category: "intern"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Matthew Mac Allister"
+  slug: "matthew-mac-allister"
+  category: "intern"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer 2012 intern at SBPL.
+
+- name: "Eduardo Barrera"
+  slug: "eduardo-barrera"
+  category: "intern"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Krishna Sapkota"
+  slug: "krishna-sapkota"
+  category: "intern"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Burak Yucesoy"
+  slug: "burak-yucesoy"
+  category: "intern"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Haojie \"Tony\" Zhang"
+  slug: "haojie-tony-zhang"
+  category: "intern"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Former member at SBPL.

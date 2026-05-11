@@ -611,6 +611,80 @@ article {
   color: #555;
 }
 
+/* ---------- Legacy / Generic Single Pages ---------- */
+.legacy-page {
+  max-width: 900px;
+  margin: 0 auto;
+  background: transparent !important;
+  border: none;
+  padding: 0;
+}
+
+.legacy-page > h1 {
+  color: var(--sbpl-dark);
+  margin-bottom: 0.25rem;
+}
+
+.legacy-page .page-lead {
+  color: var(--sbpl-gray);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.legacy-page-content {
+  line-height: 1.7;
+  color: #444;
+}
+
+.legacy-page-content h2 {
+  color: var(--sbpl-dark);
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--sbpl-border);
+}
+
+.legacy-page-content h3 {
+  color: var(--sbpl-dark);
+  margin-top: 1.5rem;
+}
+
+.legacy-page-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+}
+
+.legacy-page-content a {
+  color: var(--sbpl-accent);
+}
+
+.legacy-page-content a:hover {
+  color: var(--sbpl-accent-hover);
+}
+
+/* Inline-flex image row (used on Robots page) */
+.legacy-page-content p img {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Video grid (used on Videos page) */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--sbpl-border);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--sbpl-light);

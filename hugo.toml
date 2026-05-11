@@ -10,7 +10,7 @@ title = 'SBPL — Search-Based Planning Lab'
   labName = "SBPL"
   labFullName = "Search-Based Planning Lab"
   labLogo = "/images/lab-logo.png"
-  labBlurb = "The Search-Based Planning Lab develops algorithms and systems that enable robots and autonomous agents to plan and act intelligently in complex, real-world environments. Our research spans motion planning, task planning, planning under uncertainty, and machine learning, with a focus on principled approaches that provide theoretical guarantees while remaining practical for real-world deployment."
+  labBlurb = "The Search-Based Planning Laboratory researches methodologies and algorithms that enable autonomous systems to act fast, intelligently, and robustly. Our research concentrates on developing novel planning approaches, novel heuristic searches, and investigating how planning can be combined with machine learning. Our work spans graph theory, algorithms, data structures, machine learning, and robotics. We use our algorithms to build real-time planners for complex robotic systems operating in the real world and performing challenging tasks ranging from autonomous navigation and autonomous flight to multi-agent systems and full-body mobile manipulation."
   university = "Carnegie Mellon University"
   department = "Robotics Institute"
 
@@ -27,6 +27,26 @@ title = 'SBPL — Search-Based Planning Lab'
     name = "Publications"
     url = "/publications/"
     weight = 3
+  [[menu.main]]
+    name = "Robots"
+    url = "/robots/"
+    weight = 4
+  [[menu.main]]
+    name = "Software"
+    url = "/software/"
+    weight = 5
+  [[menu.main]]
+    name = "Videos"
+    url = "/videos/"
+    weight = 6
+  [[menu.main]]
+    name = "Tutorials"
+    url = "/tutorials/"
+    weight = 7
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 8
 
 [markup]
   [markup.goldmark]
