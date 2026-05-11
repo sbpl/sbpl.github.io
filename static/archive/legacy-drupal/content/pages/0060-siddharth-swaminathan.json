@@ -1,0 +1,27 @@
+{
+  "nid": 60,
+  "vid": 60,
+  "type": "page",
+  "language": "und",
+  "title": "Siddharth Swaminathan",
+  "slug": "siddharth-swaminathan",
+  "uid": 1595,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1382043736,
+  "changed": 1382117198,
+  "url_aliases": [
+    "Siddharth Swaminathan"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "filtered_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Masters Student</p>\r\n",
+  "body_markdown": "Masters Student\n",
+  "body_html_raw": "<p>Masters Student</p>\r\n",
+  "revision_log": ""
+}

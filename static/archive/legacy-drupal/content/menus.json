@@ -1,0 +1,910 @@
+{
+  "user-menu": [
+    {
+      "menu_name": "user-menu",
+      "mlid": 2,
+      "plid": 0,
+      "link_path": "user",
+      "router_path": "user",
+      "link_title": "User account",
+      "options": {
+        "alter": true
+      },
+      "module": "system",
+      "hidden": 0,
+      "external": 0,
+      "weight": -10,
+      "depth": 1,
+      "node_target": null,
+      "children": [
+        {
+          "menu_name": "user-menu",
+          "mlid": 10,
+          "plid": 2,
+          "link_path": "user/register",
+          "router_path": "user/register",
+          "link_title": "Create new account",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "user-menu",
+          "mlid": 14,
+          "plid": 2,
+          "link_path": "user/login",
+          "router_path": "user/login",
+          "link_title": "Log in",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "user-menu",
+          "mlid": 20,
+          "plid": 2,
+          "link_path": "user/password",
+          "router_path": "user/password",
+          "link_title": "Request new password",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "menu_name": "user-menu",
+      "mlid": 15,
+      "plid": 0,
+      "link_path": "user/logout",
+      "router_path": "user/logout",
+      "link_title": "Log out",
+      "options": [],
+      "module": "system",
+      "hidden": 0,
+      "external": 0,
+      "weight": 10,
+      "depth": 1,
+      "node_target": null,
+      "children": []
+    }
+  ],
+  "navigation": [
+    {
+      "menu_name": "navigation",
+      "mlid": 3,
+      "plid": 0,
+      "link_path": "comment/%",
+      "router_path": "comment/%",
+      "link_title": "Comment permalink",
+      "options": [],
+      "module": "system",
+      "hidden": 0,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": null,
+      "children": [
+        {
+          "menu_name": "navigation",
+          "mlid": 28,
+          "plid": 3,
+          "link_path": "comment/%/view",
+          "router_path": "comment/%/view",
+          "link_title": "View comment",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": -10,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 26,
+          "plid": 3,
+          "link_path": "comment/%/edit",
+          "router_path": "comment/%/edit",
+          "link_title": "Edit",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 24,
+          "plid": 3,
+          "link_path": "comment/%/approve",
+          "router_path": "comment/%/approve",
+          "link_title": "Approve",
+          "options": [],
+          "module": "system",
+          "hidden": 0,
+          "external": 0,
+          "weight": 1,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 25,
+          "plid": 3,
+          "link_path": "comment/%/delete",
+          "router_path": "comment/%/delete",
+          "link_title": "Delete",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 2,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "menu_name": "navigation",
+      "mlid": 4,
+      "plid": 0,
+      "link_path": "filter/tips",
+      "router_path": "filter/tips",
+      "link_title": "Compose tips",
+      "options": [],
+      "module": "system",
+      "hidden": 1,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": null,
+      "children": []
+    },
+    {
+      "menu_name": "navigation",
+      "mlid": 5,
+      "plid": 0,
+      "link_path": "node/%",
+      "router_path": "node/%",
+      "link_title": "",
+      "options": [],
+      "module": "system",
+      "hidden": 0,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": null,
+      "children": [
+        {
+          "menu_name": "navigation",
+          "mlid": 62,
+          "plid": 5,
+          "link_path": "node/%/view",
+          "router_path": "node/%/view",
+          "link_title": "View",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": -10,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 41,
+          "plid": 5,
+          "link_path": "node/%/edit",
+          "router_path": "node/%/edit",
+          "link_title": "Edit",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 38,
+          "plid": 5,
+          "link_path": "node/%/delete",
+          "router_path": "node/%/delete",
+          "link_title": "Delete",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 1,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 52,
+          "plid": 5,
+          "link_path": "node/%/revisions",
+          "router_path": "node/%/revisions",
+          "link_title": "Revisions",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 2,
+          "depth": 2,
+          "node_target": null,
+          "children": [
+            {
+              "menu_name": "navigation",
+              "mlid": 146,
+              "plid": 52,
+              "link_path": "node/%/revisions/%/delete",
+              "router_path": "node/%/revisions/%/delete",
+              "link_title": "Delete earlier revision",
+              "options": [],
+              "module": "system",
+              "hidden": 0,
+              "external": 0,
+              "weight": 0,
+              "depth": 3,
+              "node_target": null,
+              "children": []
+            },
+            {
+              "menu_name": "navigation",
+              "mlid": 147,
+              "plid": 52,
+              "link_path": "node/%/revisions/%/revert",
+              "router_path": "node/%/revisions/%/revert",
+              "link_title": "Revert to earlier revision",
+              "options": [],
+              "module": "system",
+              "hidden": 0,
+              "external": 0,
+              "weight": 0,
+              "depth": 3,
+              "node_target": null,
+              "children": []
+            },
+            {
+              "menu_name": "navigation",
+              "mlid": 148,
+              "plid": 52,
+              "link_path": "node/%/revisions/%/view",
+              "router_path": "node/%/revisions/%/view",
+              "link_title": "Revisions",
+              "options": [],
+              "module": "system",
+              "hidden": 0,
+              "external": 0,
+              "weight": 0,
+              "depth": 3,
+              "node_target": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "menu_name": "navigation",
+      "mlid": 6,
+      "plid": 0,
+      "link_path": "node/add",
+      "router_path": "node/add",
+      "link_title": "Add content",
+      "options": [],
+      "module": "system",
+      "hidden": 0,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": null,
+      "children": [
+        {
+          "menu_name": "navigation",
+          "mlid": 219,
+          "plid": 6,
+          "link_path": "node/add/article",
+          "router_path": "node/add/article",
+          "link_title": "Article",
+          "options": {
+            "attributes": {
+              "title": "Use <em>articles</em> for time-sensitive content like news, press releases or blog posts."
+            }
+          },
+          "module": "system",
+          "hidden": 0,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 220,
+          "plid": 6,
+          "link_path": "node/add/page",
+          "router_path": "node/add/page",
+          "link_title": "Basic page",
+          "options": {
+            "attributes": {
+              "title": "Use <em>basic pages</em> for your static content, such as an 'About us' page."
+            }
+          },
+          "module": "system",
+          "hidden": 0,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "menu_name": "navigation",
+      "mlid": 17,
+      "plid": 0,
+      "link_path": "user/%",
+      "router_path": "user/%",
+      "link_title": "My account",
+      "options": [],
+      "module": "system",
+      "hidden": 0,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": null,
+      "children": [
+        {
+          "menu_name": "navigation",
+          "mlid": 63,
+          "plid": 17,
+          "link_path": "user/%/view",
+          "router_path": "user/%/view",
+          "link_title": "View",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": -10,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 31,
+          "plid": 17,
+          "link_path": "user/%/cancel",
+          "router_path": "user/%/cancel",
+          "link_title": "Cancel account",
+          "options": [],
+          "module": "system",
+          "hidden": 0,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": [
+            {
+              "menu_name": "navigation",
+              "mlid": 156,
+              "plid": 31,
+              "link_path": "user/%/cancel/confirm/%/%",
+              "router_path": "user/%/cancel/confirm/%/%",
+              "link_title": "Confirm account cancellation",
+              "options": [],
+              "module": "system",
+              "hidden": 0,
+              "external": 0,
+              "weight": 0,
+              "depth": 3,
+              "node_target": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 40,
+          "plid": 17,
+          "link_path": "user/%/edit",
+          "router_path": "user/%/edit",
+          "link_title": "Edit",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": [
+            {
+              "menu_name": "navigation",
+              "mlid": 126,
+              "plid": 40,
+              "link_path": "user/%/edit/account",
+              "router_path": "user/%/edit/account",
+              "link_title": "Account",
+              "options": [],
+              "module": "system",
+              "hidden": -1,
+              "external": 0,
+              "weight": 0,
+              "depth": 3,
+              "node_target": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 191,
+          "plid": 17,
+          "link_path": "user/%/shortcuts",
+          "router_path": "user/%/shortcuts",
+          "link_title": "Shortcuts",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "menu_name": "navigation",
+      "mlid": 23,
+      "plid": 0,
+      "link_path": "comment/reply/%",
+      "router_path": "comment/reply/%",
+      "link_title": "Add new comment",
+      "options": [],
+      "module": "system",
+      "hidden": 0,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": null,
+      "children": []
+    },
+    {
+      "menu_name": "navigation",
+      "mlid": 27,
+      "plid": 0,
+      "link_path": "taxonomy/term/%",
+      "router_path": "taxonomy/term/%",
+      "link_title": "Taxonomy term",
+      "options": [],
+      "module": "system",
+      "hidden": 0,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": null,
+      "children": [
+        {
+          "menu_name": "navigation",
+          "mlid": 88,
+          "plid": 27,
+          "link_path": "taxonomy/term/%/view",
+          "router_path": "taxonomy/term/%/view",
+          "link_title": "View",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 87,
+          "plid": 27,
+          "link_path": "taxonomy/term/%/edit",
+          "router_path": "taxonomy/term/%/edit",
+          "link_title": "Edit",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 10,
+          "depth": 2,
+          "node_target": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "menu_name": "navigation",
+      "mlid": 187,
+      "plid": 0,
+      "link_path": "search",
+      "router_path": "search",
+      "link_title": "Search",
+      "options": [],
+      "module": "system",
+      "hidden": 1,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": null,
+      "children": [
+        {
+          "menu_name": "navigation",
+          "mlid": 188,
+          "plid": 187,
+          "link_path": "search/node",
+          "router_path": "search/node",
+          "link_title": "Content",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": -10,
+          "depth": 2,
+          "node_target": null,
+          "children": [
+            {
+              "menu_name": "navigation",
+              "mlid": 190,
+              "plid": 188,
+              "link_path": "search/node/%",
+              "router_path": "search/node/%",
+              "link_title": "Content",
+              "options": [],
+              "module": "system",
+              "hidden": -1,
+              "external": 0,
+              "weight": 0,
+              "depth": 3,
+              "node_target": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "menu_name": "navigation",
+          "mlid": 189,
+          "plid": 187,
+          "link_path": "search/user",
+          "router_path": "search/user",
+          "link_title": "Users",
+          "options": [],
+          "module": "system",
+          "hidden": -1,
+          "external": 0,
+          "weight": 0,
+          "depth": 2,
+          "node_target": null,
+          "children": [
+            {
+              "menu_name": "navigation",
+              "mlid": 193,
+              "plid": 189,
+              "link_path": "search/user/%",
+              "router_path": "search/user/%",
+              "link_title": "Users",
+              "options": [],
+              "module": "system",
+              "hidden": -1,
+              "external": 0,
+              "weight": 0,
+              "depth": 3,
+              "node_target": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shortcut-set-1": [
+    {
+      "menu_name": "shortcut-set-1",
+      "mlid": 216,
+      "plid": 0,
+      "link_path": "node/add",
+      "router_path": "node/add",
+      "link_title": "Add content",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": -50,
+      "depth": 1,
+      "node_target": null,
+      "children": []
+    },
+    {
+      "menu_name": "shortcut-set-1",
+      "mlid": 217,
+      "plid": 0,
+      "link_path": "admin/content",
+      "router_path": "admin/content",
+      "link_title": "Find content",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": -49,
+      "depth": 1,
+      "node_target": null,
+      "children": []
+    },
+    {
+      "menu_name": "shortcut-set-1",
+      "mlid": 412,
+      "plid": 0,
+      "link_path": "node/3",
+      "router_path": "node/%",
+      "link_title": "People",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": -48,
+      "depth": 1,
+      "node_target": {
+        "nid": 3,
+        "title": "People"
+      },
+      "children": []
+    }
+  ],
+  "main-menu": [
+    {
+      "menu_name": "main-menu",
+      "mlid": 396,
+      "plid": 0,
+      "link_path": "node/9",
+      "router_path": "node/%",
+      "link_title": "Home",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": -50,
+      "depth": 1,
+      "node_target": {
+        "nid": 9,
+        "title": "Home"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 525,
+      "plid": 0,
+      "link_path": "node/45",
+      "router_path": "node/%",
+      "link_title": "Tutorials",
+      "options": {
+        "attributes": []
+      },
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 0,
+      "depth": 1,
+      "node_target": {
+        "nid": 45,
+        "title": "Tutorials"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 395,
+      "plid": 0,
+      "link_path": "node/3",
+      "router_path": "node/%",
+      "link_title": "People",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 1,
+      "depth": 1,
+      "node_target": {
+        "nid": 3,
+        "title": "People"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 397,
+      "plid": 0,
+      "link_path": "node/10",
+      "router_path": "node/%",
+      "link_title": "Publications",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 2,
+      "depth": 1,
+      "node_target": {
+        "nid": 10,
+        "title": "Publications"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 398,
+      "plid": 0,
+      "link_path": "node/11",
+      "router_path": "node/%",
+      "link_title": "Videos",
+      "options": {
+        "attributes": []
+      },
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 3,
+      "depth": 1,
+      "node_target": {
+        "nid": 11,
+        "title": "Videos"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 399,
+      "plid": 0,
+      "link_path": "node/12",
+      "router_path": "node/%",
+      "link_title": "Robots",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 4,
+      "depth": 1,
+      "node_target": {
+        "nid": 12,
+        "title": "Robots"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 417,
+      "plid": 0,
+      "link_path": "node/32",
+      "router_path": "node/%",
+      "link_title": "Software",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 5,
+      "depth": 1,
+      "node_target": {
+        "nid": 32,
+        "title": "Software"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 418,
+      "plid": 0,
+      "link_path": "node/33",
+      "router_path": "node/%",
+      "link_title": "Files",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 6,
+      "depth": 1,
+      "node_target": {
+        "nid": 33,
+        "title": " "
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 415,
+      "plid": 0,
+      "link_path": "node/30",
+      "router_path": "node/%",
+      "link_title": "Contact",
+      "options": {
+        "attributes": []
+      },
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 8,
+      "depth": 1,
+      "node_target": {
+        "nid": 30,
+        "title": "Contact"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 513,
+      "plid": 0,
+      "link_path": "node/44",
+      "router_path": "node/%",
+      "link_title": "Calender",
+      "options": [],
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 8,
+      "depth": 1,
+      "node_target": {
+        "nid": 44,
+        "title": "Calendar"
+      },
+      "children": []
+    },
+    {
+      "menu_name": "main-menu",
+      "mlid": 416,
+      "plid": 0,
+      "link_path": "node/31",
+      "router_path": "node/%",
+      "link_title": "Login",
+      "options": {
+        "attributes": {
+          "title": ""
+        }
+      },
+      "module": "menu",
+      "hidden": 0,
+      "external": 0,
+      "weight": 50,
+      "depth": 1,
+      "node_target": {
+        "nid": 31,
+        "title": "Login"
+      },
+      "children": []
+    }
+  ]
+}

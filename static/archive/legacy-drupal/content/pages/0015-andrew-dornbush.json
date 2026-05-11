@@ -1,0 +1,27 @@
+{
+  "nid": 15,
+  "vid": 15,
+  "type": "page",
+  "language": "und",
+  "title": "Andrew Dornbush",
+  "slug": "andrew-dornbush",
+  "uid": 1,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599102,
+  "changed": 1344135530,
+  "url_aliases": [
+    "AndrewDornbush"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Reasearch Staff</p>\r\n",
+  "body_markdown": "Reasearch Staff\n",
+  "body_html_raw": "<p>Reasearch Staff</p>\r\n",
+  "revision_log": ""
+}

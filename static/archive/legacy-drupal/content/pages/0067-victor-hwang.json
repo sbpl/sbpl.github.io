@@ -1,0 +1,27 @@
+{
+  "nid": 67,
+  "vid": 67,
+  "type": "page",
+  "language": "und",
+  "title": "Victor Hwang",
+  "slug": "victor-hwang",
+  "uid": 648,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1382044955,
+  "changed": 1382112369,
+  "url_aliases": [
+    "Victor Hwang"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "filtered_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Masters Student</p>\r\n",
+  "body_markdown": "Masters Student\n",
+  "body_html_raw": "<p>Masters Student</p>\r\n",
+  "revision_log": ""
+}

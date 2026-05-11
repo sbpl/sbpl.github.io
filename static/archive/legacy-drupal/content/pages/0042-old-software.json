@@ -1,0 +1,27 @@
+{
+  "nid": 42,
+  "vid": 42,
+  "type": "page",
+  "language": "und",
+  "title": "Old Software",
+  "slug": "old-software",
+  "uid": 1,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1344526290,
+  "changed": 1344526321,
+  "url_aliases": [
+    "OldSoftwarePage"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "filtered_html",
+  "body_summary": "",
+  "body_html_rewritten": "<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>SBPL</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl\">Wiki Page</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://kforge.ros.org/sbpl/sbpl\">Repository</a></li>\r\n</ul>\r\n<br />\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>3D Navigation Planner</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl_3dnav_planner\">http://www.ros.org/wiki/sbpl_3dnav_planner</a></li>\r\n</ul>\r\n<br />\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>Lattice Planner</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl_lattice_planner\">Wiki Page</a></li>\r\n</ul>\r\n<br />\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>Arm Planner (PR2 only)</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl_arm_planner\">Wiki Page</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/tags/diamondback/\">ROS Diamondback</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/electric/\">ROS Electric</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/trunk/\">ROS Fuerte</a></li>\r\n</ul>\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t&nbsp;</li>\r\n\t<li>\r\n\t\t<b>Full Body Navigation Planner (PR2 only)</b></li>\r\n\t<li>\r\n\t\t<a href=\"https://sbpl.pc.cs.cmu.edu/redmine/projects/full-body-nav\">Repository</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://kforge.ros.org/Sushi/trac/wiki/Navigation\">Some Documentation</a></li>\r\n</ul>\r\n<br />\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>Dynamic Environment Navigation Planner (SIPP)</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl_dynamic_env\">Wiki Page</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_dynamic_env/trunk\">Repository</a></li>\r\n</ul>\r\n",
+  "body_markdown": "-  **SBPL**\n-  [Wiki Page](http://www.ros.org/wiki/sbpl)\n-  [Repository](https://kforge.ros.org/sbpl/sbpl)\n\n-  **3D Navigation Planner**\n-  [http://www.ros.org/wiki/sbpl_3dnav_planner](http://www.ros.org/wiki/sbpl_3dnav_planner)\n\n-  **Lattice Planner**\n-  [Wiki Page](http://www.ros.org/wiki/sbpl_lattice_planner)\n\n-  **Arm Planner (PR2 only)**\n-  [Wiki Page](http://www.ros.org/wiki/sbpl_arm_planner)\n-  [ROS Diamondback](https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/tags/diamondback/)\n-  [ROS Electric](https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/electric/)\n-  [ROS Fuerte](https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/trunk/)\n\n-\n-  **Full Body Navigation Planner (PR2 only)**\n-  [Repository](https://sbpl.pc.cs.cmu.edu/redmine/projects/full-body-nav)\n-  [Some Documentation](https://kforge.ros.org/Sushi/trac/wiki/Navigation)\n\n-  **Dynamic Environment Navigation Planner (SIPP)**\n-  [Wiki Page](http://www.ros.org/wiki/sbpl_dynamic_env)\n-  [Repository](https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_dynamic_env/trunk)\n",
+  "body_html_raw": "<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>SBPL</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl\">Wiki Page</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://kforge.ros.org/sbpl/sbpl\">Repository</a></li>\r\n</ul>\r\n<br />\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>3D Navigation Planner</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl_3dnav_planner\">http://www.ros.org/wiki/sbpl_3dnav_planner</a></li>\r\n</ul>\r\n<br />\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>Lattice Planner</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl_lattice_planner\">Wiki Page</a></li>\r\n</ul>\r\n<br />\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>Arm Planner (PR2 only)</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl_arm_planner\">Wiki Page</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/tags/diamondback/\">ROS Diamondback</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/electric/\">ROS Electric</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/trunk/\">ROS Fuerte</a></li>\r\n</ul>\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t&nbsp;</li>\r\n\t<li>\r\n\t\t<b>Full Body Navigation Planner (PR2 only)</b></li>\r\n\t<li>\r\n\t\t<a href=\"https://sbpl.pc.cs.cmu.edu/redmine/projects/full-body-nav\">Repository</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://kforge.ros.org/Sushi/trac/wiki/Navigation\">Some Documentation</a></li>\r\n</ul>\r\n<br />\r\n<ul type=\"none\">\r\n\t<li>\r\n\t\t<b>Dynamic Environment Navigation Planner (SIPP)</b></li>\r\n\t<li>\r\n\t\t<a href=\"http://www.ros.org/wiki/sbpl_dynamic_env\">Wiki Page</a></li>\r\n\t<li>\r\n\t\t<a href=\"https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_dynamic_env/trunk\">Repository</a></li>\r\n</ul>\r\n",
+  "revision_log": ""
+}

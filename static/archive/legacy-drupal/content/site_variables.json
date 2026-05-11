@@ -1,0 +1,14 @@
+{
+  "site_name": "Search-Based Planning Lab",
+  "site_slogan": "",
+  "site_mail": "searchbasedplanninglibrary@gmail.com",
+  "site_frontpage": "node/9",
+  "site_default_country": "US",
+  "site_404": "",
+  "site_403": "",
+  "theme_default": "bartik",
+  "admin_theme": "seven",
+  "date_default_timezone": "America/New_York",
+  "user_register": "2",
+  "user_email_verification": 1
+}

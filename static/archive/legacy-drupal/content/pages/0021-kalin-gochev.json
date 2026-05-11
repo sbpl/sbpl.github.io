@@ -1,0 +1,27 @@
+{
+  "nid": 21,
+  "vid": 21,
+  "type": "page",
+  "language": "und",
+  "title": "Kalin Gochev",
+  "slug": "kalin-gochev",
+  "uid": 1,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599493,
+  "changed": 1344135581,
+  "url_aliases": [
+    "KalinGochev"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>PhD student in CIS, UPenn</p>\r\n",
+  "body_markdown": "PhD student in CIS, UPenn\n",
+  "body_html_raw": "<p>PhD student in CIS, UPenn</p>\r\n",
+  "revision_log": ""
+}

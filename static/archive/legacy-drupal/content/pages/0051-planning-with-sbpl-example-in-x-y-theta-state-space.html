@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Planning with SBPL: Example in X, Y, Theta State Space</title></head>
+<body>
+<h1>Planning with SBPL: Example in X, Y, Theta State Space</h1>
+<p><span>This tutorial will go through a simple example of loading in an environment (the Willow Garage floorplan), then generating a plan from a specified start and goal.</span></p>
+<p>As described in the previous tutorial, planning with search-based methods have&nbsp;<span>two parts - representing the problem as a graph, then solving the graph with&nbsp;</span><span>graph-search methods. SBPL has two objects it uses for these two roles - the&nbsp;</span><span>environment and the planner. The code below shows the initialization of an environment in the (x, y, theta) state space. We&#39;ll then use the ARA* planner to produce our paths.</span></p>
+<p><strong>Initializing the environment</strong></p>
+<p>We&#39;ll be using an environment file (specific to EnvironmentXYTHETALAT) that&nbsp;<span>already contains values for all the parameters we need, so you can load them&nbsp;</span><span>right in. But here&#39;s the breakdown of what the XYTheta environment requires.&nbsp;</span></p>
+<ul>
+	<li>
+		<span>discretization(cells): this describes how many cells the environment is&nbsp;</span><span>descretized into.</span></li>
+	<li>
+		<span>Obsthresh: equivalent to cost_lethal (see </span><a href="http://www.ros.org/wiki/costmap_2d" target="_blank">section 1.5 of the ROS Wiki</a><span>)</span></li>
+	<li>
+		<span>Cost_inscribed_thresh:&nbsp;</span><span>(see&nbsp;</span><a href="http://www.ros.org/wiki/costmap_2d" target="_blank">section 1.5 of the ROS Wiki</a><span>)</span></li>
+	<li>
+		<span>Cost_possibly_circumscribed_thresh:&nbsp;</span><span>(see&nbsp;</span><a href="http://www.ros.org/wiki/costmap_2d" target="_blank">section 1.5 of the ROS Wiki</a><span>)</span></li>
+	<li>
+		<span>Cellsize(meters): the length of one edge of a square cell. Multipyling each&nbsp;</span><span>value in the discretization(cell) line should yield the size of your actual map.</span></li>
+	<li>
+		<span>nominalvel(mpersecs): speed of translational movement</span></li>
+	<li>
+		<span>timetoturn45degsinplace(secs): speed of rotational movement</span></li>
+	<li>
+		<span>start(meters,rads): the start x, y, and theta position</span></li>
+	<li>
+		<span>end(meters,rads): the end x, y, and theta position</span></li>
+	<li>
+		<span>environment: a map of the environment.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>The Code</strong></p>
+<p>You can find the entire file at <a href="https://gist.github.com/vhwanger/5304396" target="_blank">this GIST</a>. We&#39;ll step through the planxythetalat&nbsp;<span>function.</span></p>
+<script src="https://gist.github.com/vhwanger/5297492.js" type="text/javascript"></script>
+<p><strong>Perimeter of robot</strong></p>
+<p>This function defines a vector of points that describe the perimeter of the&nbsp;<span>robot. The (0,0) point of the robot is the reference location that the planner&nbsp;</span><span>uses. In this example, the robot is a .01m by .01m robot, with its center at (0,0).</span></p>
+<p><strong>Initializing the environment</strong></p>
+<p>This initializes our environment with the information from the environment file,&nbsp;<span>perimeter description, and motion primitive file. There are also functions&nbsp;</span><span>available to initialize an environment without a file, but this requires a lot of parameters to be passed into the initialization function.</span></p>
+<p><strong>Specifying start and goal state</strong></p>
+<p>This sets the desired start and goal states to plan between. A very important&nbsp;<span>detail here is that start_id and goal_id get filled in to be used later. BOTH&nbsp;</span><span>the environment and planner must have their start and goal set. The environment&nbsp;</span><span>takes in the continuous coordinate for the start and goal, and the planner takes&nbsp;</span><span>in the state IDs for the start and goal.&nbsp;</span></p>
+<p><strong>Initializing the planner</strong></p>
+<p>Here, we specify the initial epsilon. By default, this will decrement the&nbsp;<span>epsilon by .2 after every solved plan. The search mode of the planner denotes if&nbsp;</span><span>it quits after the first solution (search_mode = true) or if it continues to try&nbsp;</span><span>and improve its solution quality until it&#39;s out of time (search_mode = false).&nbsp;</span><span>One other parameter here is the bsearch, which sets whether it is a forward or&nbsp;</span><span>backward search (searching from start to goal or from goal to start).</span></p>
+<p><strong>Planning</strong></p>
+<p>The planner takes in an double limiting how long it has to plan. It returns a&nbsp;<span>vector containing the state IDs for the path. </span><span>It then prints out some stats that shows how long it took to plan, the solution&nbsp;</span><span>cost, and the final epsilon it reached.</span></p>
+<p><strong>Writing out solution</strong></p>
+<p>While the planner returned a vector of state IDs, this is not what you would&nbsp;<span>feed to a controller - it must be converted back into continuous coordinates. </span><span>The writeSolution function spits out a text file containing both the discrete&nbsp;</span><span>and continuous paths. You&#39;ll notice that the continuous path has many more&nbsp;</span><span>points than the discrete path. This is because each motion primitive is composed&nbsp;</span><span>of many waypoints that are expanded for the continuous path.</span></p>
+<p><strong>Running the code</strong></p>
+<p>Once you compile the code, you can run it with</p>
+<pre>
+$ ./xytheta [location of willow cfg file] [location of motion primitives file]</pre>
+<p>In the standard SBPL install, use these files</p>
+<pre>
+env_examples/nav3d/willow-25mm-inflated-env.cfg
+<span>matlab/mprim/pr2.mprim
+</span></pre>
+<p>(By default, the willow cfg comes as a zip, so you have to unzip it first). This will produce two solution files sol.txt and sol.txt.discrete</p>
+<p>This is the planned path plotted using <a href="https://gist.github.com/vhwanger/5304953" target="_blank">this python code</a>&nbsp;(depends on matplotlib and numpy). You can run this code with </p>
+<pre>python visualize.py willow-25mm-inflated-env.cfg sol.txt.discrete</pre>
+<p><img alt="image" src="http://media.tumblr.com/60a4d48268e40b016df3f6933c71065d/tumblr_inline_mkp51c2BGn1qz4rgp.png" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body></html>

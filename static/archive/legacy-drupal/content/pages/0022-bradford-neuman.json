@@ -1,0 +1,27 @@
+{
+  "nid": 22,
+  "vid": 22,
+  "type": "page",
+  "language": "und",
+  "title": "Bradford Neuman",
+  "slug": "bradford-neuman",
+  "uid": 33,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599525,
+  "changed": 1344493624,
+  "url_aliases": [
+    "BradfordNeuman"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>PhD student in Robotics, CMU, co-advised with A. Stentz</p>\r\n<p>Currently on leave of absence</p>\r\n",
+  "body_markdown": "PhD student in Robotics, CMU, co-advised with A. Stentz\n\nCurrently on leave of absence\n",
+  "body_html_raw": "<p>PhD student in Robotics, CMU, co-advised with A. Stentz</p>\r\n<p>Currently on leave of absence</p>\r\n",
+  "revision_log": ""
+}

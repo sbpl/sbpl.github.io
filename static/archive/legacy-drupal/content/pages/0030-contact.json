@@ -1,0 +1,27 @@
+{
+  "nid": 30,
+  "vid": 30,
+  "type": "page",
+  "language": "und",
+  "title": "Contact",
+  "slug": "contact",
+  "uid": 1,
+  "status": 1,
+  "promote": 0,
+  "sticky": 1,
+  "comment": 1,
+  "created": 1341860373,
+  "changed": 1407243685,
+  "url_aliases": [
+    "Contact"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Physical Address:<br />\r\n\t1612 Newell Simon Hall<br />\r\n\tCarnegie Mellon University<br />\r\n\tPittsburgh, PA 15217<br />\r\n\t<br />\r\n\tMailing Address:<br />\r\n\tMaxim Likhachev<br />\r\n\tCarnegie Mellon University - Robotics Institute<br />\r\n\t5000 Forbes Ave<br />\r\n\tPittsburgh, PA, 15217</p>\r\n<div>\r\n\t&nbsp;</div>\r\n<div>\r\n\t<span style=\"font-size:14px;\">To get updates and announcements, please join the<em><span style=\"color: rgb(0, 0, 205);\"> sbpl-users</span></em> mailing list by signing up <a href=\"https://groups.google.com/forum/#!forum/sbpl-users\">here</a>.</span></div>\r\n<p><span style=\"font-size:14px;\">Email any comments to us at: <span class=\"go\">a*************h@gmail.com</span></span></p>\r\n<p><iframe frameborder=\"0\" height=\"800px\" marginheight=\"0\" marginwidth=\"0\" scrolling=\"no\" src=\"https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Newell+Simon+Hall,+Pittsburgh,+PA&amp;aq=0&amp;oq=Newell+Simon&amp;sll=37.0625,-95.677068&amp;sspn=59.379225,135.263672&amp;ie=UTF8&amp;hq=Newell+Simon+Hall,&amp;hnear=Pittsburgh,+Allegheny,+Pennsylvania&amp;ll=40.443534,-79.945621&amp;spn=0.0064,0.110584&amp;t=h&amp;output=embed\" width=\"100%\"></iframe></p>\r\n",
+  "body_markdown": "Physical Address:\n 1612 Newell Simon Hall\n Carnegie Mellon University\n Pittsburgh, PA 15217\n\n Mailing Address:\n Maxim Likhachev\n Carnegie Mellon University - Robotics Institute\n 5000 Forbes Ave\n Pittsburgh, PA, 15217\n\n To get updates and announcements, please join the* sbpl-users* mailing list by signing up [here](https://groups.google.com/forum/#!forum/sbpl-users).\n\nEmail any comments to us at: a*************h@gmail.com\n",
+  "body_html_raw": "<p>Physical Address:<br />\r\n\t1612 Newell Simon Hall<br />\r\n\tCarnegie Mellon University<br />\r\n\tPittsburgh, PA 15217<br />\r\n\t<br />\r\n\tMailing Address:<br />\r\n\tMaxim Likhachev<br />\r\n\tCarnegie Mellon University - Robotics Institute<br />\r\n\t5000 Forbes Ave<br />\r\n\tPittsburgh, PA, 15217</p>\r\n<div>\r\n\t&nbsp;</div>\r\n<div>\r\n\t<span style=\"font-size:14px;\">To get updates and announcements, please join the<em><span style=\"color: rgb(0, 0, 205);\"> sbpl-users</span></em> mailing list by signing up <a href=\"https://groups.google.com/forum/#!forum/sbpl-users\">here</a>.</span></div>\r\n<p><span style=\"font-size:14px;\">Email any comments to us at: <span class=\"go\">a*************h@gmail.com</span></span></p>\r\n<p><iframe frameborder=\"0\" height=\"800px\" marginheight=\"0\" marginwidth=\"0\" scrolling=\"no\" src=\"https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Newell+Simon+Hall,+Pittsburgh,+PA&amp;aq=0&amp;oq=Newell+Simon&amp;sll=37.0625,-95.677068&amp;sspn=59.379225,135.263672&amp;ie=UTF8&amp;hq=Newell+Simon+Hall,&amp;hnear=Pittsburgh,+Allegheny,+Pennsylvania&amp;ll=40.443534,-79.945621&amp;spn=0.0064,0.110584&amp;t=h&amp;output=embed\" width=\"100%\"></iframe></p>\r\n",
+  "revision_log": ""
+}

@@ -1,0 +1,27 @@
+{
+  "nid": 62,
+  "vid": 62,
+  "type": "page",
+  "language": "und",
+  "title": "Ellis Ratner",
+  "slug": "ellis-ratner",
+  "uid": 1588,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1382044111,
+  "changed": 1382112175,
+  "url_aliases": [
+    "Ellis Ratner"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "filtered_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Summer Intern/Off-site Develepor</p>\r\n",
+  "body_markdown": "Summer Intern/Off-site Develepor\n",
+  "body_html_raw": "<p>Summer Intern/Off-site Develepor</p>\r\n",
+  "revision_log": ""
+}

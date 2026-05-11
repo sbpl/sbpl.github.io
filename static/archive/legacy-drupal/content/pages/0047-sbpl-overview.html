@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>SBPL overview</title></head>
+<body>
+<h1>SBPL overview</h1>
+<p><span>This tutorial will describe how SBPL is set up</span><span>. For background information, <a href="http://victor.hwanger.com/post/47051626618/primer-to-the-search-based-planning-library-sbpl" target="_blank">click here</a>.</span></p>
+<p><strong>Environments</strong></p>
+<p>As described in the previous tutorial, planning with search-based methods have&nbsp;<span>two parts - representing the problem as a graph, then solving the graph with&nbsp;</span><span>graph-search methods. SBPL has two objects it uses for these two roles - the&nbsp;</span><span>environment and the planner. Unless you're fiddling with the actual graph search&nbsp;</span><span>algorithm, the environment object will be the thing you interact most with.</span></p>
+<p>In a nutshell, the environment handles domain specific details and translates&nbsp;<span>them into a generic form for the planner to handle. For example, the environment&nbsp;</span><span>handles the translation between the (x, y, theta) position of a robot into a&nbsp;</span><span>graph composed of generic state IDs. The planner then solves the graph without&nbsp;</span><span>having to know about the domain. (This doesn't actually happen in one step - the&nbsp;</span><span>graph is generated on demand by the planner. As a result, the planner often&nbsp;</span><span>calls the environment object to retrieve information on demand).&nbsp;</span></p>
+<p>The environment also implements the heuristic computation. This is domain&nbsp;<span>dependent, since the heuristic for guiding a robotic arm to an object will be&nbsp;</span><span>different from navigating a car close to its goal.</span></p>
+<p>There already exists many environments and planners in SBPL, but they might not&nbsp;<span>cover a custom scenario. In this case, you will have to implement your own&nbsp;</span><span>environment (a very involved topic that might be covered in the future).</span></p>
+<ul>
+<li><span>Environment2D - for robots navigating in (x, y) coordinates</span></li>
+<li><span>EnvironmentXYTHETALAT - for robots navigating in (x, y, theta) coordinates</span></li>
+<li><span>EnvironmentXYTHETALEVLAT - for robots navigating in (x, y, theta) but also</span><span>handles collision checking and cost computations for a given set of footprints.</span></li>
+<li><span>Environment_robarm - motion planning for a 7D (7 joint angles) robotic arm.</span></li>
+</ul>
+<p>These can all be found in sbpl/src/discrete_space_information.</p>
+<p>Other environments that have successfully been implemented (but not included in SBPL):&nbsp;</p>
+<ul>
+<li><span>&nbsp; &nbsp; pushing a cart with the PR2 (x, y, theta, theta of the cart)</span></li>
+<li><span>&nbsp; &nbsp; opening a door with the PR2 (x, y, theta, door interval)</span></li>
+<li><span>&nbsp; &nbsp; quadrotor path planning (x, y, z)</span></li>
+<li><span>&nbsp; &nbsp; time dependent planning (x, y, z, time)</span></li>
+</ul>
+<p><strong>Planners</strong></p>
+<p>There are a number of planners that are available in sbpl/src/planners</p>
+<ul>
+<li><span>&nbsp; &nbsp; ARA*</span></li>
+<li><span>&nbsp; &nbsp; Anytime D*</span></li>
+<li><span>&nbsp; &nbsp; R*</span></li>
+</ul>
+</body></html>

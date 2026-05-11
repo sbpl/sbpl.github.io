@@ -1,0 +1,27 @@
+{
+  "nid": 28,
+  "vid": 28,
+  "type": "page",
+  "language": "und",
+  "title": "Kavan McEachern",
+  "slug": "kavan-mceachern",
+  "uid": 1,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599780,
+  "changed": 1344135621,
+  "url_aliases": [
+    "KavanMcEachern"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Summer Intern</p>\r\n",
+  "body_markdown": "Summer Intern\n",
+  "body_html_raw": "<p>Summer Intern</p>\r\n",
+  "revision_log": ""
+}

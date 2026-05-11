@@ -1,0 +1,27 @@
+{
+  "nid": 23,
+  "vid": 23,
+  "type": "page",
+  "language": "und",
+  "title": "Aline Normoyle",
+  "slug": "aline-normoyle",
+  "uid": 1,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599547,
+  "changed": 1344135596,
+  "url_aliases": [
+    "AlineNormoyle"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>PhD student in CIS, UPenn, co-advised with A. Safonova</p>\r\n",
+  "body_markdown": "PhD student in CIS, UPenn, co-advised with A. Safonova\n",
+  "body_html_raw": "<p>PhD student in CIS, UPenn, co-advised with A. Safonova</p>\r\n",
+  "revision_log": ""
+}

@@ -1,0 +1,651 @@
+{
+  "by_node": [
+    {
+      "nid": 3,
+      "page_file": "0003-people.html",
+      "title": "People",
+      "aliases": [
+        "People"
+      ]
+    },
+    {
+      "nid": 9,
+      "page_file": "0009-home.html",
+      "title": "Home",
+      "aliases": [
+        "Home"
+      ]
+    },
+    {
+      "nid": 10,
+      "page_file": "0010-publications.html",
+      "title": "Publications",
+      "aliases": [
+        "Publications"
+      ]
+    },
+    {
+      "nid": 11,
+      "page_file": "0011-videos.html",
+      "title": "Videos",
+      "aliases": [
+        "Videos"
+      ]
+    },
+    {
+      "nid": 12,
+      "page_file": "0012-robots.html",
+      "title": "Robots",
+      "aliases": [
+        "Robots"
+      ]
+    },
+    {
+      "nid": 13,
+      "page_file": "0013-ben-cohen.html",
+      "title": "Ben Cohen",
+      "aliases": [
+        "BenCohen"
+      ]
+    },
+    {
+      "nid": 14,
+      "page_file": "0014-brian-macallister.html",
+      "title": "Brian MacAllister",
+      "aliases": [
+        "BrianMacAllister"
+      ]
+    },
+    {
+      "nid": 15,
+      "page_file": "0015-andrew-dornbush.html",
+      "title": "Andrew Dornbush",
+      "aliases": [
+        "AndrewDornbush"
+      ]
+    },
+    {
+      "nid": 16,
+      "page_file": "0016-subhrajit-bhattacharya.html",
+      "title": "Subhrajit Bhattacharya",
+      "aliases": [
+        "SubhrajitBhattacharya"
+      ]
+    },
+    {
+      "nid": 17,
+      "page_file": "0017-jonathan-butzke.html",
+      "title": "Jonathan Butzke",
+      "aliases": [
+        "JonathanButzke"
+      ]
+    },
+    {
+      "nid": 18,
+      "page_file": "0018-chris-clingerman.html",
+      "title": "Chris Clingerman",
+      "aliases": [
+        "ChrisClingerman"
+      ]
+    },
+    {
+      "nid": 19,
+      "page_file": "0019-john-drake.html",
+      "title": "John Drake",
+      "aliases": [
+        "JohnDrake"
+      ]
+    },
+    {
+      "nid": 20,
+      "page_file": "0020-steven-gray.html",
+      "title": "Steven Gray",
+      "aliases": [
+        "StevenGray"
+      ]
+    },
+    {
+      "nid": 21,
+      "page_file": "0021-kalin-gochev.html",
+      "title": "Kalin Gochev",
+      "aliases": [
+        "KalinGochev"
+      ]
+    },
+    {
+      "nid": 22,
+      "page_file": "0022-bradford-neuman.html",
+      "title": "Bradford Neuman",
+      "aliases": [
+        "BradfordNeuman"
+      ]
+    },
+    {
+      "nid": 23,
+      "page_file": "0023-aline-normoyle.html",
+      "title": "Aline Normoyle",
+      "aliases": [
+        "AlineNormoyle"
+      ]
+    },
+    {
+      "nid": 24,
+      "page_file": "0024-mike-phillips.html",
+      "title": "Mike Phillips",
+      "aliases": [
+        "MikePhillips"
+      ]
+    },
+    {
+      "nid": 25,
+      "page_file": "0025-venkatraman-narayanan.html",
+      "title": "Venkatraman Narayanan",
+      "aliases": [
+        "VenkatramanNarayanan"
+      ]
+    },
+    {
+      "nid": 26,
+      "page_file": "0026-alex-kushleyev.html",
+      "title": "Alex Kushleyev",
+      "aliases": [
+        "AlexKushleyev"
+      ]
+    },
+    {
+      "nid": 27,
+      "page_file": "0027-harsh-pandey.html",
+      "title": "Harsh Pandey",
+      "aliases": [
+        "HarshPandey"
+      ]
+    },
+    {
+      "nid": 28,
+      "page_file": "0028-kavan-mceachern.html",
+      "title": "Kavan McEachern",
+      "aliases": [
+        "KavanMcEachern"
+      ]
+    },
+    {
+      "nid": 29,
+      "page_file": "0029-matthew-mac-allister.html",
+      "title": "Matthew Mac Allister",
+      "aliases": [
+        "MatthewMacAllister"
+      ]
+    },
+    {
+      "nid": 30,
+      "page_file": "0030-contact.html",
+      "title": "Contact",
+      "aliases": [
+        "Contact"
+      ]
+    },
+    {
+      "nid": 31,
+      "page_file": "0031-login.html",
+      "title": "Login",
+      "aliases": [
+        "Login"
+      ]
+    },
+    {
+      "nid": 32,
+      "page_file": "0032-software.html",
+      "title": "Software",
+      "aliases": [
+        "Software"
+      ]
+    },
+    {
+      "nid": 33,
+      "page_file": "0033-untitled-33.html",
+      "title": "",
+      "aliases": [
+        "Files"
+      ]
+    },
+    {
+      "nid": 39,
+      "page_file": "0039-eduardo-barrera.html",
+      "title": "Eduardo Barrera",
+      "aliases": [
+        "EduardoBarrera"
+      ]
+    },
+    {
+      "nid": 42,
+      "page_file": "0042-old-software.html",
+      "title": "Old Software",
+      "aliases": [
+        "OldSoftwarePage"
+      ]
+    },
+    {
+      "nid": 43,
+      "page_file": "0043-sandip-aine.html",
+      "title": "Sandip Aine",
+      "aliases": [
+        "SandipAine"
+      ]
+    },
+    {
+      "nid": 44,
+      "page_file": "0044-calendar.html",
+      "title": "Calendar",
+      "aliases": [
+        "Calender"
+      ]
+    },
+    {
+      "nid": 45,
+      "page_file": "0045-tutorials.html",
+      "title": "Tutorials",
+      "aliases": [
+        "Tutorials"
+      ]
+    },
+    {
+      "nid": 55,
+      "page_file": "0055-arm-planning.html",
+      "title": "Arm Planning",
+      "aliases": [
+        "sbpl_arm_planning"
+      ]
+    },
+    {
+      "nid": 56,
+      "page_file": "0056-aram-ebtekar.html",
+      "title": "Aram Ebtekar",
+      "aliases": [
+        "Aram Ebtekar"
+      ]
+    },
+    {
+      "nid": 57,
+      "page_file": "0057-kush-prasad.html",
+      "title": "Kush Prasad",
+      "aliases": [
+        "Kush Prasad"
+      ]
+    },
+    {
+      "nid": 58,
+      "page_file": "0058-sung-kyun-kim.html",
+      "title": "Sung-Kyun Kim",
+      "aliases": [
+        "Sung-Kyun Kim"
+      ]
+    },
+    {
+      "nid": 59,
+      "page_file": "0059-soonkyum-kim.html",
+      "title": "Soonkyum Kim",
+      "aliases": [
+        "Soonkyum Kim"
+      ]
+    },
+    {
+      "nid": 60,
+      "page_file": "0060-siddharth-swaminathan.html",
+      "title": "Siddharth Swaminathan",
+      "aliases": [
+        "Siddharth Swaminathan"
+      ]
+    },
+    {
+      "nid": 61,
+      "page_file": "0061-chen-gao.html",
+      "title": "Chen Gao",
+      "aliases": [
+        "Chen Gao"
+      ]
+    },
+    {
+      "nid": 62,
+      "page_file": "0062-ellis-ratner.html",
+      "title": "Ellis Ratner",
+      "aliases": [
+        "Ellis Ratner"
+      ]
+    },
+    {
+      "nid": 63,
+      "page_file": "0063-krishna-sapkota.html",
+      "title": "Krishna Sapkota",
+      "aliases": [
+        "Krishna Sapkota"
+      ]
+    },
+    {
+      "nid": 64,
+      "page_file": "0064-burak-yucesoy.html",
+      "title": "Burak Yucesoy",
+      "aliases": [
+        "Burak Yucesoy"
+      ]
+    },
+    {
+      "nid": 65,
+      "page_file": "0065-arjun-menon.html",
+      "title": "Arjun Menon",
+      "aliases": [
+        "Arjun Menon"
+      ]
+    },
+    {
+      "nid": 66,
+      "page_file": "0066-hao-wang.html",
+      "title": "Hao Wang",
+      "aliases": [
+        "Hao Wang"
+      ]
+    },
+    {
+      "nid": 67,
+      "page_file": "0067-victor-hwang.html",
+      "title": "Victor Hwang",
+      "aliases": [
+        "Victor Hwang"
+      ]
+    },
+    {
+      "nid": 68,
+      "page_file": "0068-margarite-safonova.html",
+      "title": "Margarite Safonova",
+      "aliases": [
+        "Margarite Safonova"
+      ]
+    },
+    {
+      "nid": 69,
+      "page_file": "0069-discriminatively-guided-deliberative-perception-for-pose-estimation-of-multiple-3d-object-instances.html",
+      "title": "Discriminatively-guided Deliberative Perception for Pose Estimation of Multiple 3D Object Instances",
+      "aliases": [
+        "Software/d2p"
+      ]
+    }
+  ],
+  "non_node_aliases": [],
+  "all": [
+    {
+      "pid": 1,
+      "source": "node/13",
+      "alias": "BenCohen",
+      "language": "und"
+    },
+    {
+      "pid": 2,
+      "source": "node/14",
+      "alias": "BrianMacAllister",
+      "language": "und"
+    },
+    {
+      "pid": 3,
+      "source": "node/15",
+      "alias": "AndrewDornbush",
+      "language": "und"
+    },
+    {
+      "pid": 4,
+      "source": "node/16",
+      "alias": "SubhrajitBhattacharya",
+      "language": "und"
+    },
+    {
+      "pid": 5,
+      "source": "node/17",
+      "alias": "JonathanButzke",
+      "language": "und"
+    },
+    {
+      "pid": 6,
+      "source": "node/18",
+      "alias": "ChrisClingerman",
+      "language": "und"
+    },
+    {
+      "pid": 7,
+      "source": "node/19",
+      "alias": "JohnDrake",
+      "language": "und"
+    },
+    {
+      "pid": 8,
+      "source": "node/20",
+      "alias": "StevenGray",
+      "language": "und"
+    },
+    {
+      "pid": 9,
+      "source": "node/21",
+      "alias": "KalinGochev",
+      "language": "und"
+    },
+    {
+      "pid": 10,
+      "source": "node/22",
+      "alias": "BradfordNeuman",
+      "language": "und"
+    },
+    {
+      "pid": 11,
+      "source": "node/23",
+      "alias": "AlineNormoyle",
+      "language": "und"
+    },
+    {
+      "pid": 12,
+      "source": "node/24",
+      "alias": "MikePhillips",
+      "language": "und"
+    },
+    {
+      "pid": 13,
+      "source": "node/25",
+      "alias": "VenkatramanNarayanan",
+      "language": "und"
+    },
+    {
+      "pid": 14,
+      "source": "node/26",
+      "alias": "AlexKushleyev",
+      "language": "und"
+    },
+    {
+      "pid": 15,
+      "source": "node/27",
+      "alias": "HarshPandey",
+      "language": "und"
+    },
+    {
+      "pid": 16,
+      "source": "node/28",
+      "alias": "KavanMcEachern",
+      "language": "und"
+    },
+    {
+      "pid": 17,
+      "source": "node/29",
+      "alias": "MatthewMacAllister",
+      "language": "und"
+    },
+    {
+      "pid": 18,
+      "source": "node/31",
+      "alias": "Login",
+      "language": "und"
+    },
+    {
+      "pid": 22,
+      "source": "node/30",
+      "alias": "Contact",
+      "language": "und"
+    },
+    {
+      "pid": 23,
+      "source": "node/10",
+      "alias": "Publications",
+      "language": "und"
+    },
+    {
+      "pid": 24,
+      "source": "node/3",
+      "alias": "People",
+      "language": "und"
+    },
+    {
+      "pid": 25,
+      "source": "node/11",
+      "alias": "Videos",
+      "language": "und"
+    },
+    {
+      "pid": 26,
+      "source": "node/32",
+      "alias": "Software",
+      "language": "und"
+    },
+    {
+      "pid": 27,
+      "source": "node/33",
+      "alias": "Files",
+      "language": "und"
+    },
+    {
+      "pid": 28,
+      "source": "node/12",
+      "alias": "Robots",
+      "language": "und"
+    },
+    {
+      "pid": 29,
+      "source": "node/9",
+      "alias": "Home",
+      "language": "und"
+    },
+    {
+      "pid": 32,
+      "source": "node/39",
+      "alias": "EduardoBarrera",
+      "language": "und"
+    },
+    {
+      "pid": 34,
+      "source": "node/42",
+      "alias": "OldSoftwarePage",
+      "language": "und"
+    },
+    {
+      "pid": 35,
+      "source": "node/43",
+      "alias": "SandipAine",
+      "language": "und"
+    },
+    {
+      "pid": 36,
+      "source": "node/44",
+      "alias": "Calender",
+      "language": "und"
+    },
+    {
+      "pid": 37,
+      "source": "node/45",
+      "alias": "Tutorials",
+      "language": "und"
+    },
+    {
+      "pid": 38,
+      "source": "node/55",
+      "alias": "sbpl_arm_planning",
+      "language": "und"
+    },
+    {
+      "pid": 39,
+      "source": "node/56",
+      "alias": "Aram Ebtekar",
+      "language": "und"
+    },
+    {
+      "pid": 40,
+      "source": "node/57",
+      "alias": "Kush Prasad",
+      "language": "und"
+    },
+    {
+      "pid": 41,
+      "source": "node/58",
+      "alias": "Sung-Kyun Kim",
+      "language": "und"
+    },
+    {
+      "pid": 42,
+      "source": "node/59",
+      "alias": "Soonkyum Kim",
+      "language": "und"
+    },
+    {
+      "pid": 43,
+      "source": "node/60",
+      "alias": "Siddharth Swaminathan",
+      "language": "und"
+    },
+    {
+      "pid": 44,
+      "source": "node/61",
+      "alias": "Chen Gao",
+      "language": "und"
+    },
+    {
+      "pid": 45,
+      "source": "node/62",
+      "alias": "Ellis Ratner",
+      "language": "und"
+    },
+    {
+      "pid": 46,
+      "source": "node/63",
+      "alias": "Krishna Sapkota",
+      "language": "und"
+    },
+    {
+      "pid": 47,
+      "source": "node/64",
+      "alias": "Burak Yucesoy",
+      "language": "und"
+    },
+    {
+      "pid": 48,
+      "source": "node/65",
+      "alias": "Arjun Menon",
+      "language": "und"
+    },
+    {
+      "pid": 49,
+      "source": "node/66",
+      "alias": "Hao Wang",
+      "language": "und"
+    },
+    {
+      "pid": 50,
+      "source": "node/67",
+      "alias": "Victor Hwang",
+      "language": "und"
+    },
+    {
+      "pid": 51,
+      "source": "node/68",
+      "alias": "Margarite Safonova",
+      "language": "und"
+    },
+    {
+      "pid": 52,
+      "source": "node/69",
+      "alias": "Software/d2p",
+      "language": "und"
+    }
+  ]
+}

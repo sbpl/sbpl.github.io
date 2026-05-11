@@ -1,0 +1,222 @@
+[
+  {
+    "format": "filtered_html",
+    "name": "Filtered HTML",
+    "status": 1,
+    "cache": 1,
+    "weight": 0,
+    "filters": [
+      {
+        "format": "filtered_html",
+        "module": "filter",
+        "name": "filter_html_escape",
+        "weight": -10,
+        "status": 0,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "filtered_html",
+        "module": "filter",
+        "name": "filter_url",
+        "weight": 0,
+        "status": 1,
+        "settings": "a:1:{s:17:\"filter_url_length\";i:72;}"
+      },
+      {
+        "format": "filtered_html",
+        "module": "filter",
+        "name": "filter_html",
+        "weight": 1,
+        "status": 1,
+        "settings": "a:3:{s:12:\"allowed_html\";s:74:\"<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>\";s:16:\"filter_html_help\";i:1;s:20:\"filter_html_nofollow\";i:0;}"
+      },
+      {
+        "format": "filtered_html",
+        "module": "filter",
+        "name": "filter_autop",
+        "weight": 2,
+        "status": 1,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "filtered_html",
+        "module": "filter",
+        "name": "filter_htmlcorrector",
+        "weight": 10,
+        "status": 1,
+        "settings": "a:0:{}"
+      }
+    ]
+  },
+  {
+    "format": "full_html",
+    "name": "Full HTML",
+    "status": 1,
+    "cache": 1,
+    "weight": 1,
+    "filters": [
+      {
+        "format": "full_html",
+        "module": "filter",
+        "name": "filter_html",
+        "weight": -50,
+        "status": 0,
+        "settings": "a:3:{s:12:\"allowed_html\";s:74:\"<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>\";s:16:\"filter_html_help\";i:1;s:20:\"filter_html_nofollow\";i:0;}"
+      },
+      {
+        "format": "full_html",
+        "module": "filter",
+        "name": "filter_html_escape",
+        "weight": -49,
+        "status": 0,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "full_html",
+        "module": "php",
+        "name": "php_code",
+        "weight": -48,
+        "status": 0,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "full_html",
+        "module": "filter",
+        "name": "filter_url",
+        "weight": -47,
+        "status": 1,
+        "settings": "a:1:{s:17:\"filter_url_length\";s:2:\"72\";}"
+      },
+      {
+        "format": "full_html",
+        "module": "image_resize_filter",
+        "name": "image_resize_filter",
+        "weight": -46,
+        "status": 1,
+        "settings": "a:4:{s:4:\"link\";i:1;s:10:\"link_class\";s:0:\"\";s:8:\"link_rel\";s:0:\"\";s:15:\"image_locations\";a:2:{s:5:\"local\";s:5:\"local\";s:6:\"remote\";i:0;}}"
+      },
+      {
+        "format": "full_html",
+        "module": "filter",
+        "name": "filter_autop",
+        "weight": -45,
+        "status": 0,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "full_html",
+        "module": "filter",
+        "name": "filter_htmlcorrector",
+        "weight": -44,
+        "status": 0,
+        "settings": "a:0:{}"
+      }
+    ]
+  },
+  {
+    "format": "plain_text",
+    "name": "Plain text",
+    "status": 1,
+    "cache": 1,
+    "weight": 10,
+    "filters": [
+      {
+        "format": "plain_text",
+        "module": "filter",
+        "name": "filter_html",
+        "weight": -10,
+        "status": 0,
+        "settings": "a:3:{s:12:\"allowed_html\";s:74:\"<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>\";s:16:\"filter_html_help\";i:1;s:20:\"filter_html_nofollow\";i:0;}"
+      },
+      {
+        "format": "plain_text",
+        "module": "filter",
+        "name": "filter_html_escape",
+        "weight": 0,
+        "status": 1,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "plain_text",
+        "module": "filter",
+        "name": "filter_url",
+        "weight": 1,
+        "status": 1,
+        "settings": "a:1:{s:17:\"filter_url_length\";i:72;}"
+      },
+      {
+        "format": "plain_text",
+        "module": "filter",
+        "name": "filter_autop",
+        "weight": 2,
+        "status": 1,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "plain_text",
+        "module": "filter",
+        "name": "filter_htmlcorrector",
+        "weight": 10,
+        "status": 0,
+        "settings": "a:0:{}"
+      }
+    ]
+  },
+  {
+    "format": "php_code",
+    "name": "PHP code",
+    "status": 1,
+    "cache": 0,
+    "weight": 11,
+    "filters": [
+      {
+        "format": "php_code",
+        "module": "filter",
+        "name": "filter_html",
+        "weight": -10,
+        "status": 0,
+        "settings": "a:3:{s:12:\"allowed_html\";s:74:\"<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>\";s:16:\"filter_html_help\";i:1;s:20:\"filter_html_nofollow\";i:0;}"
+      },
+      {
+        "format": "php_code",
+        "module": "filter",
+        "name": "filter_html_escape",
+        "weight": -10,
+        "status": 0,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "php_code",
+        "module": "filter",
+        "name": "filter_autop",
+        "weight": 0,
+        "status": 0,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "php_code",
+        "module": "filter",
+        "name": "filter_url",
+        "weight": 0,
+        "status": 0,
+        "settings": "a:1:{s:17:\"filter_url_length\";s:2:\"72\";}"
+      },
+      {
+        "format": "php_code",
+        "module": "php",
+        "name": "php_code",
+        "weight": 0,
+        "status": 1,
+        "settings": "a:0:{}"
+      },
+      {
+        "format": "php_code",
+        "module": "filter",
+        "name": "filter_htmlcorrector",
+        "weight": 10,
+        "status": 0,
+        "settings": "a:0:{}"
+      }
+    ]
+  }
+]

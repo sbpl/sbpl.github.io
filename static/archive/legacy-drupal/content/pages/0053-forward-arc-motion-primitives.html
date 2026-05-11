@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Forward Arc Motion Primitives</title></head>
+<body>
+<h1>Forward Arc Motion Primitives</h1>
+<style type="text/css">
+.cmr-10x-x-109{}
+.cmr-17{font-size:154%;}
+.cmr-12{font-size:109%;}
+.cmr-8{font-size:72%;}
+.cmr-6{font-size:54%;}
+.cmmi-8{font-size:72%;font-style: italic;}
+.cmmi-6{font-size:54%;font-style: italic;}
+.cmsy-8{font-size:72%;}
+.cmsy-6{font-size:54%;}
+.cmmi-10x-x-109{font-style: italic;}
+.cmsy-10x-x-109{}
+.cmex-10x-x-109{}
+.cmr-9{font-size:81%;}
+.cmmi-9{font-size:81%;font-style: italic;}
+.cmsy-9{font-size:81%;}
+.cmbx-10x-x-109{ font-weight: bold;}
+.cmtt-9{font-size:81%;font-family: monospace;}
+.cmtt-9{font-family: monospace;}
+.cmtt-9{font-family: monospace;}
+.cmtt-8x-x-75{font-size:54%;font-family: monospace;}
+.cmtt-8x-x-75{font-family: monospace;}
+.cmtt-8x-x-75{font-family: monospace;}
+.cmmib-10x-x-109{font-style: italic; font-weight: bold;}
+.cmtt-8{font-size:72%;font-family: monospace;}
+.cmtt-8{font-family: monospace;}
+.cmtt-8{font-family: monospace;}
+p.noindent { text-indent: 0em; }
+td p.noindent { text-indent: 0em; margin-top:0em; }
+p.nopar { text-indent: 0em; }
+p.indent{ text-indent: 1.5em }
+@media print {div.crosslinks {visibility:hidden;}}
+a img { border-top: 0; border-left: 0; border-right: 0; }
+center { margin-top:1em; margin-bottom:1em; }
+td center { margin-top:0em; margin-bottom:0em; }
+.Canvas { position:relative; }
+img.math{vertical-align:middle;}
+li p.indent { text-indent: 0em }
+li p:first-child{ margin-top:0em; }
+li p:last-child, li div:last-child { margin-bottom:0.5em; }
+li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+.enumerate1 {list-style-type:decimal;}
+.enumerate2 {list-style-type:lower-alpha;}
+.enumerate3 {list-style-type:lower-roman;}
+.enumerate4 {list-style-type:upper-alpha;}
+div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+.obeylines-h,.obeylines-v {white-space: nowrap; }
+div.obeylines-v p { margin-top:0; margin-bottom:0; }
+.overline{ text-decoration:overline; }
+.overline img{ border-top: 1px solid black; }
+td.displaylines {text-align:center; white-space:nowrap;}
+.centerline {text-align:center;}
+.rightline {text-align:right;}
+div.verbatim {font-family: monospace; white-space: nowrap; text-align:left; clear:both; }
+.fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+div.fbox {display:table}
+div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+div.minipage{width:100%;}
+div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+div.center div {text-align: left;}
+div.flushright, div.flushright div.flushright {text-align: right;}
+div.flushright div {text-align: left;}
+div.flushleft {text-align: left;}
+.underline{ text-decoration:underline; }
+.underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+.framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.framebox-c {text-align:center;}
+.framebox-l {text-align:left;}
+.framebox-r {text-align:right;}
+span.thank-mark{ vertical-align: super }
+span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+table.tabular td p{margin-top:0em;}
+table.tabular {margin-left: auto; margin-right: auto;}
+td p:first-child{ margin-top:0em; }
+td p:last-child{ margin-bottom:0em; }
+div.td00{ margin-left:0pt; margin-right:0pt; }
+div.td01{ margin-left:0pt; margin-right:5pt; }
+div.td10{ margin-left:5pt; margin-right:0pt; }
+div.td11{ margin-left:5pt; margin-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+td.td00{ padding-left:0pt; padding-right:0pt; }
+td.td01{ padding-left:0pt; padding-right:5pt; }
+td.td10{ padding-left:5pt; padding-right:0pt; }
+td.td11{ padding-left:5pt; padding-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.hline hr, .cline hr{ height : 1px; margin:0px; }
+.tabbing-right {text-align:right;}
+span.TEX {letter-spacing: -0.125em; }
+span.TEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
+a span.TEX span.E {text-decoration: none; }
+span.LATEX span.A{ position:relative; top:-0.5ex; left:-0.4em; font-size:85%;}
+span.LATEX span.TEX{ position:relative; left: -0.4em; }
+div.float, div.figure {margin-left: auto; margin-right: auto;}
+div.float img {text-align:center;}
+div.figure img {text-align:center;}
+.marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+.marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+table.equation {width:100%;}
+.equation td{text-align:center; }
+td.equation { margin-top:1em; margin-bottom:1em; } 
+td.equation-label { width:5%; text-align:center; }
+td.eqnarray4 { width:5%; white-space: normal; }
+td.eqnarray2 { width:5%; }
+table.eqnarray-star, table.eqnarray {width:100%;}
+div.eqnarray{text-align:center;}
+div.array {text-align:center;}
+div.pmatrix {text-align:center;}
+table.pmatrix {width:100%;}
+span.pmatrix img{vertical-align:middle;}
+div.pmatrix {text-align:center;}
+table.pmatrix {width:100%;}
+span.bar-css {text-decoration:overline;}
+img.cdots{vertical-align:middle;}
+.partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+.index-item, .index-subitem, .index-subsubitem {display:block}
+div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+div.caption span.id{font-weight: bold; white-space: nowrap; }
+h1.partHead{text-align: center}
+p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+.paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+.subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+.quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
+.verse{white-space:nowrap; margin-left:2em}
+div.maketitle {text-align:center;}
+h2.titleHead{text-align:center;}
+div.maketitle{ margin-bottom: 2em; }
+div.author, div.date {text-align:center;}
+div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+div.author{white-space: nowrap;}
+.quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
+.abstract p {margin-left:5%; margin-right:5%;}
+div.abstract {width:100%;}
+.equation td{text-align:center; }
+.equation-star td{text-align:center; }
+table.equation-star { width:100%; }
+table.equation { width:100%; }
+table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:100%; margin-left:5%; white-space: nowrap;}
+table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
+td.align-label { width:5%; text-align:center; }
+td.align-odd { text-align:right; padding-right:0.3em;}
+td.align-even { text-align:left; padding-right:0.6em;}
+table.multline, table.multline-star {width:100%;}
+td.gather {text-align:center; }
+table.gather {width:100%;}
+div.gather-star {text-align:center;}
+dt.enumerate-enumitem{float:left; clear:left; margin-left:1em; margin-right:1em;}
+.figure img.graphics {margin-left:10%;}
+span.textso{letter-spacing: 0.3em; word-spacing: 0.3em}
+span.textul{text-decoration:underline}
+span.textst{text-decoration:line-through}
+span.textcaps{font-variant:small-caps}</style>
+<p>&nbsp;</p>
+<div class="maketitle">
+	<h2 class="titleHead">
+		SBPL Forward-Turn-Arc Motion Primitive Generation</h2>
+	<div class="author">
+		(Margarita Safonova)</div>
+</div>
+<!--l. 28-->
+<p class="noindent">SBPL Lattice Planner generates a path from start to goal by combining a series of pre-defined motion primitives. SBPL provides several matlab scripts that can be used to build motion primitives for different types of vehicles. For example, the matlab script named <span class="cmmi-10x-x-109">genmprim</span>_<span class="cmmi-10x-x-109">unicycle.m</span> constructs forward, backward, turn-in-place, and forward-turn-arc motion primitives for a unicycle robot in the 3D state space (<span class="cmmi-10x-x-109">x,y,&theta;</span>). In this tutorial we describe how the <span class="cmmi-10x-x-109">genmprim</span>_<span class="cmmi-10x-x-109">unicycle.m </span>script calculates the forward-turn-arc motion primitive given the start and the end poses.</p>
+<h3 class="sectionHead">
+	<strong><span class="titlemark">1 </span> Introduction</strong></h3>
+<!--l. 35-->
+<p class="noindent">The task of the SBPL Lattice Planner is to generate a smooth kinematically feasible trajectory or path, that a robot can safely follow to reach its goal pose. This trajectory is represented as a series of connected states in a lattice-based graph constructed using motion primitives and efficient search algorithms. A lattice-based graph is a graph constructed using short motion primitives as edges that end up at the center of cells. Motion primitives are short, kinematically feasible motions which form the basis of movements that can be performed by the robot platform. <!--l. 42--></p>
+<p class="noindent">Figure 1 shows the base set of motion primitives used by the planner (<span class="cmmi-10x-x-109">left</span>), the lattice-based graph construction process (<span class="cmmi-10x-x-109">middle</span>), and the final generated path (<span class="cmmi-10x-x-109">right</span>). Each state is represented in the 3D space by a pose with two-dimensional coordinates (<span class="cmmi-10x-x-109">x,y</span>) and orientation <span class="cmmi-10x-x-109">&theta;</span>. <!--l. 45--></p>
+<p class="indent">&nbsp;</p>
+<hr class="figure" />
+<div class="figure">
+	<!--l. 47-->
+	<p class="no"><img alt="PIC" class="displayed" src="../../media/images/PathGen.jpg" style="width: 920px; height: 239px;" /></p>
+	<div class="caption">
+		<span class="id">Figure&nbsp;1: </span><span class="content"><span class="cmr-9">Lattice-based graph representation for 3</span><span class="cmmi-9">D</span><span class="cmr-9">(</span><span class="cmmi-9">x,y,&theta;</span><span class="cmr-9">) planning.</span></span></div>
+	<!--tex4ht:label?: x1-10011 --><!--l. 52-->
+	<p class="indent">&nbsp;</p>
+</div>
+<hr class="endfigure" />
+<!--l. 54-->
+<p class="noindent">The <span class="cmmi-10x-x-109">genmprim</span>_<span class="cmmi-10x-x-109">unicycle.m </span>matlab script constructs a set of motion primitives that enable a robot to move straight forward, straight backward, turn in place by a certain angle and move forward and turn by a certain angle.&nbsp; The script generates primitives for a discrete set of turning angles <span class="cmmi-10x-x-109">&phi;</span>, varying from 0 to 2<span class="cmmi-10x-x-109">&pi; </span>radians. The set of primitives generated for each turning angle <span class="cmmi-10x-x-109">&phi; </span>can include two forward primitives (short and long), one backward primitive (short), two turn in place primitives (clockwise and counterclockwise) and two forward-turn-arc primitives (clockwise and counterclockwise). All motion primitives share the same starting point (<span class="cmmi-10x-x-109">x </span>= 0<span class="cmmi-10x-x-109">, y </span>= 0), but have different starting orientations. Motion primitives within the same set have the same starting orientation (<span class="cmmi-10x-x-109">&theta; </span>= <span class="cmmi-10x-x-109">&phi;</span>) equal to the turning angle of the set. Each individual motion primitive is defined by its type, its start pose, its end pose and contains a dense sequence of poses forming a trajectory in the 3D space (<span class="cmmi-10x-x-109">x,y,&theta;</span>). The matlab script writes all generated primitive trajectories into a file. This file is later used by the SBPL Lattice Planner to generate trajectories.</p>
+<h3 class="sectionHead">
+	<strong><span class="titlemark">2 </span> Matlab Script Description</strong></h3>
+<!--l. 65-->
+<p class="noindent">The matlab script uses several configurable parameters:</p>
+<dl class="description">
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(a)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">outfilename </span><span class="cmr-9">- name of the file (usually with extention .mprim) where generated set of motion</span> <span class="cmr-9">primitives is saved. This parameter is required and must be passed to the script as an argument.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(b)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">resolution </span><span class="cmr-9">- cell size of the (</span><span class="cmmi-9">x,y</span><span class="cmr-9">) grid in meters (0.1 by default).</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(c)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">numberofangles </span><span class="cmr-9">- number of discrete angles per circle (16 by default). This number preferably</span> <span class="cmr-9">should be a power of 2 and definitely should be multiple of 8. This parameter determines </span><span class="cmmi-9">the</span> <span class="cmmi-9">base turning angle </span><span class="cmr-9">calculated as </span><span class="cmmi-9">&delta; </span><span class="cmr-9">=</span> <img align="middle" alt="numbe2roπfangles" class="frac" src="../../media/images/LatextDoc10x.png" /> <span class="cmr-9">and the set of turning angles as</span> <span class="cmmi-9">&phi; </span><span class="cmr-9">= </span><span class="cmmi-9">k&delta;</span><span class="cmr-9">, where</span> <span class="cmr-9">0 </span><span class="cmsy-9">&le; </span><span class="cmmi-9">k </span><span class="cmsy-9">&le; </span><span class="cmtt-9">numberofangles</span><span class="cmsy-9">&minus;</span><span class="cmr-9">1.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(d)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">numberofprimsperangle </span><span class="cmr-9">- number of primitives per set (5 by default). By default turn in place</span> <span class="cmr-9">primitives are not generated. To add them set this parameter to 7.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(e)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">numofsamples </span><span class="cmr-9">- number of discrete points on each primitive trajectory (10 by default).</span></dd>
+</dl>
+<!--l. 77-->
+<p class="noindent">The turning angle of the motion primitive set (<span class="cmmi-10x-x-109">&phi;</span>) and the base turning angle (<span class="cmmi-10x-x-109">&delta;</span>) together define the orientation (<span class="cmmi-10x-x-109">&theta;</span>) of the end pose for each motion primitive in the set:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="θ = φ + nδ,    where     n ∈ { − 1,0,1}" class="math-display" src="../../media/images/LatextDoc11x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(1)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 87-->
+<p class="nopar"><!--l. 89--></p>
+<p class="noindent">The script defines a set of end poses for a subset of starting angles in the first quadrant.&nbsp; These form the basis for all motion primitives that are generated for a discrete set of angles.</p>
+<dl class="description">
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(a)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">basemprimendpts0</span><span class="cmtt-9">_c </span><span class="cmr-9">- the array of end poses for the starting angle </span><span class="cmmi-9">&phi; </span><span class="cmr-9">= 0</span><sup><span class="cmsy-6">∘</span></sup>.</dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(b)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">basemprimendpts45</span><span class="cmtt-9">_c </span><span class="cmr-9">- the array of end poses for the starting angle </span><span class="cmmi-9">&phi; </span><span class="cmr-9">= 45</span><sup><span class="cmsy-6">∘</span></sup><span class="cmr-9">.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(c)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">basemprimendpts22p5</span><span class="cmtt-9">_c </span><span class="cmr-9">- the array of end poses for the starting angle </span><span class="cmmi-9">&phi; </span><span class="cmr-9">= 22</span><span class="cmmi-9">.</span><span class="cmr-9">5</span><sup><span class="cmsy-6">∘</span></sup><span class="cmr-9">.</span></dd>
+</dl>
+<!--l. 96-->
+<p class="noindent">In the script, each of these arrays of end poses is defined as an array of four-dimensional vectors (<span class="cmmi-10x-x-109">i,j,n,</span><span class="cmtt-9">costmultiplier</span>), where <span class="cmmi-10x-x-109">i </span>and <span class="cmmi-10x-x-109">j </span>specify <span class="cmmi-10x-x-109">x </span>and <span class="cmmi-10x-x-109">y </span>coordinates of the end pose in grid units (<span class="cmmi-10x-x-109">x </span>= <span class="cmmi-10x-x-109">i</span><span class="cmsy-10x-x-109">&lowast;</span><span class="cmtt-9">resolution</span>, <span class="cmmi-10x-x-109">y </span>= <span class="cmmi-10x-x-109">j</span><span class="cmsy-10x-x-109">&lowast;</span><span class="cmtt-9">resolution</span>), <span class="cmmi-10x-x-109">n </span>determines the orientation of the end pose (see &nbsp;(1<!--tex4ht:ref: eq:1 -->)) and <span class="cmtt-9">costmultiplier </span>is a cost multiplier value used by the SBPL Lattice Planner to penalize certain types of motion primitives. <!--l. 101--></p>
+<p class="noindent">It is important for each motion primitive to start and end exactly in the center of a grid cell to avoid having discontinuities in the path generated by the lattice planner. (As an implementation detail, the matlab script actually generates primitives that start and end at the corners of grid cells. The planner then shifts motion primitive trajectories by 0<span class="cmmi-10x-x-109">.</span>5<span class="cmsy-10x-x-109">&lowast;</span><span class="cmtt-9">resolution </span>in each direction to move their start/end points to the centers of the grid cells.) <!--l. 105--></p>
+<p class="noindent">The rest of motion primitives are constructed as a result of symmetrical rotation of one of the base primitives around the origin by a certain angle which is a multiple of the base turning angle (<span class="cmmi-10x-x-109">&delta;</span>). The disposition of the end pose relative to the origin determines the shape, the length and the turning angle of the primitive. By specifying appropriate end pose and base turning angle, we can control the kinematic feasibility of motion primitives. <!--l. 110--></p>
+<p class="noindent">In each set, the forward and backward primitives have fixed orientation and are represented by simple straight line segments. The two turn in place primitives have (<span class="cmmi-10x-x-109">x,y</span>) coordinates of the end pose equal to (<span class="cmmi-10x-x-109">x,y</span>) coordinates of the start pose, and simply demonstrate change in the orientation. The two forward-turn-arc primitives have ending orientations symmetrical with respect to the forward primitive: <span class="cmmi-10x-x-109">&theta;</span><sub><span class="cmr-8">1</span><span class="cmmi-8">,</span><span class="cmr-8">2</span></sub> = <span class="cmmi-10x-x-109">&phi; </span><span class="cmsy-10x-x-109">&plusmn; </span><span class="cmmi-10x-x-109">&delta;</span>. Due to the requirement to reach exactly the given end pose (<span class="cmmi-10x-x-109">x,y,&theta;</span>), each forward-turn-arc primitive is constructed as combination of two movements: a forward straight line segment followed by an arc of a circle. Figure 2 <!--tex4ht:ref: fig:2 -->illustrates the base set of motion primitives for turning angle <span class="cmmi-10x-x-109">&phi; </span>= 0<sup><span class="cmsy-8">∘</span></sup>. Figure 3 <!--tex4ht:ref: fig:3 -->displays the full set of motion primitives generated by the <span class="cmmi-10x-x-109">genmprim</span>_<span class="cmmi-10x-x-109">unicycle.m </span>matlab script. <!--l. 118--></p>
+<p class="noindent">The matlab scripts records information about all generated motion primitives into a file specified by <span class="cmtt-9">outfilename</span>. First it writes data related to all motion primitives:</p>
+<dl class="description">
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(a)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">resolution</span><span class="cmtt-9">_m </span><span class="cmr-9">- cell size of the (</span><span class="cmmi-9">x,y</span><span class="cmr-9">) grid in meters.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(b)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">numberofangles </span><span class="cmr-9">- number of discrete angles per circle.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(c)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">totalnumberofprimitives </span><span class="cmr-9">- total number of generated motion primitives.</span></dd>
+</dl>
+<!--l. 126-->
+<p class="noindent">Then in a loop, the scripts outputs information applicable to each individual motion primitive:</p>
+<dl class="description">
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(a)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">primID </span><span class="cmr-9">- unique identifier of the motion primitive.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(b)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">startangle</span><span class="cmtt-9">_c </span><span class="cmr-9">- starting orientation of the motion primitive (</span><span class="cmmi-9">&theta;</span><span class="cmr-9">).</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(c)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">endpose</span><span class="cmtt-9">_c </span><span class="cmr-9">- end pose of the motion primitive (</span><span class="cmmi-9">x,y,&theta;</span><span class="cmr-9">).</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(d)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">additionalactioncostmult </span><span class="cmr-9">- cost multiplier of the motion primitive.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(e)</span></dt>
+	<dd class="description">
+		<span class="cmtt-9">intermediateposes </span><span class="cmr-9">- number of generated poses for the motion primitive.</span></dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(f)</span></dt>
+	<dd class="description">
+		<span class="cmr-9">- list of actual intermediate poses generated for the motion primitive (</span><span class="cmmi-9">x,y,&theta;</span><span class="cmr-9">). Notice that these poses</span> <span class="cmr-9">are calculated with respect to the origin (0</span><span class="cmmi-9">, </span><span class="cmr-9">0), not the center of the grid cells.</span></dd>
+</dl>
+<!--l. 136-->
+<p class="indent">&nbsp;</p>
+<hr class="figure" />
+<div class="figure">
+	<!--l. 137-->
+	<p class="IMG class"><img alt="PIC" class="displayed" src="../../media/images/BasePrim.jpg" style="width: 980px; height: 592px;" /></p>
+	<div class="caption">
+		<span class="id">Figure&nbsp;2: </span><span class="content"><span class="cmr-9">Base set of motion primitives for turning angle </span><span class="cmmi-9">&phi; </span><span class="cmr-9">= 0</span><sup><span class="cmsy-6">∘</span></sup><span class="cmr-9">. Here 0 denotes forward and backward</span> <span class="cmr-9">straight motion primitives, 1 denotes the counterclockwise forward-turn-arc motion primitive with the</span> <span class="cmr-9">ending orientation</span> <span class="cmmi-9">&theta;</span><sub><span class="cmr-6">1</span></sub> <span class="cmr-9">= </span><span class="cmmi-9">&phi; </span><span class="cmr-9">+ </span><span class="cmmi-9">&delta; </span><span class="cmr-9">= 22</span><span class="cmmi-9">.</span><span class="cmr-9">5</span><sup><span class="cmsy-6">∘</span></sup><span class="cmr-9">, and </span><span class="cmsy-9">&minus;</span><span class="cmr-9">1 denotes the clockwise forward-turn-arc motion primitive</span> <span class="cmr-9">with the ending orientation</span> <span class="cmmi-9">&theta;</span><sub><span class="cmr-6">2</span></sub> <span class="cmr-9">= </span><span class="cmmi-9">&phi; </span><span class="cmsy-9">&minus; </span><span class="cmmi-9">&delta; </span><span class="cmr-9">= </span><span class="cmsy-9">&minus;</span><span class="cmr-9">22</span><span class="cmmi-9">.</span><span class="cmr-9">5</span><sup><span class="cmsy-6">∘</span></sup><span class="cmr-9">.</span></span></div>
+	<!--tex4ht:label?: x1-20022 --><!--l. 145-->
+	<p class="indent">&nbsp;</p>
+</div>
+<hr class="endfigure" />
+<!--l. 147-->
+<p class="indent">&nbsp;</p>
+<hr class="figure" />
+<div class="figure">
+	<!--l. 148-->
+	<p class="IMG"><img alt="PIC" class="displayed" src="../../media/images/MotionPrimitives.jpg" style="width: 980px; height: 591px;" /></p>
+	<div class="caption">
+		<span class="id">Figure&nbsp;3: </span><span class="content"><span class="cmr-9">Full set of motion primitives generated by the </span><span class="cmmi-9">genmprim</span><span class="cmr-9">_</span><span class="cmmi-9">unicycle.m </span><span class="cmr-9">matlab script for</span> <span class="cmr-9">turning angles </span><span class="cmmi-9">&phi; </span><span class="cmr-9">= </span><span class="cmmi-9">k&delta; </span><span class="cmr-9">where </span><span class="cmmi-9">k </span><span class="cmr-9">= 0</span><span class="cmmi-9">,</span><span class="cmmi-9">&hellip;</span><span class="cmmi-9">, </span><span class="cmr-9">15.</span></span></div>
+	<!--tex4ht:label?: x1-20033 --><!--l. 154-->
+	<p class="indent">&nbsp;</p>
+</div>
+<hr class="endfigure" />
+<h3 class="sectionHead">
+	<strong><span class="titlemark">3 </span> A forward-turn-arc motion primitive</strong></h3>
+<!--l. 157-->
+<p class="noindent">In the following sections we describe how to build a single forward-turn-arc motion primitive. The trajectory of this motion primitive must satisfy the following requirements: <!--l. 159--></p>
+<p class="indent">&nbsp;</p>
+<dl class="description">
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(a)</span></dt>
+	<dd class="description">
+		The robot moves from the start pose (<span class="cmmi-10x-x-109">x</span><sub><span class="cmr-8">0</span></sub><span class="cmmi-10x-x-109">,y</span><sub><span class="cmr-8">0</span></sub><span class="cmmi-10x-x-109">,&theta;</span><sub><span class="cmr-8">0</span></sub>) to the end (goal) pose (<span class="cmmi-10x-x-109">x</span><sub><span class="cmmi-8">g</span></sub><span class="cmmi-10x-x-109">,y</span><sub><span class="cmmi-8">g</span></sub><span class="cmmi-10x-x-109">,&theta;</span><sub><span class="cmmi-8">g</span></sub>) of the primitive with fixed rotational (<span class="cmmi-10x-x-109">&omega;</span>) and translational (<span class="cmmi-10x-x-109">v</span>) velocities.</dd>
+	<dt class="description">
+		&nbsp;</dt>
+	<dd class="description">
+		&nbsp;</dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(b)</span></dt>
+	<dd class="description">
+		The robots travels from the start pose to the goal pose during the time interval 0 <span class="cmsy-10x-x-109">&le; </span><span class="cmmi-10x-x-109">t </span><span class="cmsy-10x-x-109">&le; </span>1. For any arbitrary time interval <img alt="˜t" class="tilde" src="../../media/images/LatextDoc12x.png" /> <sub><span class="cmr-8">0</span></sub> <span class="cmsy-10x-x-109">&le;</span><img alt="˜t" class="tilde" src="../../media/images/LatextDoc13x.png" /> <span class="cmsy-10x-x-109">&le;</span><img alt="˜t" class="tilde" src="../../media/images/LatextDoc14x.png" /> <sub><span class="cmmi-8">g</span></sub> this can be achieved using the following parameter transformation: <span class="cmmi-10x-x-109">t </span>= <img align="middle" alt="˜t−˜t-Δ-0" class="frac" src="../../media/images/LatextDoc15x.png" />, <span class="cmmi-10x-x-109">v </span>= <img align="middle" alt="vΔ˜" class="frac" src="../../media/images/LatextDoc16x.png" />, <span class="cmmi-10x-x-109">&omega; </span>= <img align="middle" alt="Δ˜ω" class="frac" src="../../media/images/LatextDoc17x.png" />, &Delta; = <img alt="˜t" class="tilde" src="../../media/images/LatextDoc18x.png" /> <sub><span class="cmmi-8">g</span></sub> <span class="cmsy-10x-x-109">&minus;</span><img alt="˜t" class="tilde" src="../../media/images/LatextDoc19x.png" /> <sub><span class="cmr-8">0</span></sub>.</dd>
+	<dt class="description">
+		&nbsp;</dt>
+	<dd class="description">
+		&nbsp;</dd>
+	<dt class="description">
+		<span class="cmbx-10x-x-109">(c)</span></dt>
+	<dd class="description">
+		The trajectory of the primitive is a combination of the segment of the straight line for (0 <span class="cmsy-10x-x-109">&le; </span><span class="cmmi-10x-x-109">t </span><span class="cmsy-10x-x-109">&le; </span><span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>) followed by the arc of the circle of radius <span class="cmmi-10x-x-109">r </span>for (<span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub> <span class="cmsy-10x-x-109">&le; </span><span class="cmmi-10x-x-109">t </span><span class="cmsy-10x-x-109">&le; </span>1). The radius of the arc <span class="cmmi-10x-x-109">r </span>represents the robot&rsquo;s turning radius. Let <span class="cmmi-10x-x-109">l </span>denote the length of the straight line segment and (<span class="cmmi-10x-x-109">x</span><sub><span class="cmmi-8">l</span></sub><span class="cmmi-10x-x-109">,y</span><sub><span class="cmmi-8">l</span></sub><span class="cmmi-10x-x-109">,&theta;</span><sub><span class="cmmi-8">l</span></sub>) denote the start pose of the arc. Therefore, <span class="cmmi-10x-x-109">l </span>= <span class="cmmi-10x-x-109">s</span>(<span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>)<span class="cmmi-10x-x-109">,x</span><sub><span class="cmmi-8">l</span></sub> = <span class="cmmi-10x-x-109">x</span>(<span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>)<span class="cmmi-10x-x-109">,y</span><sub><span class="cmmi-8">l</span></sub> = <span class="cmmi-10x-x-109">y</span>(<span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>)<span class="cmmi-10x-x-109">,&theta;</span><sub><span class="cmmi-8">l</span></sub> = <span class="cmmi-10x-x-109">&theta;</span>(<span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>) = <span class="cmmi-10x-x-109">&theta;</span><sub><span class="cmr-8">0</span></sub>.</dd>
+</dl>
+<!--l. 178-->
+<p class="noindent">To build a motion primitive, we need to determine values of <span class="cmmi-10x-x-109">l,r,v,&omega; </span>and <span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>. <!--l. 182--></p>
+<p class="noindent">The length of the path, traveled by the robot at any given time, is <span class="cmmi-10x-x-109">s</span>(<span class="cmmi-10x-x-109">t</span>) = <span class="cmmi-10x-x-109">vt</span>. Specifically for <span class="cmmi-10x-x-109">t </span>= <span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>, <span class="cmmi-10x-x-109">l </span>= <span class="cmmi-10x-x-109">vt</span><sub><span class="cmmi-8">l</span></sub>. <!--l. 186--></p>
+<p class="noindent">When following the arc, the robot&rsquo;s turning angle at any given time is &Delta;<span class="cmmi-10x-x-109">&theta;</span>(<span class="cmmi-10x-x-109">t</span>) = <span class="cmmi-10x-x-109">&theta;</span>(<span class="cmmi-10x-x-109">t</span>) <span class="cmsy-10x-x-109">&minus; </span><span class="cmmi-10x-x-109">&theta;</span><sub><span class="cmr-8">0</span></sub> = <span class="cmmi-10x-x-109">&omega;</span>(<span class="cmmi-10x-x-109">t </span><span class="cmsy-10x-x-109">&minus; </span><span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>) and the length of the arc is <span class="cmmi-10x-x-109">s</span><sub><span class="cmmi-8">arc</span></sub>(<span class="cmmi-10x-x-109">t</span>) = <span class="cmmi-10x-x-109">r</span>&Delta;<span class="cmmi-10x-x-109">&theta;</span>(<span class="cmmi-10x-x-109">t</span>) = <span class="cmmi-10x-x-109">r&omega;</span>(<span class="cmmi-10x-x-109">t </span><span class="cmsy-10x-x-109">&minus; </span><span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>). From the latter, <span class="cmmi-10x-x-109">r </span>= <img align="middle" alt="sarc(t) t−tl" class="frac" src="../../media/images/LatextDoc110x.png" /><img align="middle" alt="1-ω" class="frac" src="../../media/images/LatextDoc111x.png" /> = <img align="middle" alt="v-ω" class="frac" src="../../media/images/LatextDoc112x.png" />. <!--l. 191--></p>
+<p class="noindent">Figure 4 displays the sample forward-turn-arc motion primitive trajectory. <!--l. 194--></p>
+<p class="indent">&nbsp;</p>
+<hr class="figure" />
+<div class="figure">
+	<!--l. 195-->
+	<p class="noindent"><img alt="PIC" class="displayed" src="../../media/images/fig1.jpg" style="width: 981px; height: 590px;" /></p>
+	<div class="caption">
+		<span class="id">Figure&nbsp;4: </span><span class="content"><span class="cmr-9">The sample forward-turn-arc motion primitive with</span> <span class="cmmi-9">x</span><sub><span class="cmr-6">0</span></sub> <span class="cmr-9">= 0</span><span class="cmmi-9">, y</span><sub><span class="cmr-6">0</span></sub> <span class="cmr-9">= 0</span><span class="cmmi-9">, &theta;</span><sub><span class="cmr-6">0</span></sub> <span class="cmr-9">= 0</span><span class="cmr-9">,</span> <span class="cmmi-9">x</span><sub><span class="cmmi-6">g</span></sub> <span class="cmr-9">= 15</span><span class="cmmi-9">, y</span><sub><span class="cmmi-6">g</span></sub> <span class="cmr-9">= 5</span><span class="cmmi-9">, &theta;</span><sub><span class="cmmi-6">g</span></sub> <span class="cmr-9">= 0</span><span class="cmmi-9">.</span><span class="cmr-9">93</span><span class="cmr-9">.</span></span></div>
+	<!--tex4ht:label?: x1-30014 --><!--l. 201-->
+	<p class="indent">&nbsp;</p>
+</div>
+<hr class="endfigure" />
+<h3 class="sectionHead">
+	<strong><span class="titlemark">4 </span> Straight Line Segment Of The Motion Primitive</strong></h3>
+<!--l. 205-->
+<p class="noindent">Consider the case of when the robot follows the straight line segment of the motion primitive with the fixed velocity <span class="cmmi-10x-x-109">v </span>and the fixed heading <span class="cmmi-10x-x-109">&theta;</span><sub><span class="cmr-8">0</span></sub>. As shown on Figure 5<!--tex4ht:ref: fig:5 -->, this behavior can be described by the following equations:</p>
+<div class="eqnarray">
+	<center class="math-display">
+		<img alt="x(t) = x0 + vtcos(θ0)y(t) = y0 + vtsin (θ0),   where     0 ≤ t ≤ tl                            (2)θ(t) = θ .       0" class="math-display" src="../../media/images/LatextDoc113x.png" /></center>
+</div>
+<p>Substituting <span class="cmmi-10x-x-109">t </span>= <span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub> and <span class="cmmi-10x-x-109">l </span>= <span class="cmmi-10x-x-109">vt</span><sub><span class="cmmi-8">l</span></sub> into (2), we get equations for the last pose of the straight line segment:</p>
+<div class="eqnarray">
+	<center class="math-display">
+		<img alt="x =  x + lcos(θ ) l    0        0yl = y0 + lsin(θ0)                                                       (3)θl = θ0." class="math-display" src="../../media/images/LatextDoc114x.png" /></center>
+</div>
+<hr class="figure" />
+<div class="figure">
+	<!--l. 219-->
+	<p class="noindent"><img alt="PIC" class="displayed" src="../../media/images/fig2.jpg" /></p>
+	<div class="caption">
+		<span class="id">Figure&nbsp;5: </span><span class="content"><span class="cmr-9">Straight line segment of the motion primitive.</span></span></div>
+	<!--tex4ht:label?: x1-40035 --><!--l. 225-->
+	<p class="indent">&nbsp;</p>
+</div>
+<hr class="endfigure" />
+<h3 class="sectionHead">
+	<strong><span class="titlemark">5 </span> Arc Segment Of The Motion Primitive</strong></h3>
+<!--l. 229-->
+<p class="noindent">Now consider the case of when the robot follows the arc of the circle with the fixed velocity <span class="cmmi-10x-x-109">v</span> and the fixed rotational velocity <span class="cmmi-10x-x-109">&omega;</span>. Derivatives <img align="middle" alt="ddxt" class="frac" src="../../media/images/LatextDoc115x.png" /> and <img align="middle" alt="ddyt" class="frac" src="../../media/images/LatextDoc116x.png" /> give us components of the robot&rsquo;s velocity <span class="cmmi-10x-x-109">v</span><sub><span class="cmmi-8">x</span></sub> (in the direction of the x-axis) and <span class="cmmi-10x-x-109">v</span><sub><span class="cmmi-8">y</span></sub> (in the direction of the y-axis), correspondingly. As shown on Figure 6<!--tex4ht:ref: fig:6 -->, we have the following system of three differential equations:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="dx-dt = v cos(θ(t))dy---= v sin(θ(t)),    where     tl ≤ t ≤ 1ddtθ---= ω.dt" class="math-display" src="../../media/images/LatextDoc117x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(4)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 241-->
+<p class="nopar"><!--l. 243--></p>
+<p class="indent">&nbsp;</p>
+<hr class="figure" />
+<div class="figure">
+	<!--l. 244-->
+	<p class="noindent"><img alt="PIC" class="displayed" src="../../media/images/fig3.jpg" /></p>
+	<div class="caption">
+		<span class="id">Figure&nbsp;6: </span><span class="content"><span class="cmr-9">Robot&rsquo;s velocity components.</span></span></div>
+	<!--tex4ht:label?: x1-50026 --><!--l. 250-->
+	<p class="indent">&nbsp;</p>
+</div>
+<hr class="endfigure" />
+<!--l. 253-->
+<p class="noindent">Integrating the last equation of &nbsp;(4<!--tex4ht:ref: eq:4 -->), we receive:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="      ∫ tθ(t) =    ωdt + θ(tl) = ω(t− tl) + θ0,    where    tl ≤ t ≤ 1.       tl" class="math-display" src="../../media/images/LatextDoc118x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(5)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 257-->
+<p class="nopar"><!--l. 259--></p>
+<p class="noindent">Substituting &nbsp;(5<!--tex4ht:ref: eq:5 -->) into &nbsp;(4<!--tex4ht:ref: eq:4 -->) gives us:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="dx-dt = vcos(ω(t− tl) + θ0)dy---=  vsin (ω (t− tl) + θ0),    where     tl ≤ t ≤ 1. dt" class="math-display" src="../../media/images/LatextDoc119x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(6)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 268-->
+<p class="nopar"><!--l. 270--></p>
+<p class="noindent">Integrating &nbsp;(6<!--tex4ht:ref: eq:6 -->), we receive:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="      ∫x(t) =  tv cos(ω (t− t) + θ)dt + x(t)       tl            l    0       l      ∫ ty(t) =   v sin(ω (t − tl)+ θ0)dt+ y (tl),    where    tl ≤ t ≤ 1.       tl" class="math-display" src="../../media/images/LatextDoc120x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(7)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 279-->
+<p class="nopar"><!--l. 281--></p>
+<p class="noindent">From &nbsp;(7<!--tex4ht:ref: eq:7 -->), &nbsp;(3<!--tex4ht:ref: eq:3 -->) and using <span class="cmmi-10x-x-109">r </span>= <img align="middle" alt="v-ω" class="frac" src="../../media/images/LatextDoc121x.png" />, we get:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="x(t) = x0 + lcos(θ0)+ r sin(ω (t − tl)+ θ0)−  rsin(θ0)y(t) = y0 + lsin(θ0)− rcos(ω(t− tl)+ θ0)+ r cos(θ0), where  tl ≤ t ≤ 1." class="math-display" src="../../media/images/LatextDoc122x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(8)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 290-->
+<p class="nopar"><!--l. 292--></p>
+<p class="noindent">Substituting <span class="cmmi-10x-x-109">t </span>= <span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">g</span></sub> = 1 into &nbsp;(8<!--tex4ht:ref: eq:8 -->), we have:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="xg − x0 = lcos(θ0)+ r(sin(θg) − sin(θ0))yg − y0 = lsin(θ0)+ r(cos(θ0) − cos(θg))." class="math-display" src="../../media/images/LatextDoc123x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(9)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 301-->
+<p class="nopar"><!--l. 303--></p>
+<p class="noindent">The &nbsp;(9<!--tex4ht:ref: eq:9 -->) is a system of two linear equation involving variables <span class="cmmi-10x-x-109">l </span>and <span class="cmmi-10x-x-109">r</span>. It can be expressed in the matrix form:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="B = AX,    where    |                   |        |      |        ||A = ||cosθ0  sin θg − sinθ0|| , B = ||xg − x0||,  X =  ||l||.    |sin θ0  cosθ0 − cos θg|       |yg − y0|       |r|" class="math-display" src="../../media/images/LatextDoc124x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(10)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 324-->
+<p class="nopar"><!--l. 326--></p>
+<p class="noindent">The system &nbsp;(10<!--tex4ht:ref: eq:10 -->) has a unique solution:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="       −1X  = A   B,   where  l = X (1 ),  r = X (2)." class="math-display" src="../../media/images/LatextDoc125x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(11)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 330-->
+<p class="nopar"><!--l. 332--></p>
+<p class="noindent">By definition, <span class="cmmi-10x-x-109">&omega; </span>= <img align="middle" alt="θg−-θ0-1−tl" class="frac" src="../../media/images/LatextDoc126x.png" />. Using <span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub> = <img align="middle" alt="lv" class="frac" src="../../media/images/LatextDoc127x.png" /> and <span class="cmmi-10x-x-109">r </span>= <img align="middle" alt="v-ω" class="frac" src="../../media/images/LatextDoc128x.png" />, we finally get:</p>
+<table class="equation">
+	<tbody>
+		<tr>
+			<td>
+				<center class="math-display">
+					<img alt="             -lω = θg − θ0 + r    and    v = rω." class="math-display" src="../../media/images/LatextDoc129x.png" /></center>
+			</td>
+			<td class="equation-label">
+				(12)</td>
+		</tr>
+	</tbody>
+</table>
+<!--l. 336-->
+<p class="nopar">&nbsp;</p>
+<h3 class="sectionHead">
+	<strong><span class="titlemark">6 </span> Motion Primitive Calculation</strong></h3>
+<!--l. 339-->
+<p class="noindent">In the previous sections we derived formulas for all initially unknown motion parameters. Specifically using &nbsp;(11<!--tex4ht:ref: eq:11 -->), we can find the length of the straight line segment (<span class="cmmi-10x-x-109">l</span>) and the turning radius (<span class="cmmi-10x-x-109">r</span>). From (12<!--tex4ht:ref: eq:12 -->) we can determine both the rotational (<span class="cmmi-10x-x-109">&omega;</span>) and the translational (<span class="cmmi-10x-x-109">v</span>) velocities. Finally, using <span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub> = <img align="middle" alt="lv" class="frac" src="../../media/images/LatextDoc130x.png" /> we can calculate the time, corresponding to the end of the straight line segment. <!--l. 343--></p>
+<p class="noindent">The next step is to build the motion primitive trajectory. As defined earlier in this tutorial, the <span class="cmtt-9">numofsamples </span>is the given number of discrete poses required on the motion primitive trajectory. Let &Delta;<span class="cmmi-10x-x-109">t </span>be a time step between sequential discrete poses of the trajectory. Hence &Delta;<span class="cmmi-10x-x-109">t </span>= <img align="middle" alt="-----1------numofsamples− 1" class="frac" src="../../media/images/LatextDoc131x.png" />. To build the motion primitive trajectory, we iterate over <span class="cmmi-10x-x-109">t </span>= <span class="cmmi-10x-x-109">i</span>&Delta;<span class="cmmi-10x-x-109">t</span>, where 0 <span class="cmsy-10x-x-109">&le; </span><span class="cmmi-10x-x-109">i </span><span class="cmsy-10x-x-109">&le;</span> <span class="cmtt-9">numofsamples</span>-1 and use an appropriate formula to calculate each discrete pose. Specifically for <span class="cmmi-10x-x-109">t </span><span class="cmsy-10x-x-109">&le; </span><span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub>, we use &nbsp;(2<!--tex4ht:ref: eq:2 -->) to construct the straight line segment of the motion primitive, then for <span class="cmmi-10x-x-109">t</span><sub><span class="cmmi-8">l</span></sub> <span class="cmsy-10x-x-109">&le; </span><span class="cmmi-10x-x-109">t </span><span class="cmsy-10x-x-109">&le; </span>1, use &nbsp;(8<!--tex4ht:ref: eq:8 -->) to construct the arc portion of the motion primitive.</p>
+
+</body></html>

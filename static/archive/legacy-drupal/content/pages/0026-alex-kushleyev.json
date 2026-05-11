@@ -1,0 +1,27 @@
+{
+  "nid": 26,
+  "vid": 26,
+  "type": "page",
+  "language": "und",
+  "title": "Alex Kushleyev",
+  "slug": "alex-kushleyev",
+  "uid": 1,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599726,
+  "changed": 1344135537,
+  "url_aliases": [
+    "AlexKushleyev"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Reasearch Staff</p>\r\n",
+  "body_markdown": "Reasearch Staff\n",
+  "body_html_raw": "<p>Reasearch Staff</p>\r\n",
+  "revision_log": ""
+}

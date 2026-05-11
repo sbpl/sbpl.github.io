@@ -1,0 +1,27 @@
+{
+  "nid": 45,
+  "vid": 45,
+  "type": "page",
+  "language": "und",
+  "title": "Tutorials",
+  "slug": "tutorials",
+  "uid": 36,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1366912385,
+  "changed": 1382110193,
+  "url_aliases": [
+    "Tutorials"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "filtered_html",
+  "body_summary": "",
+  "body_html_rewritten": "<h2>\r\n\t<a href=\"http://sbpl.net/node/50\">Primer to the Search-Based Planning Library (SBPL)</a></h2>\r\n<p>Learn the basic theory behind graph search and SBPL.</p>\r\n<h2>\r\n\t<a href=\"http://sbpl.net/node/47\">SBPL Overview</a></h2>\r\n<p>This has a brief overview of how SBPL is organized.</p>\r\n<h2>\r\n\t<span><a href=\"http://sbpl.net/node/51\">Planning with SBPL: Example in X, Y, Theta State Space</a></span></h2>\r\n<p><span>This has example code for planning with a 2d footprint of a robot in X, Y, and theta dimensions.</span></p>\r\n<h2>\r\n\t<a href=\"http://sbpl.net/node/46\">Navigation with SBPL</a></h2>\r\n<p>This builds on the previous tutorial to handle exploring an unknown environment.</p>\r\n<h2>\r\n\t<a href=\"http://sbpl.net/node/48\">Kinematic Constraints and Motion Primitives</a></h2>\r\n<p>An introduction to how kinematic constraints are dealt with in SBPL.</p>\r\n<h2>\r\n\t<span><a href=\"http://sbpl.net/node/52\">Generating Motion Primitives</a></span></h2>\r\n<p><span>How to use the Matlab scripts in SBPL to generate custom motion primitives.</span></p>\r\n<h2>\r\n\t<span><a href=\"http://sbpl.net/node/53\">Forward Arc Motion Primitives</a></span></h2>\r\n<h2>\r\n\t<span><a href=\"http://sbpl.net/node/54\">Buliding, Installing, and Using SBPL</a></span></h2>\r\n",
+  "body_markdown": "##  [Primer to the Search-Based Planning Library (SBPL)](http://sbpl.net/node/50)\n\nLearn the basic theory behind graph search and SBPL.\n\n##  [SBPL Overview](http://sbpl.net/node/47)\n\nThis has a brief overview of how SBPL is organized.\n\n##  [Planning with SBPL: Example in X, Y, Theta State Space](http://sbpl.net/node/51)\n\nThis has example code for planning with a 2d footprint of a robot in X, Y, and theta dimensions.\n\n##  [Navigation with SBPL](http://sbpl.net/node/46)\n\nThis builds on the previous tutorial to handle exploring an unknown environment.\n\n##  [Kinematic Constraints and Motion Primitives](http://sbpl.net/node/48)\n\nAn introduction to how kinematic constraints are dealt with in SBPL.\n\n##  [Generating Motion Primitives](http://sbpl.net/node/52)\n\nHow to use the Matlab scripts in SBPL to generate custom motion primitives.\n\n##  [Forward Arc Motion Primitives](http://sbpl.net/node/53)\n\n##  [Buliding, Installing, and Using SBPL](http://sbpl.net/node/54)\n",
+  "body_html_raw": "<h2>\r\n\t<a href=\"http://sbpl.net/node/50\">Primer to the Search-Based Planning Library (SBPL)</a></h2>\r\n<p>Learn the basic theory behind graph search and SBPL.</p>\r\n<h2>\r\n\t<a href=\"http://sbpl.net/node/47\">SBPL Overview</a></h2>\r\n<p>This has a brief overview of how SBPL is organized.</p>\r\n<h2>\r\n\t<span><a href=\"http://sbpl.net/node/51\">Planning with SBPL: Example in X, Y, Theta State Space</a></span></h2>\r\n<p><span>This has example code for planning with a 2d footprint of a robot in X, Y, and theta dimensions.</span></p>\r\n<h2>\r\n\t<a href=\"http://sbpl.net/node/46\">Navigation with SBPL</a></h2>\r\n<p>This builds on the previous tutorial to handle exploring an unknown environment.</p>\r\n<h2>\r\n\t<a href=\"http://sbpl.net/node/48\">Kinematic Constraints and Motion Primitives</a></h2>\r\n<p>An introduction to how kinematic constraints are dealt with in SBPL.</p>\r\n<h2>\r\n\t<span><a href=\"http://sbpl.net/node/52\">Generating Motion Primitives</a></span></h2>\r\n<p><span>How to use the Matlab scripts in SBPL to generate custom motion primitives.</span></p>\r\n<h2>\r\n\t<span><a href=\"http://sbpl.net/node/53\">Forward Arc Motion Primitives</a></span></h2>\r\n<h2>\r\n\t<span><a href=\"http://sbpl.net/node/54\">Buliding, Installing, and Using SBPL</a></span></h2>\r\n",
+  "revision_log": ""
+}

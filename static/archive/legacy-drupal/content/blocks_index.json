@@ -1,0 +1,20 @@
+[
+  {
+    "bid": 1,
+    "info": "private files",
+    "slug": "private-files",
+    "format": "full_html",
+    "file_html": "content/blocks/001-private-files.html",
+    "file_md": "content/blocks/001-private-files.md",
+    "file_json": "content/blocks/001-private-files.json"
+  },
+  {
+    "bid": 2,
+    "info": "publicfiles",
+    "slug": "publicfiles",
+    "format": "full_html",
+    "file_html": "content/blocks/002-publicfiles.html",
+    "file_md": "content/blocks/002-publicfiles.md",
+    "file_json": "content/blocks/002-publicfiles.json"
+  }
+]
