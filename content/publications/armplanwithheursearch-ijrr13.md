@@ -1,19 +1,18 @@
 ---
-title: "Arm Planning with Heuristic Search"
+title: "Single- and dual-arm motion planning with heuristic search"
 date: 2013-01-01
 authors:
+  - "Benjamin Cohen"
+  - "Sachin Chitta"
   - "Maxim Likhachev"
 venue: "IJRR 2013"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/armplanwithheursearch_ijrr13.pdf"
+publication_type: "journal"
+pdf: "https://www.cs.cmu.edu/~maxim/files/armplanwithheursearch_ijrr13.pdf"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/armplanwithheursearch_ijrr13.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *International Journal of Robotics Research (IJRR), 2013*.
 
-Original (defunct) link: <http://sbpl.net/files/armplanwithheursearch_ijrr13.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/armplanwithheursearch_ijrr13.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

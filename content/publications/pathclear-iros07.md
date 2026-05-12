@@ -1,19 +1,18 @@
 ---
-title: "Path Clearance"
-date: 2007-10-01
+title: "Goal Directed Navigation with Uncertainty in Adversary Locations"
+date: 2007-01-01
 authors:
   - "Maxim Likhachev"
+  - "Anthony Stentz"
 venue: "IROS 2007"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/pathclear_iros07.pdf"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/pathclear_iros07.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/pathclear_iros07_abs.html"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/pathclear_iros07.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2007*.
 
-Original (defunct) link: <http://sbpl.net/files/pathclear_iros07.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/pathclear_iros07.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

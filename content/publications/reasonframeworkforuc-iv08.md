@@ -1,19 +1,20 @@
 ---
-title: "Reasoning Framework for Urban Challenge"
-date: 2008-06-01
+title: "A Reasoning Framework for Autonomous Urban Driving"
+date: 2008-01-01
 authors:
+  - "Dave Ferguson"
+  - "Christopher Baker"
   - "Maxim Likhachev"
-venue: "IV 2008"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/reasonframeworkforUC_iv08.pdf"
+  - "John Dolan"
+venue: "IEEE IV 2008"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/reasonframeworkforUC_iv08.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/reasonframeworkforUC_iv08_abs.html"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/reasonframeworkforUC_iv08.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *IEEE Intelligent Vehicles Symposium (IV), oral presentation, 2008*.
 
-Original (defunct) link: <http://sbpl.net/files/reasonframeworkforUC_iv08.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/reasonframeworkforUC_iv08.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

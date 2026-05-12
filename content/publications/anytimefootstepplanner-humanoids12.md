@@ -1,19 +1,19 @@
 ---
-title: "Anytime Footstep Planner"
-date: 2012-11-01
+title: "Anytime Footstep Planning with Suboptimality Bounds"
+date: 2012-01-01
 authors:
+  - "Armin Hornung"
+  - "Andrew Dornbush"
   - "Maxim Likhachev"
+  - "Maren Bennewitz"
 venue: "Humanoids 2012"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/anytimefootstepplanner_humanoids12.pdf"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/anytimefootstepplanner_humanoids12.pdf"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/anytimefootstepplanner_humanoids12.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the IEEE-RAS International Conference on Humanoid Robots (HUMANOIDS), 2012*.
 
-Original (defunct) link: <http://sbpl.net/files/anytimefootstepplanner_humanoids12.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/anytimefootstepplanner_humanoids12.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

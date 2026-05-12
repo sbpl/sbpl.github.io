@@ -1,19 +1,19 @@
 ---
-title: "Modular Component Planner"
-date: 2004-12-01
+title: "Planning for Markov Decision Processes with Sparse Stochasticity"
+date: 2005-01-01
 authors:
   - "Maxim Likhachev"
-venue: "NIPS 2004"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/mcp_nips04.pdf"
+  - "Geoff Gordon"
+  - "Sebastian Thrun"
+venue: "NeurIPS (formerly NIPS) 2005"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/mcp_nips04.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/mcp_nips04_abs.html"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/mcp_nips04.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Advances in Neural Information Processing Systems 17 (NIPS), MIT Press, Cambridge, MA, 2005*.
 
-Original (defunct) link: <http://sbpl.net/files/mcp_nips04.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/mcp_nips04.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

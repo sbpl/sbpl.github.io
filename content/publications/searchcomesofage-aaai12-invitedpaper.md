@@ -1,19 +1,20 @@
 ---
-title: "“Search Comes of Age”aaai12 invitedpaper"
-date: 2012-07-01
+title: "Heuristic Search Comes of Age"
+date: 2012-01-01
 authors:
+  - "Nathan R. Sturtevant"
+  - "Ariel Felner"
   - "Maxim Likhachev"
-venue: "AAAI 2012 (Invited)"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/searchcomesofage_aaai12_invitedpaper.pdf"
+  - "Wheeler Ruml"
+venue: "AAAI 2012"
+award: "invited paper"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/searchcomesofage_aaai12_invitedpaper.pdf"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/searchcomesofage_aaai12_invitedpaper.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the National Conference on Artificial Intelligence (AAAI), 2012*. **invited paper.**
 
-Original (defunct) link: <http://sbpl.net/files/searchcomesofage_aaai12_invitedpaper.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/searchcomesofage_aaai12_invitedpaper.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

@@ -1,19 +1,18 @@
 ---
-title: "Spatio (unknown paper)"
-date: 2010-01-01
+title: "Spatio-Temporal Case-Based Reasoning for Behavioral Selection"
+date: 2001-01-01
 authors:
   - "Maxim Likhachev"
-venue: "Imported from legacy sbpl.net (year unknown)"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/Spatio.pdf"
+  - "Ronald C. Arkin"
+venue: "ICRA 2001"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/Spatio.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/Spatio_abs.htm"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/Spatio.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the IEEE International Conference on Robotics and Automation (ICRA), Vol. 2, pp. 1627-1634, 2001*.
 
-Original (defunct) link: <http://sbpl.net/files/Spatio.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/Spatio.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

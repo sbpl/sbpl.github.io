@@ -23,16 +23,25 @@
 
       <p class="publication-venue">
         <strong>{{ .Params.venue }}</strong>
+        {{ with .Params.award }}<span class="publication-award">— {{ . }}</span>{{ end }}
       </p>
 
-      <p class="publication-description">{{ .Params.description }}</p>
+      {{ with .Params.description }}
+        <p class="publication-description">{{ . }}</p>
+      {{ end }}
 
       <div class="publication-links">
+        {{ with .Params.pdf }}
+          <a href="{{ . }}" target="_blank" class="pub-link">📄 PDF</a>
+        {{ end }}
         {{ with .Params.arxiv }}
-          <a href="{{ . }}" target="_blank" class="pub-link">📄 arXiv</a>
+          <a href="{{ . }}" target="_blank" class="pub-link">arXiv</a>
+        {{ end }}
+        {{ with .Params.abstract_html }}
+          <a href="{{ . }}" target="_blank" class="pub-link">Abstract</a>
         {{ end }}
         {{ with .Params.project_page }}
-          <a href="{{ . }}" target="_blank" class="pub-link">🔗 Project Page</a>
+          <a href="{{ . }}" target="_blank" class="pub-link">🔗 Project</a>
         {{ end }}
         {{ with .Params.code }}
           <a href="{{ . }}" target="_blank" class="pub-link">💻 Code</a>

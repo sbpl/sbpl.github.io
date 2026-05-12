@@ -1,19 +1,18 @@
 ---
-title: "Improved Multi-Heuristic A*"
-date: 2015-07-01
+title: "Improved Multi-Heuristic A* for Searching with Uncalibrated Heuristics"
+date: 2015-01-01
 authors:
+  - "Venkatraman Narayanan"
+  - "Sandip Aine"
   - "Maxim Likhachev"
 venue: "SoCS 2015"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/improvedmha_socs15.pdf"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/improvedmha_socs15.pdf"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/improvedmha_socs15.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the International Symposium on Combinatorial Search (SoCS), 2015*.
 
-Original (defunct) link: <http://sbpl.net/files/improvedmha_socs15.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/improvedmha_socs15.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

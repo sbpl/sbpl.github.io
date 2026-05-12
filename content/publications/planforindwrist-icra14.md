@@ -1,19 +1,20 @@
 ---
-title: "Planning for an Industrial Wrist"
-date: 2014-05-01
+title: "Motion Planning for Robotic Manipulators with Independent Wrist Joints"
+date: 2014-01-01
 authors:
+  - "Kalin Gochev"
+  - "Venkatraman Narayanan"
+  - "Benjamin Cohen"
+  - "Alla Safonova"
   - "Maxim Likhachev"
 venue: "ICRA 2014"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/planforindwrist_icra14.pdf"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/planforindwrist_icra14.pdf"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/planforindwrist_icra14.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the IEEE International Conference on Robotics and Automation (ICRA), 2014*.
 
-Original (defunct) link: <http://sbpl.net/files/planforindwrist_icra14.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/planforindwrist_icra14.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

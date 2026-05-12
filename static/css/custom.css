@@ -445,6 +445,32 @@ article {
   margin: 0.5rem 0;
 }
 
+.publication-award {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8a5b00;
+  background: #fff4d6;
+  border: 1px solid #f0c987;
+  border-radius: 4px;
+  vertical-align: 0.05em;
+}
+
+.pub-year {
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--sbpl-border);
+  color: var(--sbpl-dark);
+}
+
+.publication-list {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .publication-links {
   display: flex;
   gap: 0.75rem;

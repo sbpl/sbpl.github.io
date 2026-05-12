@@ -1,19 +1,18 @@
 ---
-title: "Incremental Search in Games"
-date: 2006-10-01
+title: "Incremental Heuristic Search in Games: The Quest for Speed"
+date: 2006-01-01
 authors:
   - "Maxim Likhachev"
+  - "Sven Koenig"
 venue: "AIIDE 2006"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/incsearchingames_aiide06.pdf"
+publication_type: "workshop"
+pdf: "https://www.cs.cmu.edu/~maxim/files/incsearchingames_aiide06.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/incsearchingames_aiide06_abs.html"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/incsearchingames_aiide06.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the Artificial Intelligence and Interactive Digital Entertainment Conference (AIIDE), Poster Abstract, 2006*.
 
-Original (defunct) link: <http://sbpl.net/files/incsearchingames_aiide06.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/incsearchingames_aiide06.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

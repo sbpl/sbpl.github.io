@@ -4,6 +4,7 @@
 
   <p class="publication-meta">
     <strong>{{ .Params.venue }}</strong>
+    {{ with .Params.award }}<span class="publication-award">— {{ . }}</span>{{ end }}
   </p>
 
   <p class="publication-authors">
@@ -21,8 +22,14 @@
   </div>
 
   <div class="publication-links-large">
+    {{ with .Params.pdf }}
+      <a href="{{ . }}" target="_blank" role="button">📄 Read the paper (PDF)</a>
+    {{ end }}
     {{ with .Params.arxiv }}
-      <a href="{{ . }}" target="_blank" role="button" class="outline">📄 arXiv Paper</a>
+      <a href="{{ . }}" target="_blank" role="button" class="outline">arXiv</a>
+    {{ end }}
+    {{ with .Params.abstract_html }}
+      <a href="{{ . }}" target="_blank" role="button" class="outline">Abstract</a>
     {{ end }}
     {{ with .Params.project_page }}
       <a href="{{ . }}" target="_blank" role="button" class="outline">🔗 Project Page</a>

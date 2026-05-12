@@ -1,19 +1,19 @@
 ---
-title: "CBR/Likhachev (ICRA 2002)"
-date: 2010-01-01
+title: "Selection of Behavioral Parameters: Integration of Discontinuous Switching via Case-Based Reasoning with Continuous Adaptation via Learning Momentum"
+date: 2002-01-01
 authors:
+  - "J. Brian Lee"
   - "Maxim Likhachev"
-venue: "Imported from legacy sbpl.net (year unknown)"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/icra2002_cbr_lm_paper.pdf"
+  - "Ronald C. Arkin"
+venue: "ICRA 2002"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/icra2002_cbr_lm_paper.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/CBRLM_abs.htm"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/icra2002_cbr_lm_paper.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the IEEE International Conference on Robotics and Automation (ICRA), Vol. 2, pp. 1275-1281, 2002*.
 
-Original (defunct) link: <http://sbpl.net/files/icra2002_cbr_lm_paper.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/icra2002_cbr_lm_paper.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

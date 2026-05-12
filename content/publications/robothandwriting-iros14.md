@@ -1,19 +1,21 @@
 ---
-title: "Robot Handwriting"
-date: 2014-10-01
+title: "Robotic Handwriting: Multi-Contact Manipulation Based on Reactional Internal Contact Hypothesis"
+date: 2014-01-01
 authors:
+  - "Sung-Kyun Kim"
+  - "Joonhee Jo"
+  - "Yonghwan Oh"
+  - "Sang-Rok Oh"
+  - "Siddhartha Srinivasa"
   - "Maxim Likhachev"
 venue: "IROS 2014"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/robothandwriting_iros14.pdf"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/robothandwriting_iros14.pdf"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/robothandwriting_iros14.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2014*.
 
-Original (defunct) link: <http://sbpl.net/files/robothandwriting_iros14.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/robothandwriting_iros14.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

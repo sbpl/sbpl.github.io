@@ -1,19 +1,18 @@
 ---
-title: "Costmap-Based Planningicra08ws"
-date: 2010-01-01
+title: "Efficiently Using Cost Maps For Planning Complex Maneuvers"
+date: 2008-01-01
 authors:
+  - "Dave Ferguson"
   - "Maxim Likhachev"
-venue: "Imported from legacy sbpl.net (year unknown)"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/costmapplan_icra08ws.pdf"
+venue: "ICRA Workshop 2008"
+publication_type: "workshop"
+pdf: "https://www.cs.cmu.edu/~maxim/files/costmapplan_icra08ws.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/costmapplan_icra08ws_abs.html"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/costmapplan_icra08ws.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of ICRA Workshop on Planning with Cost Maps, 2008*.
 
-Original (defunct) link: <http://sbpl.net/files/costmapplan_icra08ws.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/costmapplan_icra08ws.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

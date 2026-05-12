@@ -1,19 +1,18 @@
 ---
-title: "Planning + Landing-Site Selection"
-date: 2011-07-01
+title: "Planning for Landing Site Selection in the Aerial Supply Delivery"
+date: 2011-01-01
 authors:
+  - "Aleksandr Kushleyev"
+  - "Brian MacAllister"
   - "Maxim Likhachev"
 venue: "SoCS 2011"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/planlandsitesel_socs11.pdf"
+publication_type: "workshop"
+pdf: "https://www.cs.cmu.edu/~maxim/files/planlandsitesel_socs11.pdf"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/planlandsitesel_socs11.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Two-page abstract in Proceedings of the International Symposium on Combinatorial Search (SoCS), 2011*.
 
-Original (defunct) link: <http://sbpl.net/files/planlandsitesel_socs11.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/planlandsitesel_socs11.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

@@ -1,19 +1,19 @@
 ---
-title: "Planning with Homotopy Constraints in 3D"
-date: 2011-07-01
+title: "Identification and Representation of Homotopy Classes of Trajectories for Search-based Path Planning in 3D"
+date: 2011-01-01
 authors:
+  - "Subhrajit Bhattacharya"
   - "Maxim Likhachev"
+  - "Vijay Kumar"
 venue: "RSS 2011"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/planwithhomotopyconstraints3D_rss11.pdf"
+award: "Best Paper Award"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/planwithhomotopyconstraints3D_rss11.pdf"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/planwithhomotopyconstraints3D_rss11.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the Robotics: Science and Systems Conference (RSS), 2011*. **Best Paper Award.**
 
-Original (defunct) link: <http://sbpl.net/files/planwithhomotopyconstraints3D_rss11.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/planwithhomotopyconstraints3D_rss11.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

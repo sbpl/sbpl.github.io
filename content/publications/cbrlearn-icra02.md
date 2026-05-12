@@ -1,19 +1,19 @@
 ---
-title: "Case-Based Reasoning for Learning"
-date: 2002-05-01
+title: "Learning Behavioral Parameterization Using Spatio-Temporal Case-Based Reasoning"
+date: 2002-01-01
 authors:
   - "Maxim Likhachev"
+  - "Michael Kaess"
+  - "Ronald C. Arkin"
 venue: "ICRA 2002"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/CBRLearn_icra02.pdf"
+publication_type: "conference"
+pdf: "https://www.cs.cmu.edu/~maxim/files/CBRLearn_icra02.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/CBRLearn_abs.htm"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/CBRLearn_icra02.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Proceedings of the IEEE International Conference on Robotics and Automation (ICRA), Vol. 2, pp. 1282-1289, 2002*.
 
-Original (defunct) link: <http://sbpl.net/files/CBRLearn_icra02.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/CBRLearn_icra02.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->

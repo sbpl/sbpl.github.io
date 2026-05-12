@@ -1,19 +1,21 @@
 ---
-title: "AD* Algorithm (AIJ 2008)preprint"
+title: "Anytime Search in Dynamic Graphs"
 date: 2008-01-01
 authors:
   - "Maxim Likhachev"
-venue: "AIJ 2008 (Preprint)"
-description: "Imported from the legacy sbpl.net /files/ catalogue. Title and authors are best-effort heuristics; please update from the source PDF."
-project_page: "http://www.cs.cmu.edu/~maxim/files/ad_aij08_preprint.pdf"
+  - "Dave Ferguson"
+  - "Geoff Gordon"
+  - "Anthony Stentz"
+  - "Sebastian Thrun"
+venue: "AIJ 2008"
+publication_type: "journal"
+pdf: "https://www.cs.cmu.edu/~maxim/files/ad_aij08_preprint.pdf"
+abstract_html: "https://www.cs.cmu.edu/~maxim/files/ad_aij_abs.html"
 draft: false
 ---
 
-This entry was auto-generated from the legacy `sbpl.net/files/ad_aij08_preprint.pdf` URL
-recovered from the old Drupal site's access logs. The title above is a
-heuristic expansion of the filename slug — please replace it with the
-canonical citation when convenient. Co-authors beyond Maxim Likhachev
-need to be added from the source PDF.
+Published in *Artificial Intelligence Journal (AIJ), 172 (14), pp. 1613-1643, September 2008*.
 
-Original (defunct) link: <http://sbpl.net/files/ad_aij08_preprint.pdf>
-Mirrored on Maxim's CMU page (live): <http://www.cs.cmu.edu/~maxim/files/ad_aij08_preprint.pdf>
+<!-- Canonical citation sourced from Maxim Likhachev's CMU publications page
+(https://www.cs.cmu.edu/~maxim/publications.html). If you spot an error, edit
+this file's frontmatter and submit a PR. -->
