@@ -262,6 +262,23 @@ article {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--sbpl-border);
+  display: block;
+}
+
+.member-initials-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .member-info {
@@ -289,6 +306,79 @@ article {
   color: var(--sbpl-accent);
   font-size: 0.9rem;
   margin: 0.25rem 0;
+}
+
+.member-era {
+  margin: 0 0 0.35rem;
+  color: var(--sbpl-gray);
+  font-style: italic;
+}
+
+.people-section {
+  margin-top: 3rem;
+}
+
+.people-section > h2 {
+  margin-bottom: 0.25rem;
+  border-bottom: 3px solid var(--sbpl-accent);
+  padding-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.people-subhead {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--sbpl-border);
+  color: var(--sbpl-dark);
+  font-size: 1.25rem;
+}
+
+.people-count {
+  font-size: 0.85rem;
+  color: var(--sbpl-gray);
+  font-weight: normal;
+  margin-left: 0.4rem;
+}
+
+.section-lead {
+  color: var(--sbpl-gray);
+  font-size: 0.95rem;
+  margin: 0.25rem 0 1rem;
+  max-width: 60ch;
+}
+
+.people-empty {
+  color: var(--sbpl-gray);
+  font-style: italic;
+}
+
+.lab-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.lab-photo-grid figure {
+  margin: 0;
+  border: 1px solid var(--sbpl-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--sbpl-card);
+}
+
+.lab-photo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.lab-photo-grid figcaption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--sbpl-gray);
 }
 
 .member-bio {
