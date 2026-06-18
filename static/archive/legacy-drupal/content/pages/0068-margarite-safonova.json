@@ -1,0 +1,27 @@
+{
+  "nid": 68,
+  "vid": 68,
+  "type": "page",
+  "language": "und",
+  "title": "Margarite Safonova",
+  "slug": "margarite-safonova",
+  "uid": 1633,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1382374632,
+  "changed": 1382374890,
+  "url_aliases": [
+    "Margarite Safonova"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "filtered_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Software Developer</p>\r\n",
+  "body_markdown": "Software Developer\n",
+  "body_html_raw": "<p>Software Developer</p>\r\n",
+  "revision_log": ""
+}

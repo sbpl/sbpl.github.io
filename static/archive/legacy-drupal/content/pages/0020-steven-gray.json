@@ -1,0 +1,27 @@
+{
+  "nid": 20,
+  "vid": 20,
+  "type": "page",
+  "language": "und",
+  "title": "Steven Gray",
+  "slug": "steven-gray",
+  "uid": 31,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599474,
+  "changed": 1344452675,
+  "url_aliases": [
+    "StevenGray"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>PhD student in MEAM, UPenn, co-advised with V. Kumar</p>\r\n",
+  "body_markdown": "PhD student in MEAM, UPenn, co-advised with V. Kumar\n",
+  "body_html_raw": "<p>PhD student in MEAM, UPenn, co-advised with V. Kumar</p>\r\n",
+  "revision_log": ""
+}

@@ -1,0 +1,27 @@
+{
+  "nid": 13,
+  "vid": 13,
+  "type": "page",
+  "language": "und",
+  "title": "Ben Cohen",
+  "slug": "ben-cohen",
+  "uid": 11,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599028,
+  "changed": 1344290038,
+  "url_aliases": [
+    "BenCohen"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>PhD student in CIS, UPenn</p>\r\n",
+  "body_markdown": "PhD student in CIS, UPenn\n",
+  "body_html_raw": "<p>PhD student in CIS, UPenn</p>\r\n",
+  "revision_log": ""
+}

@@ -1,6 +1,8 @@
 {{ define "main" }}
 
-<!-- Principal Investigator -->
+{{/* -------------------------------------------------------------------- */}}
+{{/* PI                                                                    */}}
+{{/* -------------------------------------------------------------------- */}}
 {{ with .Site.Data.members.pi }}
 <section class="pi-section">
   <div class="pi-card">
@@ -17,26 +19,86 @@
         {{ with .links }}
           {{ with .website }}<a href="{{ . }}" target="_blank">🌐 Website</a>{{ end }}
           {{ with .scholar }}<a href="{{ . }}" target="_blank">🎓 Scholar</a>{{ end }}
-          {{ with .email }}<a href="mailto:{{ . }}">✉️ Email</a>{{ end }}
         {{ end }}
+        {{ with .email }}<a href="mailto:{{ . }}">✉️ Email</a>{{ end }}
       </div>
     </div>
   </div>
 </section>
 {{ end }}
 
-<!-- Current Members -->
-<section>
-  <h2>Current Members</h2>
+{{/* -------------------------------------------------------------------- */}}
+{{/* Current members - grouped by category                                 */}}
+{{/* -------------------------------------------------------------------- */}}
+{{ $current := .Site.Data.members.current }}
+{{ $alumni  := .Site.Data.members.alumni }}
 
-  {{/* Group members by category in desired order */}}
-  {{ $categories := slice "postdoc" "phd" "masters" "undergraduate" }}
-  {{ $categoryLabels := dict "postdoc" "Post-Doctoral Researchers" "phd" "PhD Students" "masters" "Master's Students" "undergraduate" "Undergraduate Researchers" }}
+{{/* Display order + section headings. Add new categories here. */}}
+{{ $categories := slice
+  (dict "key" "postdoc"        "label" "Postdoctoral Researchers")
+  (dict "key" "phd"            "label" "PhD Students")
+  (dict "key" "masters"        "label" "Master’s Students")
+  (dict "key" "undergraduate"  "label" "Undergraduate Researchers")
+  (dict "key" "research-staff" "label" "Research Staff & Engineers")
+  (dict "key" "collaborator"   "label" "Research Collaborators")
+}}
 
+{{ $alumniCategories := slice
+  (dict "key" "postdoc"        "label" "Postdoc Alumni")
+  (dict "key" "phd"            "label" "PhD Alumni")
+  (dict "key" "masters"        "label" "Master’s Alumni")
+  (dict "key" "undergraduate"  "label" "Undergraduate Alumni")
+  (dict "key" "research-staff" "label" "Research Staff Alumni")
+  (dict "key" "collaborator"   "label" "Past Research Collaborators")
+  (dict "key" "intern"         "label" "Intern Alumni")
+}}
+
+<section class="people-section people-current">
+  <h2 id="current-members">Current Members</h2>
+  <p class="section-lead">
+    Researchers actively working with the lab.
+  </p>
+
+  {{ $anyCurrent := false }}
   {{ range $cat := $categories }}
-    {{ $members := where $.Site.Data.members.current "category" $cat }}
+    {{ $members := where $current "category" $cat.key }}
     {{ if $members }}
-      <h3>{{ index $categoryLabels $cat }}</h3>
+      {{ $anyCurrent = true }}
+      <h3 class="people-subhead">{{ $cat.label }}
+        <span class="people-count">({{ len $members }})</span>
+      </h3>
+      <div class="member-grid">
+        {{ range $members }}
+          {{ partial "member-card.html" (dict "member" . "site" $.Site) }}
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+
+  {{ if not $anyCurrent }}
+    <p class="people-empty">No current members listed yet.</p>
+  {{ end }}
+</section>
+
+{{/* -------------------------------------------------------------------- */}}
+{{/* Alumni - grouped by category                                         */}}
+{{/* -------------------------------------------------------------------- */}}
+{{ if $alumni }}
+<section class="people-section people-alumni">
+  <h2 id="alumni">Alumni</h2>
+  <p class="section-lead">
+    Former members of the lab. Many of the entries below were imported
+    from the archived <code>sbpl.net</code> site and reflect each member’s
+    role at that time; some career-history details are still being filled
+    in.
+  </p>
+
+  {{ range $cat := $alumniCategories }}
+    {{ $members := where $alumni "category" $cat.key }}
+    {{ if $members }}
+      <h3 class="people-subhead">{{ $cat.label }}
+        <span class="people-count">({{ len $members }})</span>
+      </h3>
       <div class="member-grid">
         {{ range $members }}
           {{ partial "member-card.html" (dict "member" . "site" $.Site) }}
@@ -45,17 +107,40 @@
     {{ end }}
   {{ end }}
 </section>
+{{ end }}
 
-<!-- Alumni -->
-{{ with .Site.Data.members.alumni }}
-<section>
-  <h2>Alumni</h2>
-  <div class="member-grid">
-    {{ range . }}
-      {{ partial "member-card.html" (dict "member" . "site" $.Site) }}
-    {{ end }}
+{{/* -------------------------------------------------------------------- */}}
+{{/* Lab group photos                                                      */}}
+{{/* -------------------------------------------------------------------- */}}
+<section class="people-section people-photos">
+  <h2 id="lab-photos">Lab Photos</h2>
+  <p class="section-lead">
+    A few snapshots from the lab over the years (recovered from the
+    archived <code>sbpl.net</code> site).
+  </p>
+
+  <div class="lab-photo-grid">
+    <figure>
+      <img src="/archive/legacy-drupal/media/images/DSC00420.JPG"
+           alt="SBPL lab cookout, Summer 2011" loading="lazy">
+      <figcaption>Lab Cookout — Summer 2011</figcaption>
+    </figure>
+    <figure>
+      <img src="/archive/legacy-drupal/media/images/andrew-mike-kenny.jpg"
+           alt="Andrew, Mike at Kennywood" loading="lazy">
+      <figcaption>Andrew &amp; Mike — Kennywood, Summer 2012</figcaption>
+    </figure>
+    <figure>
+      <img src="/archive/legacy-drupal/media/images/matt-ed-jon-kenny.jpg"
+           alt="Matt, Ed, Jon at Kennywood" loading="lazy">
+      <figcaption>Matt, Ed &amp; Jon — Kennywood, Summer 2012</figcaption>
+    </figure>
+    <figure>
+      <img src="/archive/legacy-drupal/media/images/brian-kenny-shooped.jpg"
+           alt="Brian at Kennywood" loading="lazy">
+      <figcaption>Brian — Kennywood, Summer 2012</figcaption>
+    </figure>
   </div>
 </section>
-{{ end }}
 
 {{ end }}

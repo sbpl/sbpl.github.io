@@ -1,0 +1,7 @@
+# The extractor uses only the Python 3 standard library.
+# No third-party packages are required.
+#
+# Optional (only if you want to re-run extraction with a fancier
+# HTML->Markdown converter):
+#   html2text>=2024.2.26
+#   markdownify>=0.11

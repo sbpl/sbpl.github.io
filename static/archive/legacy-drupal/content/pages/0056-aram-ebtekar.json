@@ -1,0 +1,27 @@
+{
+  "nid": 56,
+  "vid": 56,
+  "type": "page",
+  "language": "und",
+  "title": "Aram Ebtekar",
+  "slug": "aram-ebtekar",
+  "uid": 1592,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1382042307,
+  "changed": 1382112277,
+  "url_aliases": [
+    "Aram Ebtekar"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "filtered_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>Phd. student. C.S.</p>\r\n",
+  "body_markdown": "Phd. student. C.S.\n",
+  "body_html_raw": "<p>Phd. student. C.S.</p>\r\n",
+  "revision_log": ""
+}

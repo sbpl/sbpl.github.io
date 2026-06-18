@@ -1,0 +1,27 @@
+{
+  "nid": 24,
+  "vid": 24,
+  "type": "page",
+  "language": "und",
+  "title": "Mike Phillips",
+  "slug": "mike-phillips",
+  "uid": 27,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599574,
+  "changed": 1345840108,
+  "url_aliases": [
+    "MikePhillips"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p style=\"\">PhD student in Robotics, CMU</p>\r\n",
+  "body_markdown": "PhD student in Robotics, CMU\n",
+  "body_html_raw": "<p style=\"\">PhD student in Robotics, CMU</p>\r\n",
+  "revision_log": ""
+}

@@ -1,0 +1,27 @@
+{
+  "nid": 14,
+  "vid": 14,
+  "type": "page",
+  "language": "und",
+  "title": "Brian MacAllister",
+  "slug": "brian-macallister",
+  "uid": 13,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599070,
+  "changed": 1344388676,
+  "url_aliases": [
+    "BrianMacAllister"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p><strong><span style=\"font-size:22px;\">Brian MacAllister</span></strong></p>\r\n<p><img alt=\"\" src=\"../../media/images/brian.jpg\" style=\"height: 300px; width: 169px; float: left;\" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"font-family:times new roman,times,serif;\"><span style=\"font-size: 14px;\"> Me: a research staff member, CMU.</span></span></p>\r\n<p><span style=\"font-family:times new roman,times,serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>\r\n",
+  "body_markdown": "**Brian MacAllister**\n\n![](../../media/images/brian.jpg)  Me: a research staff member, CMU.\n",
+  "body_html_raw": "<p><strong><span style=\"font-size:22px;\">Brian MacAllister</span></strong></p>\r\n<p><img alt=\"\" src=\"/shared/Images/brian.jpg\" style=\"height: 300px; width: 169px; float: left;\" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"font-family:times new roman,times,serif;\"><span style=\"font-size: 14px;\"> Me: a research staff member, CMU.</span></span></p>\r\n<p><span style=\"font-family:times new roman,times,serif;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>\r\n",
+  "revision_log": ""
+}

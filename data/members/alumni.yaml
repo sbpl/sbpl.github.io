@@ -1,10 +1,33 @@
 # =============================================================================
 # Alumni
 # =============================================================================
-# When a student graduates or leaves, move their entry from current.yaml here
-# and add the "now_at" field indicating their current position.
-# Their publications will continue to be linked automatically.
+# Members who have left the lab. The `category` field controls which section
+# the entry appears under on /people/. The full set of recognised categories
+# is:
+#
+#   postdoc          - Post-doctoral researcher (Postdoc Alumni)
+#   phd              - PhD student          (PhD Alumni)
+#   masters          - Masters student      (Masters Alumni)
+#   undergraduate    - Undergraduate        (Undergrad Alumni)
+#   research-staff   - Permanent research staff / engineer (Research Alumni)
+#   collaborator     - Visiting researcher / external collaborator
+#                      (Research Collaborators - Past)
+#   intern           - Summer / short-term intern (Intern Alumni)
+#
+# When someone graduates or leaves, move their entry from current.yaml here,
+# set the right category, and add `graduated:` (year) and/or `now_at:` if
+# known.
+#
+# Entries below the "Legacy (sbpl.net, ~2012-2015)" marker were imported from
+# the old Drupal sbpl.net site and reflect each member's role at the time of
+# that snapshot. Career-history fields (`now_at`) are intentionally left
+# blank where we don't have a verified public source - please update if you
+# have better information.
 # =============================================================================
+
+# -----------------------------------------------------------------------------
+# Recent (post-2015 CMU)
+# -----------------------------------------------------------------------------
 
 - name: "Ramkumar Natarajan"
   slug: "ramkumar-natarajan"
@@ -17,3 +40,338 @@
   links:
     website: "https://www.drramkumar.me/"
 
+# -----------------------------------------------------------------------------
+# Legacy (sbpl.net, ~2012-2015) — PhD students
+# -----------------------------------------------------------------------------
+# Bios are paraphrased from the original sbpl.net member pages.
+
+- name: "Ben Cohen"
+  slug: "ben-cohen"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania. Worked on
+    search-based planning for manipulation; co-authored the foundational
+    SBPL manipulation papers (ICRA 2010, RSS 2014, IJRR 2013).
+  links:
+    website: "http://bcohen.info"
+
+- name: "Subhrajit Bhattacharya"
+  slug: "subhrajit-bhattacharya"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in MEAM at the University of Pennsylvania,
+    co-advised with V. Kumar. Pioneered the search-based homotopy-class
+    constrained path-planning line of work (RSS 2011 Best Paper Award).
+
+- name: "Jonathan Butzke"
+  slug: "jonathan-butzke"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/legacy/jonathan-butzke.jpg"
+  bio: >
+    PhD student in the SBP Lab at CMU. Interests in robot design, system
+    integration, path planning, exploration, navigation, and high-level
+    control. Previously a Navy Officer for 19 years, qualified Ship's
+    Engineer on USS Oklahoma City (SSN-723) and division officer on
+    USS Toledo (SSN-769). Past lab projects include the Segbot and the
+    Hexacopter UAV.
+  links:
+    website: "http://www.jbutzke.com"
+
+- name: "Chris Clingerman"
+  slug: "chris-clingerman"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania,
+    co-advised with B. Taskar.
+
+- name: "John Drake"
+  slug: "john-drake"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania,
+    co-advised with A. Safonova. Worked on numerical sound propagation
+    and demonstration-based training of NPC behaviour.
+
+- name: "Steven Gray"
+  slug: "steven-gray"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in MEAM at the University of Pennsylvania,
+    co-advised with V. Kumar.
+
+- name: "Kalin Gochev"
+  slug: "kalin-gochev"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania. Worked on
+    planning with adaptive dimensionality and on R*-GPU search.
+
+- name: "Bradford Neuman"
+  slug: "bradford-neuman"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/legacy/bradford-neuman.jpg"
+  bio: >
+    PhD student in Robotics at CMU, co-advised with A. Stentz. Worked on
+    planning under uncertain human intentions in navigation.
+
+- name: "Aline Normoyle"
+  slug: "aline-normoyle"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in CIS at the University of Pennsylvania,
+    co-advised with A. Safonova. Worked on stochastic activity authoring
+    and game-based data capture.
+
+- name: "Mike Phillips"
+  slug: "mike-phillips"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in Robotics at CMU. Author of the original SIPP, E-Graphs
+    and Multi-Heuristic A* lines of work.
+  links:
+    website: "https://sites.google.com/site/robotman0/"
+
+- name: "Aram Ebtekar"
+  slug: "aram-ebtekar"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student in Computer Science.
+
+- name: "Sung-Kyun Kim"
+  slug: "sung-kyun-kim"
+  category: "phd"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    PhD student. Worked on parts-assembly planning under uncertainty and
+    tethered-robot path planning using MHA*.
+
+# -----------------------------------------------------------------------------
+# Legacy (sbpl.net, ~2012-2015) — Postdoctoral researchers
+# -----------------------------------------------------------------------------
+
+- name: "Soonkyum Kim"
+  slug: "soonkyum-kim"
+  category: "postdoc"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Post-doctoral researcher at SBPL. Worked on planning for a tethered
+    robot using Multi-Heuristic A* with topology-based heuristics
+    (IROS 2015).
+
+# -----------------------------------------------------------------------------
+# Legacy (sbpl.net, ~2012-2015) — Masters students
+# -----------------------------------------------------------------------------
+
+- name: "Venkatraman Narayanan"
+  slug: "venkatraman-narayanan"
+  category: "masters"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters (later PhD) student in Robotics at CMU. Built much of the
+    Deliberative-Perception line of work culminating in PERCH
+    (ICRA 2016) and D2P (RSS 2016).
+  links:
+    website: "http://www.cs.cmu.edu/~venkatrn/"
+
+- name: "Siddharth Swaminathan"
+  slug: "siddharth-swaminathan"
+  category: "masters"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student at SBPL. Co-author on the original Multi-Heuristic
+    A* paper (RSS 2014 / IJRR 2015).
+
+- name: "Chen Gao"
+  slug: "chen-gao"
+  category: "masters"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student at SBPL.
+
+- name: "Hao Wang"
+  slug: "hao-wang"
+  category: "masters"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student at SBPL.
+
+- name: "Victor Hwang"
+  slug: "victor-hwang"
+  category: "masters"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Masters student at SBPL. Co-author on Multi-Heuristic A* (RSS 2014 /
+    IJRR 2015) and on lazy validation of Experience Graphs (ICRA 2015).
+
+# -----------------------------------------------------------------------------
+# Legacy (sbpl.net, ~2012-2015) — Research Staff / Engineers
+# -----------------------------------------------------------------------------
+
+- name: "Andrew Dornbush"
+  slug: "andrew-dornbush"
+  category: "research-staff"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Long-time research staff member of SBPL. Co-author on many
+    lab papers covering search-based manipulation planning, exploration,
+    and a single-planner approach to multi-modal humanoid mobility.
+
+- name: "Brian MacAllister"
+  slug: "brian-macallister"
+  category: "research-staff"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/legacy/brian-macallister.jpg"
+  bio: >
+    Research staff member at CMU. Worked on path planning for non-circular
+    micro aerial vehicles in constrained environments (ICRA 2013) and
+    landing-site selection for aerial supply delivery (IROS 2011).
+
+- name: "Alex Kushleyev"
+  slug: "alex-kushleyev"
+  category: "research-staff"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Research staff at SBPL. Worked on time-bounded lattice planning
+    (ICRA 2009) and on landing-site selection in aerial supply delivery.
+
+- name: "Kush Prasad"
+  slug: "kush-prasad"
+  category: "research-staff"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Research staff at SBPL. Co-author on state-lattice with controllers
+    for augmenting lattice-based path planning (IROS 2014).
+
+- name: "Margarite Safonova"
+  slug: "margarite-safonova"
+  category: "research-staff"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Software developer at SBPL.
+
+- name: "Arjun Menon"
+  slug: "arjun-menon"
+  category: "research-staff"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Research staff at SBPL. First author on motion planning for the smooth
+    pick-up of moving objects (ICRA 2014).
+
+# -----------------------------------------------------------------------------
+# Legacy (sbpl.net, ~2012-2015) — Visiting researchers / collaborators
+# -----------------------------------------------------------------------------
+
+- name: "Sandip Aine"
+  slug: "sandip-aine"
+  category: "collaborator"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Visiting researcher / long-term collaborator. Co-developed the
+    Multi-Heuristic A* and Truncated Incremental Search lines of work.
+  links:
+    website: "https://sites.google.com/site/sandipaine/"
+
+# -----------------------------------------------------------------------------
+# Legacy (sbpl.net, ~2012-2015) — Summer / short-term interns
+# -----------------------------------------------------------------------------
+
+- name: "Ellis Ratner"
+  slug: "ellis-ratner"
+  category: "intern"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern / off-site developer at SBPL. Built the web-based
+    infrastructure for recording user demonstrations of mobile
+    manipulation tasks (ICRA 2015).
+
+- name: "Harsh Pandey"
+  slug: "harsh-pandey"
+  category: "intern"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Kavan McEachern"
+  slug: "kavan-mceachern"
+  category: "intern"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Matthew Mac Allister"
+  slug: "matthew-mac-allister"
+  category: "intern"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer 2012 intern at SBPL.
+
+- name: "Eduardo Barrera"
+  slug: "eduardo-barrera"
+  category: "intern"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Krishna Sapkota"
+  slug: "krishna-sapkota"
+  category: "intern"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL. Co-author on state-lattice with controllers
+    (IROS 2014).
+
+- name: "Burak Yucesoy"
+  slug: "burak-yucesoy"
+  category: "intern"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Summer intern at SBPL.
+
+- name: "Haojie \"Tony\" Zhang"
+  slug: "haojie-tony-zhang"
+  category: "intern"
+  era: "sbpl.net (~2012-2015)"
+  photo: "/images/members/placeholder.svg"
+  bio: >
+    Former member at SBPL. Co-author on combining global and local
+    planning with guarantees on completeness (ICRA 2012).

@@ -262,6 +262,23 @@ article {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--sbpl-border);
+  display: block;
+}
+
+.member-initials-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .member-info {
@@ -289,6 +306,79 @@ article {
   color: var(--sbpl-accent);
   font-size: 0.9rem;
   margin: 0.25rem 0;
+}
+
+.member-era {
+  margin: 0 0 0.35rem;
+  color: var(--sbpl-gray);
+  font-style: italic;
+}
+
+.people-section {
+  margin-top: 3rem;
+}
+
+.people-section > h2 {
+  margin-bottom: 0.25rem;
+  border-bottom: 3px solid var(--sbpl-accent);
+  padding-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.people-subhead {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--sbpl-border);
+  color: var(--sbpl-dark);
+  font-size: 1.25rem;
+}
+
+.people-count {
+  font-size: 0.85rem;
+  color: var(--sbpl-gray);
+  font-weight: normal;
+  margin-left: 0.4rem;
+}
+
+.section-lead {
+  color: var(--sbpl-gray);
+  font-size: 0.95rem;
+  margin: 0.25rem 0 1rem;
+  max-width: 60ch;
+}
+
+.people-empty {
+  color: var(--sbpl-gray);
+  font-style: italic;
+}
+
+.lab-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.lab-photo-grid figure {
+  margin: 0;
+  border: 1px solid var(--sbpl-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--sbpl-card);
+}
+
+.lab-photo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.lab-photo-grid figcaption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--sbpl-gray);
 }
 
 .member-bio {
@@ -443,6 +533,32 @@ article {
   line-height: 1.5;
   color: #555;
   margin: 0.5rem 0;
+}
+
+.publication-award {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8a5b00;
+  background: #fff4d6;
+  border: 1px solid #f0c987;
+  border-radius: 4px;
+  vertical-align: 0.05em;
+}
+
+.pub-year {
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--sbpl-border);
+  color: var(--sbpl-dark);
+}
+
+.publication-list {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .publication-links {
@@ -609,6 +725,80 @@ article {
 .member-profile-vision p {
   line-height: 1.7;
   color: #555;
+}
+
+/* ---------- Legacy / Generic Single Pages ---------- */
+.legacy-page {
+  max-width: 900px;
+  margin: 0 auto;
+  background: transparent !important;
+  border: none;
+  padding: 0;
+}
+
+.legacy-page > h1 {
+  color: var(--sbpl-dark);
+  margin-bottom: 0.25rem;
+}
+
+.legacy-page .page-lead {
+  color: var(--sbpl-gray);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.legacy-page-content {
+  line-height: 1.7;
+  color: #444;
+}
+
+.legacy-page-content h2 {
+  color: var(--sbpl-dark);
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--sbpl-border);
+}
+
+.legacy-page-content h3 {
+  color: var(--sbpl-dark);
+  margin-top: 1.5rem;
+}
+
+.legacy-page-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+}
+
+.legacy-page-content a {
+  color: var(--sbpl-accent);
+}
+
+.legacy-page-content a:hover {
+  color: var(--sbpl-accent-hover);
+}
+
+/* Inline-flex image row (used on Robots page) */
+.legacy-page-content p img {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Video grid (used on Videos page) */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--sbpl-border);
 }
 
 /* ---------- Footer ---------- */

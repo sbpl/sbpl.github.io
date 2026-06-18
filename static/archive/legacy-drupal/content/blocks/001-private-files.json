@@ -1,0 +1,10 @@
+{
+  "bid": 1,
+  "info": "private files",
+  "format": "full_html",
+  "slug": "private-files",
+  "body_html_rewritten": "<p><a href=\"/private/SBPL/\">Private Files</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Upload:</p>\r\n<p>username: REDACTED&nbsp;&nbsp; password: REDACTED</p>\r\n",
+  "body_html_raw": "<p><a href=\"/private/SBPL/\">Private Files</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Upload:</p>\r\n<p>username: REDACTED&nbsp;&nbsp; password: REDACTED</p>\r\n",
+  "body_markdown": "[Private Files](/private/SBPL/) Upload:\n\nusername: REDACTED password: REDACTED\n",
+  "_redaction_note": "Original Drupal block body contained plaintext credentials for a /private/SBPL/ upload form on the (now offline) sbpl.net site. Credentials were redacted before publishing this archive snapshot."
+}

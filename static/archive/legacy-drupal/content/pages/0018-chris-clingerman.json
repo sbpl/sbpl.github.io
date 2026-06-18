@@ -1,0 +1,27 @@
+{
+  "nid": 18,
+  "vid": 18,
+  "type": "page",
+  "language": "und",
+  "title": "Chris Clingerman",
+  "slug": "chris-clingerman",
+  "uid": 1,
+  "status": 1,
+  "promote": 0,
+  "sticky": 0,
+  "comment": 1,
+  "created": 1341599421,
+  "changed": 1344135561,
+  "url_aliases": [
+    "ChrisClingerman"
+  ],
+  "tags_tids": [],
+  "field_image": [],
+  "field_page_file": [],
+  "body_format": "full_html",
+  "body_summary": "",
+  "body_html_rewritten": "<p>PhD student in CIS, UPenn, co-advised with B. Taskar</p>\r\n",
+  "body_markdown": "PhD student in CIS, UPenn, co-advised with B. Taskar\n",
+  "body_html_raw": "<p>PhD student in CIS, UPenn, co-advised with B. Taskar</p>\r\n",
+  "revision_log": ""
+}
