@@ -12,7 +12,11 @@
   <header class="site-header">
     <nav class="container">
       <ul>
-        <li><a href="/" class="lab-logo"><strong>{{ .Site.Params.labName }}</strong></a></li>
+        <li>
+          <a href="/" class="lab-logo" aria-label="{{ .Site.Params.labFullName }} home">
+            {{ with .Site.Params.labLogo }}<img src="{{ . }}" alt="{{ $.Site.Params.labName }} logo">{{ else }}<strong>{{ .Site.Params.labName }}</strong>{{ end }}
+          </a>
+        </li>
       </ul>
       <ul>
         {{ range .Site.Menus.main }}

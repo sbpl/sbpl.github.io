@@ -31,15 +31,30 @@ article {
 }
 
 /* ---------- Site Header ---------- */
+/* Stays pinned to the top while scrolling, so the logo and menu are always visible. */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: #ffffff;
   border-bottom: 1px solid var(--sbpl-border);
   padding: 0;
   margin-bottom: 2rem;
 }
 
+/* Keep in-page anchors (e.g. /people/#phd) from landing under the sticky header */
+html {
+  scroll-padding-top: 6.5rem;
+}
+
 .site-header nav {
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
+}
+
+.lab-logo img {
+  display: block;
+  height: 48px;
+  width: auto;
 }
 
 .site-header a {
@@ -140,158 +155,7 @@ article {
   line-height: 1.2;
 }
 
-/* ---------- PI Section ---------- */
-.pi-section {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--sbpl-border);
-}
-
-.pi-card {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.pi-photo-wrapper {
-  flex-shrink: 0;
-}
-
-.pi-photo {
-  width: 220px;
-  height: 220px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 2px solid var(--sbpl-border);
-}
-
-.pi-info {
-  flex: 1;
-}
-
-.pi-name {
-  margin-bottom: 0.25rem;
-  color: var(--sbpl-dark);
-}
-
-.pi-title {
-  color: var(--sbpl-gray);
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.pi-vision {
-  line-height: 1.7;
-  color: #555;
-}
-
-.pi-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.pi-links a {
-  font-size: 0.9rem;
-}
-
-/* ---------- Member Grid ---------- */
-.member-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-/* ---------- Member Card ---------- */
-.member-card {
-  border: 1px solid var(--sbpl-border);
-  border-radius: 12px;
-  padding: 1.25rem;
-  background: var(--sbpl-card);
-  transition: box-shadow 0.2s;
-  height: 320px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-
-.member-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: linear-gradient(transparent, var(--sbpl-card));
-  pointer-events: none;
-}
-
-.member-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  border-color: var(--sbpl-accent);
-}
-
-.member-card a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.member-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  height: 100%;
-}
-
-.member-card-inner {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.member-photo-wrapper {
-  flex-shrink: 0;
-}
-
-.member-photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--sbpl-border);
-  display: block;
-}
-
-.member-initials-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.9rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-.member-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.member-name {
-  margin: 0 0 0.25rem;
-  font-size: 1.1rem;
-  color: var(--sbpl-dark);
-}
-
+/* ---------- Member badge + "now at" (profile pages) ---------- */
 .badge {
   display: inline-block;
   background: var(--sbpl-light);
@@ -308,37 +172,16 @@ article {
   margin: 0.25rem 0;
 }
 
-.member-era {
-  margin: 0 0 0.35rem;
-  color: var(--sbpl-gray);
-  font-style: italic;
-}
-
 .people-section {
   margin-top: 3rem;
 }
 
 .people-section > h2 {
+  color: var(--sbpl-dark);
   margin-bottom: 0.25rem;
   border-bottom: 3px solid var(--sbpl-accent);
   padding-bottom: 0.35rem;
   display: inline-block;
-}
-
-.people-subhead {
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid var(--sbpl-border);
-  color: var(--sbpl-dark);
-  font-size: 1.25rem;
-}
-
-.people-count {
-  font-size: 0.85rem;
-  color: var(--sbpl-gray);
-  font-weight: normal;
-  margin-left: 0.4rem;
 }
 
 .section-lead {
@@ -381,51 +224,196 @@ article {
   color: var(--sbpl-gray);
 }
 
-.member-bio {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #555;
-  margin: 0.5rem 0;
+/* ---------- People Page: member rows ---------- */
+.people-title {
+  color: var(--sbpl-dark);
+  margin-bottom: 0.5rem;
 }
 
-.member-publications {
-  margin: 0.5rem 0;
-  font-size: 0.85rem;
-}
-
-.member-publications summary {
-  cursor: pointer;
-  color: var(--sbpl-accent);
-  font-weight: 600;
-}
-
-.member-publications ul {
-  margin: 0.25rem 0 0 1rem;
+nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative margin */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1rem 0 0.5rem;
   padding: 0;
 }
 
-.member-publications li {
-  margin-bottom: 0.25rem;
+.people-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.member-publications li small {
+.people-nav a {
+  display: inline-block;
+  margin: 0;  /* Pico gives nav links negative margins */
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--sbpl-border);
+  border-radius: 999px;
+  background: #fff;
+  color: #444;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.people-nav a:hover,
+.people-nav a:focus-visible {
+  background: #f0f4fb;
+  border-color: var(--sbpl-accent);
+  color: var(--sbpl-accent);
+}
+
+.member-group > h2 {
+  margin-bottom: 1.5rem;
+}
+
+.member-row {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eceff3;
+}
+
+.member-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Alumni: plain text, one person per line */
+.alumni-list {
+  margin-top: 1.25rem;
+}
+
+.alumni-list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.alumni-list li {
+  list-style: none;
+  margin: 0 0 0.35rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.member-row-photo {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.member-row-photo img,
+.member-row-initials {
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.member-row-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.member-row-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.member-row-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.6rem;
+  margin-bottom: 0.45rem;
+}
+
+.member-row-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--sbpl-dark);
+  text-decoration: none;
+}
+
+.member-row-name:hover,
+.member-row-name:focus-visible {
+  color: var(--sbpl-accent);
+  text-decoration: underline;
+}
+
+.member-row-enrollment {
+  font-size: 0.92rem;
   color: var(--sbpl-gray);
 }
 
-.member-links {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
+.member-row-bio {
+  margin: 0 0 0.6rem;
+  color: #555;
+  line-height: 1.65;
 }
 
-.member-links a {
-  font-size: 0.8rem;
+.member-row-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  font-size: 0.88rem;
+}
+
+.member-row-links:empty {
+  display: none;
+}
+
+.member-row-links a {
   color: var(--sbpl-accent);
   text-decoration: none;
 }
 
-.member-links a:hover {
+.member-row-links a:hover {
+  text-decoration: underline;
+}
+
+.member-row-pubs {
+  margin: 0.6rem 0 0;
+  border: none;
+}
+
+.member-row-pubs summary {
+  color: #666;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.member-row-pubs summary::after {  /* keep Pico's chevron beside the label, not at the far edge */
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.member-row-pubs ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.member-row-pubs li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
+}
+
+.member-row-pub-title {
+  color: var(--sbpl-dark);
+  text-decoration: none;
+}
+
+.member-row-pub-title:hover {
+  color: var(--sbpl-accent);
   text-decoration: underline;
 }
 
@@ -821,24 +809,14 @@ article {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-  .pi-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .member-row-photo img,
+  .member-row-initials {
+    width: 80px;
+    height: 80px;
   }
 
-  .pi-links {
-    justify-content: center;
-  }
-
-  .member-card-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .member-links {
-    justify-content: center;
+  .member-row-initials {
+    font-size: 1.5rem;
   }
 
   .publication-card-inner {
@@ -848,10 +826,6 @@ article {
   .publication-thumbnail {
     width: 100%;
     height: 200px;
-  }
-
-  .member-grid {
-    grid-template-columns: 1fr;
   }
 
   .publication-links-large {

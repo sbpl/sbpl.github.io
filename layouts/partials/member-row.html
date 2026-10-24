@@ -1,0 +1,96 @@
+{{/*
+  Member Row Partial (list layout, modelled on the ARCS lab members page)
+  Usage: {{ partial "member-row.html" (dict "member" $member "isPI" false) }}
+  Renders one full-width row: photo on the left; name, enrollment line, bio,
+  small links and a collapsible publication list on the right.
+
+  The name and photo link to the member's personal website when there is one,
+  otherwise to their profile page on this site. The grey line next to the name
+  is the optional `enrollment` field (e.g. "RI PhD, Fall 2022"); without it,
+  the role and `year` are shown instead.
+*/}}
+{{ $member := .member }}
+{{ $isPI   := .isPI }}
+{{ $slug   := $member.slug | default ($member.name | urlize) }}
+{{ $profile := printf "/people/%s/" $slug }}
+{{ $href   := $member.links.website | default $profile }}
+{{ $external := ne $href $profile }}
+
+{{ $roleLabels := dict
+  "postdoc"        "Postdoctoral Researcher"
+  "phd"            "PhD Student"
+  "masters"        "Master’s Student"
+  "undergraduate"  "Undergraduate Researcher"
+  "research-staff" "Research Staff"
+  "collaborator"   "Research Collaborator"
+}}
+{{ $enrollment := $member.enrollment }}
+{{ if not $enrollment }}
+  {{ if $isPI }}
+    {{ $enrollment = printf "%s, %s" ($member.title | default "Professor") site.Params.department }}
+  {{ else }}
+    {{ $enrollment = index $roleLabels $member.category | default ($member.category | humanize) }}
+    {{ with $member.year }}{{ $enrollment = printf "%s, %s" $enrollment . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Initials avatar for members without a photo (colour picked from the slug, so it stays stable) */}}
+{{ $hasPhoto := and $member.photo (not (in $member.photo "placeholder.svg")) }}
+{{ $words := split $member.name " " }}
+{{ $initials := printf "%s%s" (substr (index $words 0) 0 1) (substr (index $words (sub (len $words) 1)) 0 1) | upper }}
+{{ $palette := slice "#3a5fb8" "#2f7f5f" "#a04060" "#8a5b00" "#5a4b8a" "#345d7e" "#a0552e" "#3c7a7a" }}
+{{ $bg := index $palette (mod (len $slug) (len $palette)) }}
+
+<div class="member-row" id="{{ $slug }}">
+  <a class="member-row-photo" href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener"{{ end }} tabindex="-1" aria-hidden="true">
+    {{ if $hasPhoto }}
+      <img src="{{ $member.photo }}" alt="" loading="lazy" decoding="async"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span class="member-row-initials" style="display:none; background:{{ $bg }};">{{ $initials }}</span>
+    {{ else }}
+      <span class="member-row-initials" style="background:{{ $bg }};">{{ $initials }}</span>
+    {{ end }}
+  </a>
+
+  <div class="member-row-content">
+    <div class="member-row-header">
+      <a class="member-row-name" href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ $member.name }}</a>
+      <span class="member-row-enrollment">{{ $enrollment }}</span>
+    </div>
+
+    <p class="member-row-bio">{{ $member.bio }}</p>
+
+    <div class="member-row-links">
+      {{ if $external }}<a href="{{ $profile }}">Profile</a>{{ end }}
+      {{ with $member.links }}
+        {{ with .scholar }}<a href="{{ . }}" target="_blank" rel="noopener">Google Scholar</a>{{ end }}
+        {{ with .github }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+      {{ end }}
+      {{ with $member.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+    </div>
+
+    {{/* Publications from the authors taxonomy. The advisor is on nearly every
+         paper, so his list lives on his profile page instead. */}}
+    {{ if not $isPI }}
+      {{ with site.GetPage (printf "/authors/%s" ($member.name | urlize)) }}
+        {{ with .Pages }}
+          <details class="member-row-pubs">
+            <summary>Publications ({{ len . }})</summary>
+            <ul>
+              {{ range .ByDate.Reverse }}
+                <li>
+                  <a href="{{ .RelPermalink }}" class="member-row-pub-title">{{ .Title }}</a>.<br>
+                  {{ range $i, $a := .Params.authors -}}
+                    {{ if $i }}, {{ end }}{{ if eq $a $member.name }}<b>{{ $a }}</b>{{ else }}{{ $a }}{{ end }}
+                  {{- end }}.
+                  {{ with .Params.venue }}<i>{{ . }}</i>.{{ end }}
+                  {{ with .Params.award }}(<b>{{ . }}</b>){{ end }}
+                </li>
+              {{ end }}
+            </ul>
+          </details>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

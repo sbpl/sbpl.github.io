@@ -33,6 +33,7 @@ Changes are live-reloaded automatically.
      slug: "your-full-name"           # lowercase, hyphens (auto-generated from name)
      category: "phd"                  # phd | masters | undergraduate | postdoc
      year: "1st year"                 # optional
+     enrollment: "RI PhD, Fall 2025"  # optional, shown next to your name on /people/
      photo: "/images/members/your-full-name.jpg"
      bio: >
        A short paragraph about your research interests

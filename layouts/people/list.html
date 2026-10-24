@@ -1,37 +1,5 @@
 {{ define "main" }}
-
-{{/* -------------------------------------------------------------------- */}}
-{{/* PI                                                                    */}}
-{{/* -------------------------------------------------------------------- */}}
-{{ with .Site.Data.members.pi }}
-<section class="pi-section">
-  <div class="pi-card">
-    <div class="pi-photo-wrapper">
-      <img src="{{ .photo }}" alt="{{ .name }}" class="pi-photo"
-           onerror="this.src='/images/members/placeholder.svg'">
-    </div>
-    <div class="pi-info">
-      <h1 class="pi-name">{{ .name }}</h1>
-      <p class="pi-title">{{ .title }} — Principal Investigator</p>
-      <p class="pi-bio">{{ .bio }}</p>
-
-      <div class="pi-links">
-        {{ with .links }}
-          {{ with .website }}<a href="{{ . }}" target="_blank">🌐 Website</a>{{ end }}
-          {{ with .scholar }}<a href="{{ . }}" target="_blank">🎓 Scholar</a>{{ end }}
-        {{ end }}
-        {{ with .email }}<a href="mailto:{{ . }}">✉️ Email</a>{{ end }}
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-
-{{/* -------------------------------------------------------------------- */}}
-{{/* Current members - grouped by category                                 */}}
-{{/* -------------------------------------------------------------------- */}}
 {{ $current := .Site.Data.members.current }}
-{{ $alumni  := .Site.Data.members.alumni }}
 
 {{/* Display order + section headings. Add new categories here. */}}
 {{ $categories := slice
@@ -43,69 +11,58 @@
   (dict "key" "collaborator"   "label" "Research Collaborators")
 }}
 
-{{ $alumniCategories := slice
-  (dict "key" "postdoc"        "label" "Postdoc Alumni")
-  (dict "key" "phd"            "label" "PhD Alumni")
-  (dict "key" "masters"        "label" "Master’s Alumni")
-  (dict "key" "undergraduate"  "label" "Undergraduate Alumni")
-  (dict "key" "research-staff" "label" "Research Staff Alumni")
-  (dict "key" "collaborator"   "label" "Past Research Collaborators")
-  (dict "key" "intern"         "label" "Intern Alumni")
-}}
+<div class="people-page">
+<h1 class="people-title">{{ .Site.Params.labName }} Lab Members</h1>
 
-<section class="people-section people-current">
-  <h2 id="current-members">Current Members</h2>
-  <p class="section-lead">
-    Researchers actively working with the lab.
-  </p>
-
-  {{ $anyCurrent := false }}
-  {{ range $cat := $categories }}
-    {{ $members := where $current "category" $cat.key }}
-    {{ if $members }}
-      {{ $anyCurrent = true }}
-      <h3 class="people-subhead">{{ $cat.label }}
-        <span class="people-count">({{ len $members }})</span>
-      </h3>
-      <div class="member-grid">
-        {{ range $members }}
-          {{ partial "member-card.html" (dict "member" . "site" $.Site) }}
-        {{ end }}
-      </div>
+{{/* Jump links to each section that has people in it */}}
+<nav class="people-nav" aria-label="People sections">
+  <ul>
+    {{ with .Site.Data.members.pi }}<li><a href="#advisor">Advisor</a></li>{{ end }}
+    {{ range $cat := $categories }}
+      {{ if where $current "category" $cat.key }}<li><a href="#{{ $cat.key }}">{{ $cat.label }}</a></li>{{ end }}
     {{ end }}
-  {{ end }}
+    {{ if .Content }}<li><a href="#alumni">Alumni</a></li>{{ end }}
+    <li><a href="#lab-photos">Lab Photos</a></li>
+  </ul>
+</nav>
 
-  {{ if not $anyCurrent }}
-    <p class="people-empty">No current members listed yet.</p>
-  {{ end }}
+{{/* -------------------------------------------------------------------- */}}
+{{/* Advisor                                                               */}}
+{{/* -------------------------------------------------------------------- */}}
+{{ with .Site.Data.members.pi }}
+<section class="people-section member-group">
+  <h2 id="advisor">Advisor</h2>
+  {{ partial "member-row.html" (dict "member" . "isPI" true) }}
 </section>
+{{ end }}
 
 {{/* -------------------------------------------------------------------- */}}
-{{/* Alumni - grouped by category                                         */}}
+{{/* Current members - one section per category                            */}}
 {{/* -------------------------------------------------------------------- */}}
-{{ if $alumni }}
+{{ range $cat := $categories }}
+  {{ $members := where $current "category" $cat.key }}
+  {{ if $members }}
+  <section class="people-section member-group">
+    <h2 id="{{ $cat.key }}">{{ $cat.label }}</h2>
+    {{ range $members }}
+      {{ partial "member-row.html" (dict "member" . "isPI" false) }}
+    {{ end }}
+  </section>
+  {{ end }}
+{{ end }}
+
+{{ if not $current }}
+  <p class="people-empty">No current members listed yet.</p>
+{{ end }}
+</div>
+
+{{/* -------------------------------------------------------------------- */}}
+{{/* Alumni - plain-text list, written in content/people/_index.md         */}}
+{{/* -------------------------------------------------------------------- */}}
+{{ with .Content }}
 <section class="people-section people-alumni">
   <h2 id="alumni">Alumni</h2>
-  <p class="section-lead">
-    Former members of the lab. Many of the entries below were imported
-    from the archived <code>sbpl.net</code> site and reflect each member’s
-    role at that time; some career-history details are still being filled
-    in.
-  </p>
-
-  {{ range $cat := $alumniCategories }}
-    {{ $members := where $alumni "category" $cat.key }}
-    {{ if $members }}
-      <h3 class="people-subhead">{{ $cat.label }}
-        <span class="people-count">({{ len $members }})</span>
-      </h3>
-      <div class="member-grid">
-        {{ range $members }}
-          {{ partial "member-card.html" (dict "member" . "site" $.Site) }}
-        {{ end }}
-      </div>
-    {{ end }}
-  {{ end }}
+  <div class="alumni-list">{{ . }}</div>
 </section>
 {{ end }}
 
