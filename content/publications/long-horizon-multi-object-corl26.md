@@ -15,6 +15,8 @@ publication_type: "conference"
 arxiv: "https://arxiv.org/abs/2610.25785"
 project_page: "https://distilled-search.github.io/"
 thumbnail: "/images/publications/disco-corl.mp4"
+# Real-world runs shown in the homepage Research Demos instead of the thumbnail
+demo: "/images/publications/disco-real-world.mp4"
 draft: false
 ---
 

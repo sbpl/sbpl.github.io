@@ -1,8 +1,8 @@
 ---
 title: "SBPL — Search-Based Planning Lab"
 # Research Demos below the lab description, in this order: publication files in
-# content/publications/ (name without .md). Each tile plays the paper's
-# thumbnail clip/GIF and links to its project page.
+# content/publications/ (name without .md). Each tile plays the paper's `demo`
+# clip (else its `thumbnail`) and links to its project page.
 demos:
   - long-horizon-multi-object-corl26          # DISCO
   - mosaic-skill-centric-manipulation-icra26  # MOSAIC

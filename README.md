@@ -134,7 +134,9 @@ filename order. Crop new photos to 4:3 (e.g. 1600×1200) before adding them.
 The **Research Demos** under the lab description are the papers listed under
 `demos` in `content/_index.md`, in that order. Each entry is a publication file
 name from `content/publications/` without `.md`; its tile plays the paper's
-`thumbnail` clip or GIF (no text) and links to its project page.
+`thumbnail` clip or GIF (no text) and links to its project page. To show a
+different clip here than on `/publications/`, add `demo: "/images/…mp4"` to the
+paper's front matter (DISCO uses this for its real-world runs).
 
 ### Update the PI Information
 

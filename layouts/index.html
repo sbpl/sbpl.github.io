@@ -108,9 +108,9 @@
   {{ end }}
 </section>
 
-{{/* Research Demos: the thumbnail clips/GIFs of the papers listed under
-     `demos` in content/_index.md, with no text; each links to the paper's
-     project page (else the paper). */}}
+{{/* Research Demos: a clip/GIF for each paper listed under `demos` in
+     content/_index.md (the paper's `demo`, else its `thumbnail`), with no
+     text; each links to the paper's project page (else the paper). */}}
 {{ with .Params.demos }}
 <section class="demos" aria-labelledby="demos-title">
   <h2 id="demos-title" class="demos-title">Research Demos</h2>
@@ -120,7 +120,7 @@
     {{ $pub := . }}
     {{ $p := .Params }}
     {{ $url := $p.project_page | default $p.arxiv | default $p.pdf | default $p.doi | default .RelPermalink }}
-    {{ with $p.thumbnail }}
+    {{ with $p.demo | default $p.thumbnail }}
     <a class="demo-tile" href="{{ $url }}"{{ if ne $url $pub.RelPermalink }} target="_blank" rel="noopener"{{ end }} aria-label="{{ $pub.Title }}">
       {{ if findRE `(?i)\.(mp4|webm)$` . }}
       <video class="pub-preview" src="{{ . }}" muted loop playsinline preload="metadata" aria-hidden="true"></video>
