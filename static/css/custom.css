@@ -72,19 +72,135 @@ html {
   color: var(--sbpl-dark);
 }
 
-/* ---------- Hero Section (Homepage) ---------- */
+/* ---------- Lab Photo Carousel (Homepage) ---------- */
+/* Full-width black band right under the header (like the R-PAD lab site);
+   each photo is shown whole and centred. */
+.lab-carousel {
+  margin-top: -2rem;  /* cancel the header's bottom margin so the band sits flush */
+  background: #000;
+}
+
+.carousel-viewport {
+  position: relative;
+  height: min(78vh, 760px, 75vw);  /* about a screenful; 4:3 photos fill the width on phones */
+  overflow: hidden;
+}
+
+.carousel-slide {  /* slides are stacked; the active one fades in */
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.is-active {
+  opacity: 1;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 5rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-arrow svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.carousel-prev {
+  left: 1rem;
+}
+
+.carousel-next {
+  right: 1rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-dots button {
+  width: 0.65rem;
+  height: 0.65rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.carousel-dots button[aria-current="true"] {
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .carousel-arrow {
+    width: 2.5rem;
+    height: 3.5rem;
+  }
+
+  .carousel-prev {
+    left: 0.5rem;
+  }
+
+  .carousel-next {
+    right: 0.5rem;
+  }
+}
+
+/* ---------- Hero Text (Homepage) ---------- */
 .hero {
   text-align: center;
-  padding: 2rem 0 1.5rem;
-  border-bottom: 1px solid var(--sbpl-border);
-  margin-bottom: 2rem;
+  padding: 1.25rem 0 1rem;
+}
+
+/* Lab and university logos side by side, split by a thin rule */
+.hero-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .hero-logo {
-  max-width: 280px;
-  max-height: 120px;
-  margin: 0 auto 1.5rem;
   display: block;
+  height: 60px;
+  width: auto;
+}
+
+.hero-logo + .hero-logo {
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--sbpl-border);
 }
 
 .hero h1 {
@@ -98,61 +214,80 @@ html {
   font-size: 1.1rem;
 }
 
+/* Wider than the page container (up to 1700px, keeping a 1.5rem margin on
+   each side) so the text fits in four lines on most desktop screens */
 .hero-description {
-  max-width: 800px;
-  margin: 1rem auto 0;
+  max-width: none;
+  margin: 1rem calc(50% - min(50vw - 1.5rem, 850px)) 0;
+  font-size: 0.9rem;
   line-height: 1.7;
   color: #555;
+  text-wrap: pretty;  /* never leave a single word on the last line */
 }
 
-/* ---------- Team Preview (Homepage) ---------- */
-.team-preview {
-  text-align: center;
-  padding: 1rem 0;
+/* Too narrow for four lines: even out the lines instead of leaving a few
+   words on the last one */
+@media (max-width: 1439px) {
+  .hero-description {
+    text-wrap: balance;
+  }
 }
 
-.pi-preview {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  text-align: left;
+/* ---------- Research Demos (Homepage) ---------- */
+.demos {
+  margin: 2.5rem 0 1rem;
 }
 
-.member-photo-small {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+.demos-title {
+  display: table;  /* shrink-wrap so the underline fits the text */
+  margin: 0 auto 1.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 3px solid var(--sbpl-accent);
+  color: var(--sbpl-dark);
 }
 
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1.5rem;
+.demos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
-.team-member-mini {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-  text-decoration: none;
-  color: var(--sbpl-text);
-  width: 80px;
-  text-align: center;
-  transition: transform 0.2s;
+/* Clips of any shape are shown whole in a 16:9 frame */
+.demo-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.team-member-mini:hover {
+.demo-tile:hover,
+.demo-tile:focus-visible {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
 
-.team-member-mini span {
-  font-size: 0.75rem;
-  line-height: 1.2;
+.demo-tile img,
+.demo-tile video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .demos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .demos-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /* ---------- Member badge + "now at" (profile pages) ---------- */
@@ -230,39 +365,6 @@ html {
   margin-bottom: 0.5rem;
 }
 
-nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative margin */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 1rem 0 0.5rem;
-  padding: 0;
-}
-
-.people-nav li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.people-nav a {
-  display: inline-block;
-  margin: 0;  /* Pico gives nav links negative margins */
-  padding: 0.35rem 0.8rem;
-  border: 1px solid var(--sbpl-border);
-  border-radius: 999px;
-  background: #fff;
-  color: #444;
-  font-size: 0.92rem;
-  text-decoration: none;
-}
-
-.people-nav a:hover,
-.people-nav a:focus-visible {
-  background: #f0f4fb;
-  border-color: var(--sbpl-accent);
-  color: var(--sbpl-accent);
-}
-
 .member-group > h2 {
   margin-bottom: 1.5rem;
 }
@@ -280,21 +382,69 @@ nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative marg
   margin-bottom: 0;
 }
 
-/* Alumni: plain text, one person per line */
-.alumni-list {
-  margin-top: 1.25rem;
+/* Two-column sections (e.g. PhD students); one column on narrow screens */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2.5rem;
 }
 
-.alumni-list ul {
+.member-grid .member-row:nth-child(odd):nth-last-child(2) {  /* left cell of a full last row */
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-grid .member-row:nth-child(odd):nth-last-child(2) {
+    border-bottom: 1px solid #eceff3;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Master's students and alumni: plain text, one person per line */
+.name-list {
   margin: 0;
   padding: 0;
 }
 
-.alumni-list li {
+.name-list li {
   list-style: none;
   margin: 0 0 0.35rem;
   color: #555;
   line-height: 1.6;
+}
+
+/* "Show N more" toggle under long alumni groups */
+.alumni-more {
+  --pico-accordion-close-summary-color: var(--sbpl-accent);
+  --pico-accordion-open-summary-color: var(--sbpl-accent);
+  --pico-accordion-active-summary-color: var(--sbpl-accent);
+  margin: 0.35rem 0 0;
+  border: none;
+}
+
+.alumni-more summary {
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.alumni-more summary::after {  /* keep Pico's chevron beside the label, not at the far edge */
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.alumni-more .when-open,
+.alumni-more[open] .when-closed {
+  display: none;
+}
+
+.alumni-more[open] .when-open {
+  display: inline;
 }
 
 .member-row-photo {
@@ -304,14 +454,18 @@ nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative marg
 
 .member-row-photo img,
 .member-row-initials {
-  width: 110px;
-  height: 110px;
+  width: 160px;
   border-radius: 10px;
-  object-fit: cover;
   display: block;
 }
 
+.member-row-photo img {  /* full photo at its own aspect ratio, never cropped */
+  height: auto;
+  object-fit: contain;
+}
+
 .member-row-initials {
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -352,6 +506,23 @@ nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative marg
   color: var(--sbpl-gray);
 }
 
+/* Own line beneath the name/enrollment */
+.member-row-coadvisor {
+  flex-basis: 100%;
+  font-size: 0.92rem;
+  color: var(--sbpl-gray);
+}
+
+.member-row-coadvisor a {
+  color: var(--sbpl-accent);
+  text-decoration: none;
+}
+
+.member-row-coadvisor a:hover,
+.member-row-coadvisor a:focus-visible {
+  text-decoration: underline;
+}
+
 .member-row-bio {
   margin: 0 0 0.6rem;
   color: #555;
@@ -370,137 +541,199 @@ nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative marg
 }
 
 .member-row-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--sbpl-accent);
   text-decoration: none;
+}
+
+.link-icon {
+  width: 1.05em;
+  height: 1.05em;
+  flex-shrink: 0;
 }
 
 .member-row-links a:hover {
   text-decoration: underline;
 }
 
-.member-row-pubs {
-  margin: 0.6rem 0 0;
-  border: none;
+/* ---------- Publication List (modelled on the R-PAD lab's list) ---------- */
+/* Links to Maxim's Google Scholar profile above and below the list */
+.pub-scholar-top a,
+.pub-scholar-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.member-row-pubs summary {
-  color: #666;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-.member-row-pubs summary::after {  /* keep Pico's chevron beside the label, not at the far edge */
-  float: none;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.member-row-pubs ul {
-  margin: 0.6rem 0 0;
-  padding-left: 1.2rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.member-row-pubs li {
-  margin-bottom: 0.5rem;
-  list-style: disc;
-}
-
-.member-row-pub-title {
-  color: var(--sbpl-dark);
+.pub-scholar-top a {
+  color: var(--sbpl-accent);
   text-decoration: none;
 }
 
-.member-row-pub-title:hover {
-  color: var(--sbpl-accent);
+.pub-scholar-top a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Publication List ---------- */
-.publication-list {
+.pub-scholar-more {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.pub-scholar-more a {
+  color: var(--sbpl-accent);
+  border-color: var(--sbpl-accent);
+}
+
+.pub-scholar-more a:hover {
+  color: #fff;
+  background: var(--sbpl-accent);
+}
+
+/* Each year is a <details> dropdown: the year heading, an Expand/Collapse
+   label and a chevron make up the clickable summary */
+.pub-year-group {
+  margin: 2rem 0 0;
+  border-bottom: none;
+}
+
+.pub-year-group > summary {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  line-height: normal;
+  list-style: none;
+  cursor: pointer;
+}
+
+.pub-year-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.pub-year-group > summary::after {  /* Pico's chevron, kept next to the count */
+  float: none;
+  margin: 0;
+}
+
+.pub-year-group[open] > summary {
+  margin-bottom: 0.5rem;
 }
 
 .pub-year {
-  color: var(--sbpl-dark);
-  border-bottom: 1px solid var(--sbpl-border);
+  display: inline-block;
+  margin: 0;
   padding-bottom: 0.3rem;
-  margin-top: 2rem;
+  border-bottom: 3px solid var(--sbpl-accent);
+  color: var(--sbpl-dark);
 }
 
-/* ---------- Publication Card ---------- */
-.publication-card {
-  border: 1px solid var(--sbpl-border);
-  border-radius: 12px;
-  padding: 1.25rem;
-  background: var(--sbpl-card);
-  transition: box-shadow 0.2s;
+.pub-year-toggle {
+  color: var(--sbpl-gray);
+  font-size: 0.95rem;
 }
 
-.publication-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+.pub-year-group > summary:hover .pub-year-toggle {
+  color: var(--sbpl-accent);
 }
 
-.publication-card-inner {
+.pub-year-toggle .when-open,
+.pub-year-group[open] .pub-year-toggle .when-closed {
+  display: none;
+}
+
+.pub-year-group[open] .pub-year-toggle .when-open {
+  display: inline;
+}
+
+.pub-item {
   display: flex;
   gap: 1.25rem;
   align-items: flex-start;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #eceff3;
 }
 
-.publication-thumbnail {
-  flex-shrink: 0;
-  width: 180px;
-  height: 120px;
-  overflow: hidden;
-  border-radius: 8px;
-  background: var(--sbpl-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pub-item:last-child {
+  border-bottom: none;
 }
 
-.publication-thumbnail img {
+.pub-thumb {
+  flex: 0 0 220px;
+}
+
+.pub-thumb img,
+.pub-thumb video {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 200px;  /* keep tall images from stretching the row */
+  object-fit: contain;
+  border-radius: 6px;
 }
 
-.publication-info {
+.pub-body {
   flex: 1;
   min-width: 0;
 }
 
-.publication-title {
-  margin: 0 0 0.25rem;
-  font-size: 1.05rem;
-  line-height: 1.3;
-}
-
-.publication-title a {
-  color: var(--sbpl-dark);
+.pub-title {
+  color: var(--sbpl-accent);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.4;
   text-decoration: none;
 }
 
-.publication-title a:hover {
-  color: var(--sbpl-accent);
+.pub-title:hover {
+  text-decoration: underline;
 }
 
+.pub-authors {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.pub-venue {
+  margin-top: 0.1rem;
+  font-size: 0.9rem;
+  color: var(--sbpl-dark);
+}
+
+.pub-venue strong {
+  font-weight: 700;
+}
+
+.pub-description {
+  margin: 0.3rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.6rem;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+}
+
+.pub-links a {
+  color: var(--sbpl-accent);
+  text-decoration: none;
+}
+
+.pub-links a:hover {
+  text-decoration: underline;
+}
+
+/* Author names: used in the rows above and on each publication's page */
 .publication-authors {
   font-size: 0.9rem;
   margin: 0.25rem 0;
   color: #555;
-}
-
-.author-link {
-  color: var(--sbpl-accent);
-  text-decoration: none;
-}
-
-.author-link:hover {
-  text-decoration: underline;
 }
 
 .co-first-note {
@@ -510,43 +743,10 @@ nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative marg
   font-style: italic;
 }
 
-.publication-venue {
-  font-size: 0.85rem;
-  color: var(--sbpl-gray);
-  margin: 0.25rem 0;
-}
-
-.publication-description {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #555;
-  margin: 0.5rem 0;
-}
-
-.publication-award {
-  display: inline-block;
-  margin-left: 0.4rem;
-  padding: 0.05rem 0.45rem;
-  font-size: 0.75rem;
+.publication-award {  /* e.g. "Oral Presentation": red, as on the R-PAD lab site */
+  color: #d32f2f;
   font-weight: 600;
-  color: #8a5b00;
-  background: #fff4d6;
-  border: 1px solid #f0c987;
-  border-radius: 4px;
-  vertical-align: 0.05em;
-}
-
-.pub-year {
-  margin-top: 2rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 2px solid var(--sbpl-border);
-  color: var(--sbpl-dark);
-}
-
-.publication-list {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  font-style: normal;
 }
 
 .publication-links {
@@ -595,7 +795,8 @@ nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative marg
   text-align: center;
 }
 
-.publication-hero-image img {
+.publication-hero-image img,
+.publication-hero-image video {
   max-width: 100%;
   border-radius: 8px;
 }
@@ -612,181 +813,311 @@ nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative marg
   margin-top: 1.5rem;
 }
 
-/* ---------- Author Taxonomy ---------- */
-.author-affiliation {
-  color: var(--sbpl-gray);
-  margin-bottom: 1.5rem;
-}
-
-.author-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.author-tag {
-  display: inline-block;
-  background: var(--sbpl-card);
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  text-decoration: none;
+/* ---------- Generic Pages (Software, Videos, Tutorials, Contact, …) ---------- */
+/* Same title and section-heading look as the People page */
+.page-title {
   color: var(--sbpl-dark);
-  transition: all 0.2s;
-  border: 1px solid var(--sbpl-border);
+  margin: 0 0 0.35rem;
 }
 
-.author-tag:hover {
-  background: var(--sbpl-accent);
-  color: #fff;
-  border-color: var(--sbpl-accent);
-}
-
-.author-count {
-  color: var(--sbpl-gray);
-  font-size: 0.85rem;
-}
-
-/* ---------- Member Profile (Individual Page) ---------- */
-.member-profile {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.member-profile-header {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-}
-
-.member-profile-photo-wrapper {
-  flex-shrink: 0;
-}
-
-.member-profile-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 2px solid var(--sbpl-border);
-}
-
-.member-profile-info {
-  flex: 1;
-}
-
-.member-profile-info h1 {
-  margin-bottom: 0.25rem;
-  color: var(--sbpl-dark);
-}
-
-.member-profile-title {
+.page-lead {
   color: var(--sbpl-gray);
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.member-profile-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.member-profile-links a {
-  color: var(--sbpl-accent);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.member-profile-links a:hover {
-  text-decoration: underline;
-}
-
-.member-profile-bio,
-.member-profile-vision,
-.member-profile-publications {
-  margin-bottom: 2rem;
-}
-
-.member-profile-bio p,
-.member-profile-vision p {
+.page-intro,
+.page-content,
+.tutorial-content {
   line-height: 1.7;
   color: #555;
 }
 
-/* ---------- Legacy / Generic Single Pages ---------- */
-.legacy-page {
-  max-width: 900px;
-  margin: 0 auto;
-  background: transparent !important;
-  border: none;
-  padding: 0;
+.page-intro {
+  max-width: 75ch;
 }
 
-.legacy-page > h1 {
+.page-intro a,
+.page-content a,
+.tutorial-content a,
+.page-back a {
+  color: var(--sbpl-accent);
+  text-decoration: none;
+}
+
+.page-intro a:hover,
+.page-content a:hover,
+.tutorial-content a:hover,
+.page-back a:hover {
+  text-decoration: underline;
+}
+
+.page-section {
+  margin-top: 2.5rem;
+}
+
+.page-section > h2,
+.page-content h2 {
   color: var(--sbpl-dark);
-  margin-bottom: 0.25rem;
+  margin: 0 0 1.25rem;
+  border-bottom: 3px solid var(--sbpl-accent);
+  padding-bottom: 0.35rem;
+  display: inline-block;
 }
 
-.legacy-page .page-lead {
-  color: var(--sbpl-gray);
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.legacy-page-content {
-  line-height: 1.7;
-  color: #444;
-}
-
-.legacy-page-content h2 {
-  color: var(--sbpl-dark);
+.page-content h2 {
   margin-top: 2rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid var(--sbpl-border);
 }
 
-.legacy-page-content h3 {
+.page-content > h3 {
   color: var(--sbpl-dark);
-  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.5rem;
 }
 
-.legacy-page-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin: 0.5rem 0;
+/* Archive tabs (Software / Videos / Tutorials) */
+.archive-tabs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  margin: 0.75rem 0 1.25rem;
+  border-bottom: 1px solid var(--sbpl-border);
+  overflow-x: auto;
 }
 
-.legacy-page-content a {
+.archive-tabs a {
+  margin-bottom: -1px;  /* sit the active underline on the tab bar's border */
+  padding: 0.55rem 1rem;
+  border-bottom: 3px solid transparent;
+  color: var(--sbpl-gray);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.archive-tabs a:hover {
+  color: var(--sbpl-dark);
+}
+
+.archive-tabs a.active {
+  color: var(--sbpl-dark);
+  border-bottom-color: var(--sbpl-accent);
+}
+
+/* Cards (software, tutorials, contact): same look as publication cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: 1rem;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--sbpl-border);
+  border-radius: 12px;
+  box-shadow: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.info-card-title {
+  color: var(--sbpl-dark);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+}
+
+.info-card-text {
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
+.info-card .publication-links {
+  margin-top: auto;  /* keep the links on the bottom edge of the card */
+}
+
+.info-card-link {
+  text-decoration: none;
+  background: var(--sbpl-card);
+}
+
+.info-card-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--sbpl-accent);
+}
+
+.info-card-link:hover .info-card-title {
   color: var(--sbpl-accent);
 }
 
-.legacy-page-content a:hover {
-  color: var(--sbpl-accent-hover);
+.info-card-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-bottom: 0.6rem;
+  border-radius: 50%;
+  background: var(--sbpl-accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-/* Inline-flex image row (used on Robots page) */
-.legacy-page-content p img {
-  margin-right: 0.5rem;
-  vertical-align: middle;
+.info-card address {
+  font-style: normal;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
 }
 
-/* Video grid (used on Videos page) */
+.contact-grid {
+  margin-top: 1.5rem;
+}
+
+/* Video thumbnails: click to swap in the YouTube player */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1rem;
-  margin: 1rem 0 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: 1.25rem;
 }
 
-.video-grid iframe {
+.video-card {
+  margin: 0;
+}
+
+.video-thumb,
+.video-card iframe {
+  position: relative;
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.video-thumb:hover img {
+  transform: scale(1.03);
+  opacity: 0.85;
+}
+
+.video-play {  /* round play button drawn in CSS */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(74, 111, 165, 0.92);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.video-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 0.65rem 0 0.65rem 1.05rem;
+  border-color: transparent transparent transparent #fff;
+}
+
+.video-card figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--sbpl-text);
+  line-height: 1.4;
+}
+
+/* Tutorials */
+.page-back {
+  font-size: 0.92rem;
+  margin-bottom: 0.75rem;
+}
+
+.tutorial-content {
+  max-width: 900px;
+  margin-top: 1.5rem;
+}
+
+.tutorial-content h2 {
+  color: var(--sbpl-dark);
+  font-size: 1.4rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.tutorial-content h3 {
+  color: var(--sbpl-dark);
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.tutorial-content img {
+  max-width: 100%;
   height: auto;
-  border-radius: 6px;
-  border: 1px solid var(--sbpl-border);
+}
+
+.tutorial-content pre {
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.tutorial-content table {
+  width: auto;
+}
+
+.tutorial-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 900px;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--sbpl-border);
+}
+
+.tutorial-pager a {
+  display: flex;
+  flex-direction: column;
+  max-width: 48%;
+  color: var(--sbpl-accent);
+  text-decoration: none;
+}
+
+.tutorial-pager a:hover {
+  text-decoration: underline;
+}
+
+.tutorial-pager-next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.tutorial-pager small {
+  color: var(--sbpl-gray);
+  font-size: 0.8rem;
 }
 
 /* ---------- Footer ---------- */
@@ -809,36 +1140,43 @@ nav.people-nav ul {  /* nav.* outranks Pico's nav ul:first-of-type negative marg
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
+  .pub-item {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .pub-thumb {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Let the menu wrap under the logo instead of running off the screen */
+  .site-header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-header nav ul li {
+    padding: 0.2rem 0.45rem;
+  }
+
   .member-row-photo img,
   .member-row-initials {
-    width: 80px;
-    height: 80px;
+    width: 100px;
   }
 
   .member-row-initials {
+    height: 100px;
     font-size: 1.5rem;
-  }
-
-  .publication-card-inner {
-    flex-direction: column;
-  }
-
-  .publication-thumbnail {
-    width: 100%;
-    height: 200px;
   }
 
   .publication-links-large {
     flex-direction: column;
-  }
-
-  .member-profile-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .member-profile-links {
-    justify-content: center;
   }
 }

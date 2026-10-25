@@ -1,6 +1,7 @@
 ---
 title: "Learning to Avoid Local Minima in Planning for Static Environments"
 date: 2017-01-01
+scholar_rank: 137
 authors:
   - "Shivam Vats"
   - "Venkatraman Narayanan"

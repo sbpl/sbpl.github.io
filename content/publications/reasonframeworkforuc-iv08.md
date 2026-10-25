@@ -1,6 +1,7 @@
 ---
 title: "A Reasoning Framework for Autonomous Urban Driving"
 date: 2008-01-01
+scholar_rank: 283
 authors:
   - "Dave Ferguson"
   - "Christopher Baker"

@@ -1,6 +1,7 @@
 ---
 title: "Efficient Cost Computation in Cost Map Planning for Non-Circular Robots"
 date: 2009-01-01
+scholar_rank: 269
 authors:
   - "Jennifer King"
   - "Maxim Likhachev"

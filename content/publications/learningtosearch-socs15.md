@@ -1,6 +1,7 @@
 ---
 title: "Learning to Search More Efficiently from Experience: A Multi-heuristic Approach"
 date: 2015-01-01
+scholar_rank: 158
 authors:
   - "Sandip Aine"
   - "Charupriya Sharma"

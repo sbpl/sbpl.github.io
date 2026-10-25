@@ -1,6 +1,7 @@
 ---
 title: "Improved Multi-Heuristic A* for Searching with Uncalibrated Heuristics"
 date: 2015-01-01
+scholar_rank: 166
 authors:
   - "Venkatraman Narayanan"
   - "Sandip Aine"

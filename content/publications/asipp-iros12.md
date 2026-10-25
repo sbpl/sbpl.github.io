@@ -1,6 +1,7 @@
 ---
 title: "Anytime Safe Interval Path Planning for Dynamic Environments"
 date: 2012-01-01
+scholar_rank: 219
 authors:
   - "Venkatraman Narayanan"
   - "Mike Phillips"

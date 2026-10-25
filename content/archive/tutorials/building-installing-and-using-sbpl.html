@@ -1,0 +1,73 @@
+---
+title: "Building, Installing, and Using SBPL"
+aliases: ["/tutorials/building-installing-and-using-sbpl/"]
+weight: 8
+description: "Build instructions (CMake on Linux/macOS/Windows) and a minimal example of invoking a planner."
+legacy_page: "/archive/legacy-drupal/content/pages/0054-building-installing-and-using-sbpl.html"
+---
+<p>SBPL is available as a standalone software library. SBPL itself has no dependencies other than the C/C++ standard library.</p>
+<p>These build and install instructions are primarily for Linux. For other operating systems, CMake can generate the platform-specific build and project files necessary for building SBPL.</p>
+<p>Versions of ROS older than Fuerte may contain packages that depend on a ROS package version of SBPL. The recommended method to install SBPL is to install it as a standard system library. However, if you wish to use the old ROS package version of SBPL, you may follow<a href="#ROS Package Instructions"> these instructions</a>.</p>
+<h2>
+	<strong>1. Building and Installing SBPL from source</strong></h2>
+<h3>
+	<strong>1.1 Build SBPL</strong></h3>
+<p>SBPL uses git as its version control system. From the directory where you want the SBPL source to reside, clone the latest source from https://github.com/sbpl/sbpl:</p>
+<pre>
+git clone https://github.com/sbpl/sbpl.git</pre>
+<p>In the source directory, build the SBPL library using standard CMake build conventions:</p>
+<pre>
+<span>mkdir build</span>
+<span>cd build</span>
+<span>cmake ..</span>
+<span>make</span>
+</pre>
+<h3>
+	<strong>1.2 Install SBPL</strong></h3>
+<p>Install the built library and headers onto your local system (usually into /usr/local):</p>
+<pre>
+<span>sudo make install</span></pre>
+<h2>
+	<strong>2. Installing SBPL from pre-built binary package</strong></h2>
+<p>A pre-built Debian package exists on Linux for ROS distributions Fuerte and newer. To install the Debian, run:</p>
+<pre>
+<span>sudo apt-get install ros-<em>distro</em>-sbpl</span></pre>
+<p>where&nbsp;<em>distro</em>&nbsp;is the name of your ROS distribution. This will install the SBPL library and associated development headers alongside other ROS components (in /opt/ros/<em>distro</em>&nbsp;on Ubuntu distributions). A pkg-config file is also included to allow you to locate the SBPL library components in your build system.</p>
+<h2>
+	<strong>3. Build your (ROS) package with SBPL as a dependency (CMake)</strong></h2>
+<p>In the CMakeLists.txt for your (ROS) package, the following lines are needed to find the installed SBPL files:</p>
+<pre>
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(SBPL REQUIRED sbpl)
+include_directories(${SBPL_INCLUDE_DIRS})
+link_directories(${SBPL_LIBRARY_DIRS})
+</pre>
+<p>Then, after you&#39;ve declared your binaries, you need to link them against SBPL with the following line:</p>
+<pre>
+target_link_libraries(<em>your-binary-here</em> ${SBPL_LIBRARIES})</pre>
+<h2>
+	<strong><a name="ROS Package Instructions"></a>4. Installing and Using SBPL as a ROS package</strong></h2>
+<p>The ROS package version of SBPL was deprecated with the release of ROS Fuerte. However, packages in ROS Electric may still require the ROS package version of SBPL.&nbsp;</p>
+<h3>
+	<strong>4.1 Install SBPL</strong></h3>
+<h4>
+	<strong>4.1.1 Source install</strong></h4>
+<p>SBPL uses git as its version control system. From the directory where you want the SBPL source to reside, clone the latest source from https://github.com/sbpl/sbpl:</p>
+<pre>
+git clone https://github.com/sbpl/sbpl.git</pre>
+<p>In the source directory, checkout the&nbsp;<em>electric</em> branch of the repository to revert to the old ROS package version:</p>
+<pre>
+<span>git checkout electric</span></pre>
+<p>Ensure that SBPL is on your ROS_PACKAGE_PATH and type:</p>
+<pre>
+<span>rosmake sbpl</span></pre>
+<h4>
+	<strong>4.1.2 Binary install</strong></h4>
+<p>SBPL is also available as a pre-built Debian in ROS Electric. To instal the Debian, run:</p>
+<pre>
+<span>sudo apt-get install ros-electric-arm-navigation</span></pre>
+<h3>
+	<strong><span>4.2 Build your ROS package with SBPL as a depency (rosbuild)</span></strong></h3>
+<p>In the manifest.xml for your package, you need to add the following line to declare the SBPL package as a dependency:</p>
+<pre>
+<span>&lt;depend package=&quot;sbpl&quot;/&gt;</span></pre>

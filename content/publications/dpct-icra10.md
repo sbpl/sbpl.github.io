@@ -1,6 +1,7 @@
 ---
 title: "Multi-agent Path Planning with Multiple Tasks and Distance Constraints"
 date: 2010-01-01
+scholar_rank: 265
 authors:
   - "Subhrajit Bhattacharya"
   - "Maxim Likhachev"

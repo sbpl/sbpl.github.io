@@ -1,6 +1,7 @@
 ---
 title: "Speeding up heuristic computation in planning with Experience Graphs"
 date: 2015-01-01
+scholar_rank: 159
 authors:
   - "Mike Phillips"
   - "Maxim Likhachev"

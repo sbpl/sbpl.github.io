@@ -1,6 +1,7 @@
 ---
 title: "Anytime Footstep Planning with Suboptimality Bounds"
 date: 2012-01-01
+scholar_rank: 218
 authors:
   - "Armin Hornung"
   - "Andrew Dornbush"

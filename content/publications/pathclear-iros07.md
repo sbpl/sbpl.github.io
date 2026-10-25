@@ -1,6 +1,7 @@
 ---
 title: "Goal Directed Navigation with Uncertainty in Adversary Locations"
 date: 2007-01-01
+scholar_rank: 288
 authors:
   - "Maxim Likhachev"
   - "Anthony Stentz"

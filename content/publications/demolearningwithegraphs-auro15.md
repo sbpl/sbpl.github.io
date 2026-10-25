@@ -1,6 +1,7 @@
 ---
 title: "Learning to Plan for Constrained Manipulation from Demonstrations"
 date: 2016-01-01
+scholar_rank: 152
 authors:
   - "Mike Phillips"
   - "Victor Hwang"

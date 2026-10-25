@@ -1,6 +1,7 @@
 ---
 title: "Perception and Motion Planning for Pick-and-Place of Dynamic Objects"
 date: 2013-01-01
+scholar_rank: 180
 authors:
   - "Anthony Cowley"
   - "Benjamin Cohen"

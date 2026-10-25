@@ -1,6 +1,7 @@
 ---
 title: "Single- and dual-arm motion planning with heuristic search"
 date: 2013-01-01
+scholar_rank: 177
 authors:
   - "Benjamin Cohen"
   - "Sachin Chitta"

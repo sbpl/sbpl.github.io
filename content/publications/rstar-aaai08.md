@@ -1,6 +1,7 @@
 ---
 title: "R* Search"
 date: 2008-01-01
+scholar_rank: 282
 authors:
   - "Maxim Likhachev"
   - "Anthony Stentz"

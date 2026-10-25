@@ -1,6 +1,7 @@
 ---
 title: "Task-Oriented Planning for Manipulating Articulated Mechanisms under Model Uncertainty"
 date: 2015-01-01
+scholar_rank: 163
 authors:
   - "Venkatraman Narayanan"
   - "Maxim Likhachev"

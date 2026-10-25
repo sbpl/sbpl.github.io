@@ -1,6 +1,7 @@
 ---
 title: "A Planning Framework for Persistent, Multi-UAV Coverage with Global Deconfliction"
 date: 2019-01-01
+scholar_rank: 102
 authors:
   - "Tushar Kusnur"
   - "Shohin Mukherjee"

@@ -1,6 +1,7 @@
 ---
 title: "Anytime Tree-Restoring Weighted A* Graph Search"
 date: 2014-01-01
+scholar_rank: 170
 authors:
   - "Kalin Gochev"
   - "Alla Safonova"

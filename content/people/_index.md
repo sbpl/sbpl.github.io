@@ -1,68 +1,73 @@
 ---
 title: "People"
 layout: "people"
----
-<!--
-  The body of this file is the Alumni list on /people/, shown as plain text
-  under the "Alumni" heading. Add one "- " line per person.
-  (Current members and the advisor come from data/members/*.yaml.)
--->
+# Alumni on /people/, one line per person, in groups. Each group shows its
+# first 10 names; the rest are behind a "Show more" toggle.
+# (Current members and the advisor come from data/members/*.yaml.)
+alumni:
+  - group: "PhD Alumni"
+    people:
+      - "Ramkumar Natarajan (PhD student in Robotics, CMU, co-advised with H. Choset)"
+      - "Muhammad Suhail Saleem (PhD student in Robotics, CMU)"
+      - "Dhruv Saxena (PhD student in Robotics, CMU)"
+      - "Shivam Vats (PhD student in Robotics, CMU, co-advised with O. Kroemer)"
+      - "Rishi Veerapaneni (PhD student in Robotics, CMU)"
+      - "Ishani Chatterjee (PhD student in Robotics, CMU, co-advised with M. Veloso)"
+      - "Jacky Liang (PhD student in Robotics, CMU, co-advised with O. Kroemer)"
+      - "Shohin Mukherjee (PhD student in Robotics, CMU)"
+      - "Anirudh Vemula (PhD student in Robotics, CMU, co-advised with D. Bagnell)"
+      - "Fahad Islam (PhD student in Robotics, CMU)"
+      - "Anahita Mohseni Kabir (PhD student in Robotics, CMU, co-advised with M. Veloso)"
+      - "Sung Kyun Kim (PhD student in Robotics, CMU)"
+      - "John Drake (PhD student in CIS, UPenn, co-advised with A. Safonova)"
+      - "Jonathan Butzke (PhD student in Robotics, CMU; now at RobotWits)"
+      - "Venkatraman Narayanan (PhD student in Robotics, CMU; now at Aurora Innovations)"
+      - "Kalin Gochev (PhD student in CIS, UPenn; now at Uber)"
+      - "Ben Cohen (PhD student in CIS, UPenn)"
+      - "Mike Phillips (PhD student in Robotics, CMU; now at Uber)"
+      - "Aram Ebtekar (PhD student in CS, CMU)"
+      - "Steven Gray (PhD student in MEAM, UPenn, co-advised with V. Kumar; now at Lockheed Martin)"
+      - "Subhrajit Bhattacharya (PhD student in MEAM, UPenn, co-advised with V. Kumar; now Assistant Professor at Lehigh University)"
 
-- Ramkumar Natarajan (PhD student in Robotics, CMU, co-advised with H. Choset)
-- Muhammad Suhail Saleem (PhD student in Robotics, CMU)
-- Dhruv Saxena (PhD student in Robotics, CMU)
-- Shivam Vats (PhD student in Robotics, CMU, co-advised with O. Kroemer)
-- Rishi Veerapaneni (PhD student in Robotics, CMU)
-- Gabriel Olin (Masters in Robotics, CMU, co-advised with H. Choset)
-- Gopalakrishnan Thirunellai Venkitachalam (Masters in ME, CMU)
-- Trevor Stack (Masters in ME, CMU)
-- Alvin Zou (Masters in Robotics, CMU)
-- Hanlan Yang (Masters in ECE, CMU)
-- Oren Salzman (Postdoctoral Fellow)
-- Manash Pratim Das (Masters in Robotics, CMU)
-- Tushar Kusnur (Masters in Robotics, CMU)
-- Yash Oza (Masters in Robotics, CMU)
-- Ishani Chatterjee (PhD student in Robotics, CMU, co-advised with M. Veloso)
-- Jacky Liang (PhD student in Robotics, CMU, co-advised with O. Kroemer)
-- Shohin Mukherjee (PhD student in Robotics, CMU)
-- Anirudh Vemula (PhD student in Robotics, CMU, co-advised with D. Bagnell)
-- Fahad Islam (PhD student in Robotics, CMU)
-- Anahita Mohseni Kabir (PhD student in Robotics, CMU, co-advised with M. Veloso)
-- Sung Kyun Kim (PhD student in Robotics, CMU)
-- Aditya Agarwal (Masters student in Robotics, CMU)
-- Allen Cheng (Masters student in Robotics, CMU)
-- Wei Du (Masters student in ME, CMU)
-- Aaron Miller (Masters student in Robotics, CMU)
-- Raghav Sood (Masters student in ME, CMU)
-- Shanshan Xie (Masters student in Robotics, CMU)
-- Oren Salzman (Postdoc; now Assistant Professor at Technion, Israel Institute of Technology)
-- Andrew Dornbush (Research Staff, CMU)
-- Lingyao Zhang (Masters student in Machine Learning, CMU)
-- Kalyan Vasudev (Masters student in Robotics, CMU)
-- John Drake (PhD student in CIS, UPenn, co-advised with A. Safonova)
-- Jonathan Butzke (PhD student in Robotics, CMU; now at RobotWits)
-- Venkatraman Narayanan (PhD student in Robotics, CMU; now at Aurora Innovations)
-- Sameer Bardapurkar (Masters student in Robotics, CMU)
-- Karthik Vijayakumar (Masters student in Robotics, CMU)
-- Kalin Gochev (PhD student in CIS, UPenn; now at Uber)
-- Ben Cohen (PhD student in CIS, UPenn)
-- Mike Phillips (PhD student in Robotics, CMU; now at Uber)
-- Ben Holden (Masters student in Robotics, CMU)
-- Eui-Jung Jung (Postdoc)
-- Soonkyum Kim (Postdoc; now at Samsung)
-- Aram Ebtekar (PhD student in CS, CMU)
-- Siddharth Swaminathan (Masters student in Robotics, CMU)
-- Sandip Aine (Postdoc; now Assistant Professor with Indraprastha Institute of Information Technology, Delhi)
-- Steven Gray (PhD student in MEAM, UPenn, co-advised with V. Kumar; now at Lockheed Martin)
-- Subhrajit Bhattacharya (PhD student in MEAM, UPenn, co-advised with V. Kumar; now Assistant Professor at Lehigh University)
-- Bradford Neuman (Masters student in Robotics, CMU, co-advised with A. Stentz)
-- Victor Hwang (Masters student in Robotics, CMU)
-- Arjun Menon (Masters student in Robotics, CMU)
-- Brian MacAllister (Masters student in Robotics, UPenn)
-- Dinesh Thakur (Masters student in MEAM, UPenn, co-advised with V. Kumar)
-- Alex Kushleyev (Masters student in ESE; co-founder of KMel Robotics)
-- Shinsuke Okada (Masters student in Robotics, UPenn)
-- Shrinidhi Kowshika Lakshmikanth (Masters student in Robotics)
-- Donald Scott (Masters student in Robotics)
-- Sameera Anirudh Peesapati (Masters student in ESE)
-- Rahul Krishnan (Masters student in Robotics)
+  - group: "Master’s Alumni"
+    people:
+      - "Gabriel Olin (Masters in Robotics, CMU, co-advised with H. Choset)"
+      - "Gopalakrishnan Thirunellai Venkitachalam (Masters in ME, CMU)"
+      - "Trevor Stack (Masters in ME, CMU)"
+      - "Alvin Zou (Masters in Robotics, CMU)"
+      - "Hanlan Yang (Masters in ECE, CMU)"
+      - "Manash Pratim Das (Masters in Robotics, CMU)"
+      - "Tushar Kusnur (Masters in Robotics, CMU)"
+      - "Yash Oza (Masters in Robotics, CMU)"
+      - "Aditya Agarwal (Masters student in Robotics, CMU)"
+      - "Allen Cheng (Masters student in Robotics, CMU)"
+      - "Wei Du (Masters student in ME, CMU)"
+      - "Aaron Miller (Masters student in Robotics, CMU)"
+      - "Raghav Sood (Masters student in ME, CMU)"
+      - "Shanshan Xie (Masters student in Robotics, CMU)"
+      - "Lingyao Zhang (Masters student in Machine Learning, CMU)"
+      - "Kalyan Vasudev (Masters student in Robotics, CMU)"
+      - "Sameer Bardapurkar (Masters student in Robotics, CMU)"
+      - "Karthik Vijayakumar (Masters student in Robotics, CMU)"
+      - "Ben Holden (Masters student in Robotics, CMU)"
+      - "Siddharth Swaminathan (Masters student in Robotics, CMU)"
+      - "Bradford Neuman (Masters student in Robotics, CMU, co-advised with A. Stentz)"
+      - "Victor Hwang (Masters student in Robotics, CMU)"
+      - "Arjun Menon (Masters student in Robotics, CMU)"
+      - "Brian MacAllister (Masters student in Robotics, UPenn)"
+      - "Dinesh Thakur (Masters student in MEAM, UPenn, co-advised with V. Kumar)"
+      - "Alex Kushleyev (Masters student in ESE; co-founder of KMel Robotics)"
+      - "Shinsuke Okada (Masters student in Robotics, UPenn)"
+      - "Shrinidhi Kowshika Lakshmikanth (Masters student in Robotics)"
+      - "Donald Scott (Masters student in Robotics)"
+      - "Sameera Anirudh Peesapati (Masters student in ESE)"
+      - "Rahul Krishnan (Masters student in Robotics)"
+
+  - group: "Postdoc & Research Staff Alumni"
+    people:
+      - "Oren Salzman (Postdoc; now Assistant Professor at Technion, Israel Institute of Technology)"
+      - "Andrew Dornbush (Research Staff, CMU)"
+      - "Eui-Jung Jung (Postdoc)"
+      - "Soonkyum Kim (Postdoc; now at Samsung)"
+      - "Sandip Aine (Postdoc; now Assistant Professor with Indraprastha Institute of Information Technology, Delhi)"
+---

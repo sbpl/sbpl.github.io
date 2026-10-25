@@ -1,6 +1,7 @@
 ---
 title: "Planning for Markov Decision Processes with Sparse Stochasticity"
 date: 2005-01-01
+scholar_rank: 308
 authors:
   - "Maxim Likhachev"
   - "Geoff Gordon"

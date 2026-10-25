@@ -1,6 +1,7 @@
 ---
 title: "A*-Connect: Bounded Suboptimal Bidirectional Heuristic Search"
 date: 2016-01-01
+scholar_rank: 147
 authors:
   - "Fahad Islam"
   - "Venkatraman Narayanan"

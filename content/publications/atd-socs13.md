@@ -1,6 +1,7 @@
 ---
 title: "Anytime Truncated D*: Anytime Replanning with Truncation"
 date: 2013-01-01
+scholar_rank: 217
 authors:
   - "Sandip Aine"
   - "Maxim Likhachev"

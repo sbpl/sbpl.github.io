@@ -1,6 +1,7 @@
 ---
 title: "Deliberative Object Pose Estimation in Clutter"
 date: 2017-01-01
+scholar_rank: 139
 authors:
   - "Venkatraman Narayanan"
   - "Maxim Likhachev"

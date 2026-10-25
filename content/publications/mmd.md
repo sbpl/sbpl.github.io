@@ -1,6 +1,7 @@
 ---
 title: "Multi-Robot Motion Planning with Diffusion Models"
 date: 2025-05-01
+scholar_rank: 24
 authors:
   - "Yorai Shaoul"
   - "Itamar Mishani"
@@ -9,6 +10,7 @@ authors:
   - "Jiaoyang Li"
 first_authors: 3
 venue: "ICLR 2025"
+award: "Spotlight"
 description: "Coordinating robots planning using generative models through search-based planning algorithms. We show that this method can be used to solve complex multi-robot motion planning problems under implicit objectives."
 thumbnail: "/images/publications/mmd.gif"
 arxiv: "https://arxiv.org/abs/2410.03072"

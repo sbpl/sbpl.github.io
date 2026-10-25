@@ -1,6 +1,7 @@
 ---
 title: "POMHDP: Search-Based Belief Space Planning Using Multiple Heuristics"
 date: 2019-01-01
+scholar_rank: 125
 authors:
   - "Sung-Kyun Kim"
   - "Oren Salzman"

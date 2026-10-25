@@ -1,6 +1,7 @@
 ---
 title: "Bidirectional Heuristic Search for Motion Planning with an Extend Operator"
 date: 2019-01-01
+scholar_rank: 122
 authors:
   - "Allen Cheng"
   - "Dhruv Mauria Saxena"

@@ -1,6 +1,7 @@
 ---
 title: "SIPP: Safe Interval Path Planning for Dynamic Environments"
 date: 2011-01-01
+scholar_rank: 251
 authors:
   - "Mike Phillips"
   - "Maxim Likhachev"

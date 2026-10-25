@@ -1,6 +1,7 @@
 ---
 title: "Efficiently finding optimal winding-constrained loops in the plane"
 date: 2012-01-01
+scholar_rank: 229
 authors:
   - "Paul Vernaza"
   - "Venkatraman Narayanan"

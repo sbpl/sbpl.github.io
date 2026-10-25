@@ -1,6 +1,7 @@
 ---
 title: "Escaping Local Minima in Search-Based Planning Using Soft Duplicate Detection"
 date: 2019-01-01
+scholar_rank: 121
 authors:
   - "Wei Du"
   - "Sung-Kyun Kim"

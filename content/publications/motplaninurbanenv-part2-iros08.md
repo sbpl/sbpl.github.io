@@ -1,6 +1,7 @@
 ---
 title: "Motion Planning in Urban Environments: Part II"
 date: 2008-01-01
+scholar_rank: 277
 authors:
   - "Dave Ferguson"
   - "Thomas Howard"

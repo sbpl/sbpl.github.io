@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-  <link rel="stylesheet" href="/css/custom.css">
+  {{/* Content hash in the URL so browsers fetch the stylesheet again whenever it changes */}}
+  <link rel="stylesheet" href="/css/custom.css?v={{ substr (os.ReadFile "static/css/custom.css" | md5) 0 8 }}">
 </head>
 <body>
   <header class="site-header">
@@ -25,6 +26,9 @@
       </ul>
     </nav>
   </header>
+
+  {{/* Full-width content above the page container (the homepage photo carousel) */}}
+  {{ block "banner" . }}{{ end }}
 
   <main class="container">
     {{ block "main" . }}{{ end }}

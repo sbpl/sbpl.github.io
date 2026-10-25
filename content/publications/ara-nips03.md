@@ -1,6 +1,7 @@
 ---
 title: "ARA*: Anytime A* with Provable Bounds on Sub-Optimality"
 date: 2004-01-01
+scholar_rank: 311
 authors:
   - "Maxim Likhachev"
   - "Geoff Gordon"

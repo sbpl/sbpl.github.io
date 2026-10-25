@@ -1,6 +1,7 @@
 ---
 title: "Motion Planning for Smooth Pickup of Moving Objects"
 date: 2014-01-01
+scholar_rank: 172
 authors:
   - "Arjun Menon"
   - "Benjamin Cohen"

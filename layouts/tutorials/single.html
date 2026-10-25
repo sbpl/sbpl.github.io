@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{/* One tutorial (archived sbpl.net HTML) with links to the neighbouring tutorials */}}
+<div class="page tutorial">
+  {{ partial "archive-tabs.html" . }}
+  <p class="page-back"><a href="{{ .Parent.RelPermalink }}">← All tutorials</a></p>
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ with .Description }}<p class="page-lead">{{ . }}</p>{{ end }}
+
+  <div class="tutorial-content">
+    {{ .Content }}
+  </div>
+
+  <nav class="tutorial-pager" aria-label="Tutorials">
+    {{/* Pages.ByWeight lists 1, 2, 3…; .Prev in that order is the one after this page */}}
+    {{ with .Parent.Pages.ByWeight.Next . }}<a class="tutorial-pager-prev" href="{{ .RelPermalink }}"><small>Previous</small>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ with .Parent.Pages.ByWeight.Prev . }}<a class="tutorial-pager-next" href="{{ .RelPermalink }}"><small>Next</small>{{ .Title }}</a>{{ end }}
+  </nav>
+</div>
+{{ end }}

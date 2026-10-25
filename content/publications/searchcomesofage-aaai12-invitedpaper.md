@@ -1,6 +1,7 @@
 ---
 title: "Heuristic Search Comes of Age"
 date: 2012-01-01
+scholar_rank: 240
 authors:
   - "Nathan R. Sturtevant"
   - "Ariel Felner"

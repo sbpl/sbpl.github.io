@@ -1,6 +1,7 @@
 ---
 title: "A Single Planner for a Composite Task of Approaching, Opening and Navigating through Non-spring and Spring-loaded Doors"
 date: 2013-01-01
+scholar_rank: 186
 authors:
   - "Steven Gray"
   - "Sachin Chitta"

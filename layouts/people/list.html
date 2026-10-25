@@ -1,30 +1,20 @@
 {{ define "main" }}
 {{ $current := .Site.Data.members.current }}
 
-{{/* Display order + section headings. Add new categories here. */}}
+{{/* Display order + section headings. Add new categories here.
+     "columns" true lays that section out in two columns on wide screens;
+     "list" true shows it as a plain list of "Name (enrollment)". */}}
 {{ $categories := slice
   (dict "key" "postdoc"        "label" "Postdoctoral Researchers")
-  (dict "key" "phd"            "label" "PhD Students")
-  (dict "key" "masters"        "label" "Master’s Students")
+  (dict "key" "phd"            "label" "PhD Students" "columns" true)
+  (dict "key" "masters"        "label" "Master’s Students" "list" true)
   (dict "key" "undergraduate"  "label" "Undergraduate Researchers")
   (dict "key" "research-staff" "label" "Research Staff & Engineers")
   (dict "key" "collaborator"   "label" "Research Collaborators")
 }}
 
 <div class="people-page">
-<h1 class="people-title">{{ .Site.Params.labName }} Lab Members</h1>
-
-{{/* Jump links to each section that has people in it */}}
-<nav class="people-nav" aria-label="People sections">
-  <ul>
-    {{ with .Site.Data.members.pi }}<li><a href="#advisor">Advisor</a></li>{{ end }}
-    {{ range $cat := $categories }}
-      {{ if where $current "category" $cat.key }}<li><a href="#{{ $cat.key }}">{{ $cat.label }}</a></li>{{ end }}
-    {{ end }}
-    {{ if .Content }}<li><a href="#alumni">Alumni</a></li>{{ end }}
-    <li><a href="#lab-photos">Lab Photos</a></li>
-  </ul>
-</nav>
+<h1 class="people-title">Lab Members</h1>
 
 {{/* -------------------------------------------------------------------- */}}
 {{/* Advisor                                                               */}}
@@ -42,10 +32,27 @@
 {{ range $cat := $categories }}
   {{ $members := where $current "category" $cat.key }}
   {{ if $members }}
+  {{/* Alphabetical by last name (full name breaks ties) */}}
+  {{ $sorted := slice }}
+  {{ range $members }}
+    {{ $words := split .name " " }}
+    {{ $key := printf "%s %s" (index $words (sub (len $words) 1)) .name | lower }}
+    {{ $sorted = $sorted | append (dict "key" $key "member" .) }}
+  {{ end }}
   <section class="people-section member-group">
     <h2 id="{{ $cat.key }}">{{ $cat.label }}</h2>
-    {{ range $members }}
-      {{ partial "member-row.html" (dict "member" . "isPI" false) }}
+    {{ if $cat.list }}
+    <ul class="name-list">
+      {{ range sort $sorted "key" }}
+        {{ with .member }}<li id="{{ .slug }}">{{ .name }}{{ with .enrollment }} ({{ . }}){{ end }}</li>{{ end }}
+      {{ end }}
+    </ul>
+    {{ else }}
+    <div class="member-list{{ if $cat.columns }} member-grid{{ end }}">
+      {{ range sort $sorted "key" }}
+        {{ partial "member-row.html" (dict "member" .member "isPI" false) }}
+      {{ end }}
+    </div>
     {{ end }}
   </section>
   {{ end }}
@@ -57,12 +64,25 @@
 </div>
 
 {{/* -------------------------------------------------------------------- */}}
-{{/* Alumni - plain-text list, written in content/people/_index.md         */}}
+{{/* Alumni - plain-text groups from the `alumni` front matter of         */}}
+{{/* content/people/_index.md. Each group shows its first $alumniShown     */}}
+{{/* names; the rest are behind a "Show more" toggle.                       */}}
 {{/* -------------------------------------------------------------------- */}}
-{{ with .Content }}
-<section class="people-section people-alumni">
-  <h2 id="alumni">Alumni</h2>
-  <div class="alumni-list">{{ . }}</div>
+{{ $alumniShown := 10 }}
+{{ range .Params.alumni }}
+<section class="people-section member-group people-alumni">
+  <h2 id="{{ .group | urlize }}">{{ .group }}</h2>
+  <ul class="name-list">
+    {{ range first $alumniShown .people }}<li>{{ . }}</li>{{ end }}
+  </ul>
+  {{ with after $alumniShown .people }}
+  <details class="alumni-more">
+    <summary><span class="when-closed">Show {{ len . }} more</span><span class="when-open">Show fewer</span></summary>
+    <ul class="name-list">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </details>
+  {{ end }}
 </section>
 {{ end }}
 

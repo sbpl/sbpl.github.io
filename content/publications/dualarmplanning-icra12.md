@@ -1,6 +1,7 @@
 ---
 title: "Search-Based Planning for Dual-Arm Manipulation with Upright Orientation Constraints"
 date: 2012-01-01
+scholar_rank: 232
 authors:
   - "Benjamin Cohen"
   - "Sachin Chitta"

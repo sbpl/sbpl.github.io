@@ -1,6 +1,7 @@
 ---
 title: "Planning in Domains with Cost Function Dependent Actions"
 date: 2011-01-01
+scholar_rank: 246
 authors:
   - "Mike Phillips"
   - "Maxim Likhachev"

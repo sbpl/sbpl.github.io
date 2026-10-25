@@ -1,6 +1,7 @@
 ---
 title: "Adaptive A*"
 date: 2005-01-01
+scholar_rank: 297
 authors:
   - "Sven Koenig"
   - "Maxim Likhachev"

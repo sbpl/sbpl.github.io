@@ -1,6 +1,7 @@
 ---
 title: "Lifelong Planning A*"
 date: 2004-01-01
+scholar_rank: 306
 authors:
   - "Sven Koenig"
   - "Maxim Likhachev"

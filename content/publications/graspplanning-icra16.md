@@ -1,6 +1,7 @@
 ---
 title: "Planning for Grasp Selection of Partially Occluded Objects"
 date: 2016-01-01
+scholar_rank: 146
 authors:
   - "Sung-Kyun Kim"
   - "Maxim Likhachev"

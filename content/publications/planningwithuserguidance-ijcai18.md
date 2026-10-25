@@ -1,6 +1,7 @@
 ---
 title: "Online, Interactive User Guidance for High-dimensional, Constrained Motion Planning"
 date: 2018-01-01
+scholar_rank: 134
 authors:
   - "Fahad Islam"
   - "Oren Salzman"

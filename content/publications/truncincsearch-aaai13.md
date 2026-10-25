@@ -1,6 +1,7 @@
 ---
 title: "Truncated Incremental Search: Faster Replanning by Exploiting Suboptimality"
 date: 2013-01-01
+scholar_rank: 184
 authors:
   - "Sandip Aine"
   - "Maxim Likhachev"

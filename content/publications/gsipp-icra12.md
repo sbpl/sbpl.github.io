@@ -1,6 +1,7 @@
 ---
 title: "Using State Dominance for Path Planning in Dynamic Environments with Moving Obstacles"
 date: 2012-01-01
+scholar_rank: 230
 authors:
   - "Juan Pablo Gonzalez"
   - "Andrew Dornbush"

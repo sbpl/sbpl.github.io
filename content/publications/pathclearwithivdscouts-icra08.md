@@ -1,6 +1,7 @@
 ---
 title: "Information Value-Driven Approach to Path Clearance with Multiple Scout Robots"
 date: 2008-01-01
+scholar_rank: 284
 authors:
   - "Maxim Likhachev"
   - "Anthony Stentz"

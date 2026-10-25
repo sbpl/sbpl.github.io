@@ -1,6 +1,7 @@
 ---
 title: "Selection of Behavioral Parameters: Integration of Discontinuous Switching via Case-Based Reasoning with Continuous Adaptation via Learning Momentum"
 date: 2002-01-01
+scholar_rank: 314
 authors:
   - "J. Brian Lee"
   - "Maxim Likhachev"

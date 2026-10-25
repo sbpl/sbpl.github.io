@@ -1,6 +1,7 @@
 ---
 title: "Bounded Real-Time Dynamic Programming: RTDP with monotone upper bounds and performance guarantees"
 date: 2005-01-01
+scholar_rank: 296
 authors:
   - "H. Brendan McMahan"
   - "Maxim Likhachev"

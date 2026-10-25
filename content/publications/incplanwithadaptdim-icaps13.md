@@ -1,6 +1,7 @@
 ---
 title: "Incremental Planning with Adaptive Dimensionality"
 date: 2013-01-01
+scholar_rank: 185
 authors:
   - "Kalin Gochev"
   - "Alla Safonova"

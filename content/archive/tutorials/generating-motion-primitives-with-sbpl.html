@@ -1,0 +1,110 @@
+---
+title: "Generating Motion Primitives"
+aliases: ["/tutorials/generating-motion-primitives-with-sbpl/"]
+weight: 6
+description: "How to use the Matlab scripts in SBPL to generate custom motion primitives."
+legacy_page: "/archive/legacy-drupal/content/pages/0052-generating-motion-primitives-with-sbpl.html"
+---
+<p>In this article, we&#39;ll talk about how to generate motion primitves that SBPL uses for its lattice planning. For an introduction to motion primitives, see <a href="/archive/tutorials/kinematic-constraints-and-motion-primitives/">this article</a>.</p>
+<p><strong>Visualizing motion primitives</strong></p>
+<p>In the</p>
+<pre>
+matlab/mprim/</pre>
+<p>folder of sbpl, you&#39;ll find numerous files of the form</p>
+<pre>
+genmprim_*</pre>
+<p>These files generate different sets of motion primitives a robot could use. To start, open up matlab and run one of these:</p>
+<pre>
+ &gt;&gt;&gt; genmprim output.mprim</pre>
+<p>A window similar to the one shown below should appear which shows the motion primitives for a variety of angles. If you hit &lt;enter&gt; in the matlab window, you&#39;ll see the visualizations increment. As your keep on hitting &lt;enter&gt;, you&#39;ll see all the primitives that are generated.</p>
+<p><b>Decoding the genmprim.m script</b></p>
+<p>At the top of the script, you&#39;ll see the following declarations:</p>
+<pre>
+if UNICYCLE_MPRIM_16DEGS == 1
+    resolution = 0.025;
+    numberofangles = 16; %preferably a power of 2, definitely multiple of 8
+    numberofprimsperangle = 9;
+    </pre>
+<p><strong>Resolution</strong>&nbsp;denotes the resolution of your map.</p>
+<p><b>numberofangles</b> denotes how many discrete states a full 360 degree rotation should be discretized into.&nbsp;</p>
+<p><strong>numberofprimsperangle</strong> denotes how many different motions the robot can take for a given discretized angle.</p>
+<p><img alt="" src="/archive/legacy-drupal/media/images/mprims.png" style="width: 506px; height: 392px;" /></p>
+<p>To put these parameters into perspective, let&#39;s look at the labeled image above. The image shows motion primitives for 1 of the 16 discretized angles (angle = 0). There are 9 different paths the robot can take for a given angle, which are organized into the following categories: forward, forward and turn, sidestep, backward, and turn in place. Note that there are actually two turn in place actions (clockwise and counter clockwise), but this does not show up well in the image. Also, we have two motion primitives for moving forward: one that moves 1 unit, and another that moves 8 units (this tends to speed up the search if chosen well). Since the rotation is discretized into 16 states with 9 primitives for each, the robot will have a total of 144 motion primitives.</p>
+<p><strong>Multipliers</strong></p>
+<pre>
+    %multipliers (multiplier is used as costmult*cost)
+    forwardcostmult = 1;
+    backwardcostmult = 5;
+    forwardandturncostmult = 1;
+    sidestepcostmult = 50;
+    turninplacecostmult = 50;
+</pre>
+<p>The multipliers allow the user to define preferred actions. For example, if the robot is slow to move backwards, one would raise the cost multiplier on the backwards cost.&nbsp;</p>
+<p><strong>Motion Vectors</strong></p>
+<p>In order to define the actual motions, we use delta position vectors. The below is taken from genmprim_unicycleplussideways.</p>
+<pre>
+    %note, what is shown x,y,theta *changes* (that is, dx,dy,dtheta and not absolute numbers)
+
+    %0 degreees
+    basemprimendpts0_c = zeros(numberofprimsperangle, 4); %x,y,theta,costmult
+    %angles are positive counterclockwise
+    %0 theta change
+    basemprimendpts0_c(1,:) = [1 0 0 forwardcostmult];
+    basemprimendpts0_c(2,:) = [8 0 0 forwardcostmult];
+    basemprimendpts0_c(3,:) = [-1 0 0 backwardcostmult];
+    %1/16 theta change
+    basemprimendpts0_c(4,:) = [8 1 1 forwardandturncostmult];
+    basemprimendpts0_c(5,:) = [8 -1 -1 forwardandturncostmult];
+    %turn in place
+    basemprimendpts0_c(6,:) = [0 0 1 turninplacecostmult];
+    basemprimendpts0_c(7,:) = [0 0 -1 turninplacecostmult];
+    %sideways maintaining the same heading
+    basemprimendpts0_c(8,:) = [0 1 0 sidestepcostmult];
+    basemprimendpts0_c(9,:) = [0 -1 0 sidestepcostmult];
+
+    %45 degrees
+    basemprimendpts45_c = zeros(numberofprimsperangle, 4); %x,y,theta,costmult (multiplier is used as costmult*cost)
+    %angles are positive counterclockwise
+    %0 theta change
+    basemprimendpts45_c(1,:) = [1 1 0 forwardcostmult];
+    basemprimendpts45_c(2,:) = [6 6 0 forwardcostmult];
+    basemprimendpts45_c(3,:) = [-1 -1 0 backwardcostmult];
+    %1/16 theta change
+    basemprimendpts45_c(4,:) = [5 7 1 forwardandturncostmult];
+    basemprimendpts45_c(5,:) = [7 5 -1 forwardandturncostmult];
+    %turn in place
+    basemprimendpts45_c(6,:) = [0 0 1 turninplacecostmult];
+    basemprimendpts45_c(7,:) = [0 0 -1 turninplacecostmult];
+    %sideways maintaining the same heading
+    basemprimendpts45_c(8,:) = [-1 1 0 sidestepcostmult];
+    basemprimendpts45_c(9,:) = [1 -1 0 sidestepcostmult];
+
+    %22.5 degrees
+    basemprimendpts22p5_c = zeros(numberofprimsperangle, 4); %x,y,theta,costmult (multiplier is used as costmult*cost)
+    %angles are positive counterclockwise
+    %0 theta change
+    basemprimendpts22p5_c(1,:) = [2 1 0 forwardcostmult];
+    basemprimendpts22p5_c(2,:) = [6 3 0 forwardcostmult];
+    basemprimendpts22p5_c(3,:) = [-2 -1 0 backwardcostmult];
+    %1/16 theta change
+    basemprimendpts22p5_c(4,:) = [5 4 1 forwardandturncostmult];
+    basemprimendpts22p5_c(5,:) = [7 2 -1 forwardandturncostmult];
+    %turn in place
+    basemprimendpts22p5_c(6,:) = [0 0 1 turninplacecostmult];
+    basemprimendpts22p5_c(7,:) = [0 0 -1 turninplacecostmult];
+    %sideways maintaining the same heading
+    basemprimendpts22p5_c(8,:) = [-1 2 0 sidestepcostmult];
+    basemprimendpts22p5_c(9,:) = [1 -2 0 sidestepcostmult];
+
+</pre>
+<p>Defining the motion primitives is a little bit tricky due to discretization problems. Intuitively, we&#39;d expect to only define 9 motion primitives that would be used for all 16 of our discrete angles. However, due to angle discretization error, a motion primitive defined for a robot oriented at 0 degrees may not be the best motion primitive for a robot oriented at 22.5 degrees. We&#39;ll address why this is in a bit.</p>
+<p>In order to combat this, we define each angle (for one quadrant) explicitly. Since we have a total of 16 discretized angles, we can get away with defining 4 of the angles for quadrant one, and then duplicating the motions for the other three quadrants. Thus, we only need to define motion primitives for 4 angles: 0, 22.5, 45, and 67.5. We can take advantage of symmetry again and say that angles 22.5 and 67.5 can use the same set of motion primitives (as their discretization errors will be the same). In this code, we define motion primitives for 22.5 degrees.</p>
+<p>Now, we only have to define motion primitives for 3 angles: 0, 22.5, and 45. With 9 motion primitives for each, this means we must define 27 motion primitives. Looking above, we see that there are indeed 27 definitions. Let&#39;s look at the definition for moving forward 8 units when the robot is oriented at 0 degrees:</p>
+<pre>
+basemprimendpts0_c(2,:) = [8 0 0 forwardcostmult];</pre>
+<p>The format for this vector is [dx dy dtheta multiplier]. &nbsp;Since we&#39;re facing down the positive x-axis, we want dx=8, and everything else 0. For the same motion when the robot is oriented at 45 degrees, we use:</p>
+<pre>
+basemprimendpts45_c(2,:) = [6 6 0 forwardcostmult];</pre>
+<p>Notice that the distance traversed is actually more than 8 (8.48). This is to counteract the previously described discretization error. This extra distance ensure that we land in the center of the discretized cell, rather than off to one corner. When designing your own motion primitives, it&#39;s important to make sure your motions land you in the centers of cells to avoid discontinuous paths. The image below depicts what happens when your motion primitives don&#39;t land in the middle of the cell - even though it&#39;s valid in discrete space, the continuous path is invalid (thanks Andrew Dornbush).</p>
+<p><img alt="" src="/archive/legacy-drupal/media/images/unaligned_mprims.png" style="width: 438px; height: 324px;" /></p>
+<p>Once you&#39;ve defined your set of motion primitives, use the matlab visualization to ensure that the motions are correct. The generated file (usually ending with .mprim) is now ready for use by the SBPL planner!</p>

@@ -1,6 +1,7 @@
 ---
 title: "Distributed Optimization with Pairwise Constraints and its Application to Multi-robot Path Planning"
 date: 2010-01-01
+scholar_rank: 249
 authors:
   - "Subhrajit Bhattacharya"
   - "Vijay Kumar"

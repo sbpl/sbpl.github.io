@@ -1,8 +1,21 @@
 {{ define "main" }}
-<h1>Publications</h1>
+{{ $scholarIcon := `<svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>` }}
+<div class="page">
+<h1 class="page-title">Publications</h1>
+{{ with .Params.scholar }}
+<p class="pub-scholar-top">
+  <a href="{{ . }}" target="_blank" rel="noopener">{{ $scholarIcon | safeHTML }}See the full list on Google Scholar</a>
+</p>
+{{ end }}
 
-{{/* Group publications by year, reverse chronological */}}
-{{ $pages := where .Site.RegularPages "Section" "publications" }}
+{{/* Papers from `from_year` (content/publications/_index.md) on, grouped by year,
+     newest first; within a year papers with a thumbnail come first, then they are
+     ordered by venue and by Maxim's Google Scholar order (see
+     partials/sort-publications.html). Older papers are left to Google Scholar.
+     Each year is a dropdown; all start open. */}}
+{{ $from := .Params.from_year | default 0 }}
+{{ $pages := partial "sort-publications.html" (where .Site.RegularPages "Section" "publications") }}
+{{ $pages = where $pages "Date.Year" "ge" $from }}
 {{ $years := slice }}
 {{ range $pages }}
   {{ $year := .Date.Format "2006" }}
@@ -13,15 +26,31 @@
 {{ $years = sort $years "value" "desc" }}
 
 {{ range $year := $years }}
-  <h2 class="pub-year">{{ $year }}</h2>
-  <div class="publication-list">
-    {{ range where $pages "Date.Year" (int $year) }}
+{{ $inYear := where $pages "Date.Year" (int $year) }}
+<details class="pub-year-group" id="{{ $year }}" open>
+  <summary>
+    <h2 class="pub-year">{{ $year }}</h2>
+    <span class="pub-year-toggle"><span class="when-closed">Expand</span><span class="when-open">Collapse</span></span>
+  </summary>
+  <div class="pub-list">
+    {{ range $inYear }}
       {{ partial "publication-card.html" . }}
     {{ end }}
   </div>
+</details>
 {{ end }}
+
+
+{{ partial "play-previews.html" . }}
 
 {{ if eq (len $pages) 0 }}
   <p>No publications yet. Check back soon!</p>
 {{ end }}
+
+{{ with .Params.scholar }}
+<p class="pub-scholar-more">
+  <a href="{{ . }}" target="_blank" rel="noopener" role="button" class="outline">{{ $scholarIcon | safeHTML }}See more on Google Scholar</a>
+</p>
+{{ end }}
+</div>
 {{ end }}

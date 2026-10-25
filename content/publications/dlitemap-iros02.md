@@ -1,6 +1,7 @@
 ---
 title: "Incremental Replanning for Mapping"
 date: 2002-01-01
+scholar_rank: 312
 authors:
   - "Maxim Likhachev"
   - "Sven Koenig"

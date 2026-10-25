@@ -1,6 +1,7 @@
 ---
 title: "Dynamic Multi-Heuristic A*"
 date: 2015-01-01
+scholar_rank: 164
 authors:
   - "Fahad Islam"
   - "Venkatraman Narayanan"

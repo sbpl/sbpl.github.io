@@ -1,6 +1,7 @@
 ---
 title: "Search-based Path Planning with Homotopy Class Constraints"
 date: 2010-01-01
+scholar_rank: 263
 authors:
   - "Subhrajit Bhattacharya"
   - "Vijay Kumar"

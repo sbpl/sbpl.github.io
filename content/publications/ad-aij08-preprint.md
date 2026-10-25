@@ -1,6 +1,7 @@
 ---
 title: "Anytime Search in Dynamic Graphs"
 date: 2008-01-01
+scholar_rank: 279
 authors:
   - "Maxim Likhachev"
   - "Dave Ferguson"

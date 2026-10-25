@@ -1,6 +1,7 @@
 ---
 title: "Planning for Manipulation with Adaptive Motion Primitives"
 date: 2011-01-01
+scholar_rank: 252
 authors:
   - "Benjamin Cohen"
   - "Gokul Subramanian"

@@ -1,6 +1,7 @@
 ---
 title: "Truncated Incremental Search"
 date: 2016-01-01
+scholar_rank: 149
 authors:
   - "Sandip Aine"
   - "Maxim Likhachev"

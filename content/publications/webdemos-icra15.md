@@ -1,6 +1,7 @@
 ---
 title: "A Web-based Infrastructure for Recording User Demonstrations of Mobile Manipulation Tasks"
 date: 2015-01-01
+scholar_rank: 162
 authors:
   - "Ellis Ratner"
   - "Benjamin Cohen"

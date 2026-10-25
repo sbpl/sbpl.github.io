@@ -1,6 +1,7 @@
 ---
 title: "Combining Global and Local Planning with Guarantees on Completeness"
 date: 2012-01-01
+scholar_rank: 231
 authors:
   - "Haojie Zhang"
   - "Jon Butzke"

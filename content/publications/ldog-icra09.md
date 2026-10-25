@@ -1,6 +1,7 @@
 ---
 title: "Search-based Planning for a Legged Robot over Rough Terrain"
 date: 2009-01-01
+scholar_rank: 274
 authors:
   - "Paul Vernaza"
   - "Maxim Likhachev"

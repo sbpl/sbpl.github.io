@@ -1,6 +1,7 @@
 ---
 title: "Coordinated Commencement of Pre-Planned Routes for Fixed-Wing UAS Starting from Arbitrary Locations - a Near Real-Time Solution"
 date: 2014-01-01
+scholar_rank: 174
 authors:
   - "James Keller"
   - "Dinesh Thakur"

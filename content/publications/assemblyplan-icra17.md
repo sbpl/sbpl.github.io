@@ -1,6 +1,7 @@
 ---
 title: "Parts Assembly Planning under Uncertainty with Simulation-Aided Physical Reasoning"
 date: 2017-01-01
+scholar_rank: 138
 authors:
   - "Sung-Kyun Kim"
   - "Maxim Likhachev"

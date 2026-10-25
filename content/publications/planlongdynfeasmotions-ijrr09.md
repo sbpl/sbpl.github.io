@@ -1,6 +1,7 @@
 ---
 title: "Planning Long Dynamically-Feasible Maneuvers for Autonomous Vehicles"
 date: 2009-01-01
+scholar_rank: 271
 authors:
   - "Maxim Likhachev"
   - "Dave Ferguson"

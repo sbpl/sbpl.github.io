@@ -1,6 +1,7 @@
 ---
 title: "Speeding up Moving-Target Search"
 date: 2007-01-01
+scholar_rank: 289
 authors:
   - "Sven Koenig"
   - "Maxim Likhachev"

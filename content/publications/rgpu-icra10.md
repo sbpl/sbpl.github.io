@@ -1,6 +1,7 @@
 ---
 title: "High-dimensional Planning on the GPU"
 date: 2010-01-01
+scholar_rank: 266
 authors:
   - "Joseph T. Kider Jr."
   - "Mark Henderson"

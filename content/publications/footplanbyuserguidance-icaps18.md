@@ -1,6 +1,7 @@
 ---
 title: "Effective Footstep Planning for Humanoids Using Homotopy-Class Guidance"
 date: 2018-01-01
+scholar_rank: 130
 authors:
   - "Vinitha Ranganeni"
   - "Oren Salzman"

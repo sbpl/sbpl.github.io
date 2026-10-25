@@ -1,6 +1,7 @@
 ---
 title: "Time-bounded Lattice for Efficient Planning in Dynamic Environments"
 date: 2009-01-01
+scholar_rank: 275
 authors:
   - "Aleksandr Kushleyev"
   - "Maxim Likhachev"

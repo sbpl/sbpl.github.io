@@ -1,6 +1,7 @@
 ---
 title: "Speeding Up Search-Based Motion Planning via Conservative Heuristics"
 date: 2019-01-01
+scholar_rank: 124
 authors:
   - "Ishani Chatterjee"
   - "Maxim Likhachev"

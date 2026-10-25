@@ -1,6 +1,7 @@
 ---
 title: "Discriminatively-guided Deliberative Perception for Pose Estimation of Multiple 3D Object Instances"
 date: 2016-01-01
+scholar_rank: 144
 authors:
   - "Venkatraman Narayanan"
   - "Maxim Likhachev"

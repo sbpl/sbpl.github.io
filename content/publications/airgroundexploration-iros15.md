@@ -1,6 +1,7 @@
 ---
 title: "3-D Exploration with an Air-Ground Robotic System"
 date: 2015-01-01
+scholar_rank: 155
 authors:
   - "Jonathan Butzke"
   - "Andrew Dornbush"

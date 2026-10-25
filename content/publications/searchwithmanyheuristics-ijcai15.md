@@ -1,6 +1,7 @@
 ---
 title: "Efficient Search with an Ensemble of Heuristics"
 date: 2015-01-01
+scholar_rank: 156
 authors:
   - "Mike Phillips"
   - "Venkatraman Narayanan"

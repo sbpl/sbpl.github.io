@@ -1,6 +1,7 @@
 ---
 title: "Heuristic Search on Graphs with Existence Priors for Expensive-to-Evaluate Edges"
 date: 2017-01-01
+scholar_rank: 136
 authors:
   - "Venkatraman Narayanan"
   - "Maxim Likhachev"

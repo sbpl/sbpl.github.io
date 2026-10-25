@@ -1,6 +1,7 @@
 ---
 title: "Parallel A* for Planning with Time-consuming State Expansions"
 date: 2014-01-01
+scholar_rank: 175
 authors:
   - "Mike Phillips"
   - "Sven Koenig"

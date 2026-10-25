@@ -1,6 +1,7 @@
 ---
 title: "Planning for Landing Site Selection in the Aerial Supply Delivery"
 date: 2011-01-01
+scholar_rank: 244
 authors:
   - "Aleksandr Kushleyev"
   - "Brian MacAllister"
