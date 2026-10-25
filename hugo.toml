@@ -12,7 +12,7 @@ disableKinds = ["taxonomy", "term"]
   labFullName = "Search-Based Planning Lab"
   labLogo = "/images/lab-logo.png"
   universityLogo = "/images/cmu-wordmark-stacked-r.png"
-  labBlurb = "The Search-Based Planning Laboratory researches methodologies and algorithms that enable autonomous systems to act fast, intelligently, and robustly. Our research concentrates on developing novel planning approaches, novel heuristic searches, and investigating how planning can be combined with machine learning. Our work spans graph theory, algorithms, data structures, machine learning, and robotics. We use our algorithms to build real-time planners for complex robotic systems operating in the real world and performing challenging tasks ranging from autonomous navigation and autonomous flight to multi-agent systems and full-body mobile manipulation."
+  labBlurb = "The Search-Based Planning Laboratory researches methodologies and algorithms that enable autonomous systems to act fast, intelligently, and robustly. Our research concentrates on developing novel planning approaches, novel heuristic searches, and investigating how planning can be combined with machine learning. Our work spans graph theory, algorithms, data structures, machine learning, and robotics. We use our algorithms to build real-time planners for complex robotic systems operating in the real world and performing challenging tasks ranging from full-body mobile manipulation and multi-agent systems to autonomous navigation and autonomous flight."
   university = "Carnegie Mellon University"
   department = "Robotics Institute"
 
