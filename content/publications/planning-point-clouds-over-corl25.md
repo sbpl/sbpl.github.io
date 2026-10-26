@@ -17,6 +17,9 @@ publication_type: "conference"
 arxiv: "https://arxiv.org/abs/2509.04645"
 project_page: "https://planning-from-point-clouds.github.io/"
 thumbnail: "/images/publications/planning-from-point-clouds-corl.mp4"
+# Real-world runs shown in the homepage Research Demos instead of the thumbnail
+# (muted, compressed copy of pcp_demo_real_world.mp4)
+demo: "/images/publications/planning-from-point-clouds-real-world.mp4"
 draft: false
 ---
 
