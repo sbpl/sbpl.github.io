@@ -9,6 +9,7 @@ authors:
   - "Jiaoyang Li"
 first_authors: 2
 venue: "ICAPS 2024"
+award: "Best Student Paper Award"
 description: "We present a novel framework that capitalizes on the structure of conflict-based search to leverage online-generated experiences and accelerate search-based planning for multi-robot manipulation tasks."
 thumbnail: "/images/publications/xecbs.gif"
 arxiv: "https://arxiv.org/abs/2404.00143"

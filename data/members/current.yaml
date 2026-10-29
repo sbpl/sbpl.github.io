@@ -43,6 +43,18 @@
     website: "https://eyal-weiss.github.io/"
     scholar: "https://scholar.google.com/citations?user=LO5sHMIAAAAJ&hl=en"
 
+- name: "Itamar Mishani"
+  slug: "itamar-mishani"
+  category: "phd"
+  enrollment: "RI PhD, Fall 2022"
+  photo: "/images/members/itamar-mishani.jpg"
+  bio: >
+    Itamar is interested in developing algorithms that combine planning with learning for robotic manipulation: long-horizon planning over learned skills, coordination and colaboration of many arms in a shared workspace, and high-dimensional systems including mobile manipulators, with a focus on contact-rich tasks in confined spaces.
+  links:
+    github: "https://github.com/imishani"
+    website: "https://imishani.github.io"
+    scholar: "https://scholar.google.com/citations?user=rDCG1NAAAAAJ&hl=en"
+
 - name: "Nayesha Gandotra"
   slug: "nayesha-gandotra"
   category: "phd"
@@ -71,19 +83,6 @@
   links:
     website: "https://amburger66.github.io/"
     scholar: "https://scholar.google.com/citations?user=7KsLSG0AAAAJ&hl=en"
-
-- name: "Itamar Mishani"
-  slug: "itamar-mishani"
-  category: "phd"
-  enrollment: "RI PhD, Fall 2022"
-  photo: "/images/members/itamar-mishani.jpg"
-  bio: >
-    Itamar's research interests include multi-robot task and motion planning,
-    robotic manipulation, and generative models.
-  links:
-    github: "https://github.com/imishani"
-    website: "https://imishani.github.io"
-    scholar: "https://scholar.google.com/citations?user=rDCG1NAAAAAJ&hl=en"
 
 - name: "Kallol Saha"
   slug: "kallol-saha"
