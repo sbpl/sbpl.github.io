@@ -1,6 +1,7 @@
 ---
 title: "Path Planning with Adaptive Dimensionality"
 date: 2011-01-01
+scholar_rank: 258
 authors:
   - "Kalin Gochev"
   - "Benjamin Cohen"

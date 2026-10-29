@@ -1,6 +1,7 @@
 ---
 title: "Probabilistic Planning with Clear Preferences on Missing Information"
 date: 2009-01-01
+scholar_rank: 276
 authors:
   - "Maxim Likhachev"
   - "Anthony Stentz"

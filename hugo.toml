@@ -2,15 +2,17 @@ baseURL = 'https://sbpl.github.io/'
 languageCode = 'en-us'
 title = 'SBPL — Search-Based Planning Lab'
 
-[taxonomies]
-  author = "authors"
+# No taxonomy pages: Hugo would otherwise build a page per author (from each
+# paper's `authors`) plus empty tag and category pages
+disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Search-Based Planning Lab at Carnegie Mellon University"
   labName = "SBPL"
   labFullName = "Search-Based Planning Lab"
   labLogo = "/images/lab-logo.png"
-  labBlurb = "The Search-Based Planning Laboratory researches methodologies and algorithms that enable autonomous systems to act fast, intelligently, and robustly. Our research concentrates on developing novel planning approaches, novel heuristic searches, and investigating how planning can be combined with machine learning. Our work spans graph theory, algorithms, data structures, machine learning, and robotics. We use our algorithms to build real-time planners for complex robotic systems operating in the real world and performing challenging tasks ranging from autonomous navigation and autonomous flight to multi-agent systems and full-body mobile manipulation."
+  universityLogo = "/images/cmu-wordmark-stacked-r.png"
+  labBlurb = "The Search-Based Planning Laboratory researches methodologies and algorithms that enable autonomous systems to act fast, intelligently, and robustly. Our research concentrates on developing novel planning approaches, novel heuristic searches, and investigating how planning can be combined with machine learning. Our work spans graph theory, algorithms, data structures, machine learning, and robotics. We use our algorithms to build real-time planners for complex robotic systems operating in the real world and performing challenging tasks ranging from full-body mobile manipulation and multi-agent systems to autonomous navigation and autonomous flight."
   university = "Carnegie Mellon University"
   department = "Robotics Institute"
 
@@ -28,21 +30,9 @@ title = 'SBPL — Search-Based Planning Lab'
     url = "/publications/"
     weight = 3
   [[menu.main]]
-    name = "Robots"
-    url = "/robots/"
-    weight = 4
-  [[menu.main]]
-    name = "Software"
-    url = "/software/"
+    name = "Archive"
+    url = "/archive/software/"
     weight = 5
-  [[menu.main]]
-    name = "Videos"
-    url = "/videos/"
-    weight = 6
-  [[menu.main]]
-    name = "Tutorials"
-    url = "/tutorials/"
-    weight = 7
   [[menu.main]]
     name = "Contact"
     url = "/contact/"
@@ -52,3 +42,8 @@ title = 'SBPL — Search-Based Planning Lab'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# The tutorials in content/tutorials/ are the archived sbpl.net pages, kept
+# as HTML. Hugo refuses .html content files by default; allow them.
+[security]
+  allowContent = ['! ^text/org$']

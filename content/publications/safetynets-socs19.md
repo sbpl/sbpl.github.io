@@ -1,6 +1,7 @@
 ---
 title: "Intuitive, Reliable Plans with Contingencies: Planning with Safety Nets for Landmark-Based Routing"
 date: 2019-01-01
+scholar_rank: 127
 authors:
   - "Kalyan Vasudev Alwala"
   - "Margarita Safonova"

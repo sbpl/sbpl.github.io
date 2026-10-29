@@ -1,6 +1,7 @@
 ---
 title: "A Single-Planner Approach to Multi-Modal Humanoid Mobility"
 date: 2018-01-01
+scholar_rank: 131
 authors:
   - "Andrew Dornbush"
   - "Karthik Vijayakumar"

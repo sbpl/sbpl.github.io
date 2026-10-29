@@ -1,6 +1,7 @@
 ---
 title: "Lazy Validation of Experience Graphs"
 date: 2015-01-01
+scholar_rank: 160
 authors:
   - "Victor Hwang"
   - "Mike Phillips"

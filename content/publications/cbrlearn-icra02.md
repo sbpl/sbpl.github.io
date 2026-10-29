@@ -1,6 +1,7 @@
 ---
 title: "Learning Behavioral Parameterization Using Spatio-Temporal Case-Based Reasoning"
 date: 2002-01-01
+scholar_rank: 315
 authors:
   - "Maxim Likhachev"
   - "Michael Kaess"

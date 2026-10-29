@@ -1,6 +1,7 @@
 ---
 title: "Motion Planning for an Underwater Mobile Manipulator by Exploiting Loose Coupling"
 date: 2018-01-01
+scholar_rank: 129
 authors:
   - "Dina Youakim"
   - "Andrew Dornbush"

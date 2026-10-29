@@ -1,6 +1,7 @@
 ---
 title: "Anytime Incremental Planning with E-Graphs"
 date: 2013-01-01
+scholar_rank: 190
 authors:
   - "Mike Phillips"
   - "Andrew Dornbush"

@@ -1,6 +1,7 @@
 ---
 title: "Navigation in Three-Dimensional Cluttered Environments for Mobile Manipulation"
 date: 2012-01-01
+scholar_rank: 233
 authors:
   - "Armin Hornung"
   - "Mike Phillips"

@@ -1,6 +1,7 @@
 ---
 title: "A Guide to Heuristic-based Path Planning"
 date: 2005-01-01
+scholar_rank: 304
 authors:
   - "Dave Ferguson"
   - "Maxim Likhachev"

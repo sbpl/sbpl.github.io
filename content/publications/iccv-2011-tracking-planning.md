@@ -1,6 +1,7 @@
 ---
 title: "Multi-hypothesis Motion Planning for Visual Object Tracking"
 date: 2011-01-01
+scholar_rank: 243
 authors:
   - "Haifeng Gong"
   - "Jack Sim"

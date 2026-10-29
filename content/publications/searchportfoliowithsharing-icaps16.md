@@ -1,6 +1,7 @@
 ---
 title: "Search Portfolio with Sharing"
 date: 2016-01-01
+scholar_rank: 150
 authors:
   - "Sandip Aine"
   - "Maxim Likhachev"

@@ -1,6 +1,7 @@
 ---
 title: "E-Graphs: Bootstrapping Planning with Experience Graphs"
 date: 2012-01-01
+scholar_rank: 227
 authors:
   - "Mike Phillips"
   - "Benjamin Cohen"

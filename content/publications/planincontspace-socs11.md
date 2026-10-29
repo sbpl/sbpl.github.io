@@ -1,6 +1,7 @@
 ---
 title: "Search-Based Planning with Provable Suboptimality Bounds for Continuous State Spaces"
 date: 2011-01-01
+scholar_rank: 259
 authors:
   - "Juan Pablo Gonzalez"
   - "Maxim Likhachev"

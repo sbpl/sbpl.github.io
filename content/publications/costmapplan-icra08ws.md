@@ -1,6 +1,7 @@
 ---
 title: "Efficiently Using Cost Maps For Planning Complex Maneuvers"
 date: 2008-01-01
+scholar_rank: 285
 authors:
   - "Dave Ferguson"
   - "Maxim Likhachev"

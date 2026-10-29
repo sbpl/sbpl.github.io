@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{/* Software page: the body is the intro; cards come from the `groups` front matter */}}
+<div class="page">
+  <h1 class="page-title">Archive</h1>
+  {{ partial "archive-tabs.html" . }}
+  {{ with .Params.lead }}<p class="page-lead">{{ . }}</p>{{ end }}
+  <div class="page-intro">{{ .Content }}</div>
+
+  {{ range .Params.groups }}
+  <section class="page-section">
+    <h2 id="{{ .name | urlize }}">{{ .name }}</h2>
+    <div class="card-grid">
+      {{ range .items }}
+      <article class="info-card">
+        <h3 class="info-card-title">{{ .name }}</h3>
+        {{ with .description }}<p class="info-card-text">{{ . }}</p>{{ end }}
+        {{ with .links }}
+        <div class="publication-links">
+          {{ range . }}<a href="{{ .url }}" target="_blank" rel="noopener" class="pub-link">{{ .label }}</a>{{ end }}
+        </div>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</div>
+{{ end }}

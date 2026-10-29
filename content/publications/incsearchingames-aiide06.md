@@ -1,6 +1,7 @@
 ---
 title: "Incremental Heuristic Search in Games: The Quest for Speed"
 date: 2006-01-01
+scholar_rank: 294
 authors:
   - "Maxim Likhachev"
   - "Sven Koenig"

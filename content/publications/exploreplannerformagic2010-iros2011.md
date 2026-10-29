@@ -1,6 +1,7 @@
 ---
 title: "Planning for Multi-Robot Exploration With Multiple Objective Utility Functions"
 date: 2011-01-01
+scholar_rank: 245
 authors:
   - "Jonathan Butzke"
   - "Maxim Likhachev"

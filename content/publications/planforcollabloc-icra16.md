@@ -1,6 +1,7 @@
 ---
 title: "Planning for a Ground-Air Robotic System with Collaborative Localization"
 date: 2016-01-01
+scholar_rank: 145
 authors:
   - "Jonathan Butzke"
   - "Kalin Gochev"

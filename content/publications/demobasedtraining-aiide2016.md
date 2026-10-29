@@ -1,6 +1,7 @@
 ---
 title: "Demonstration-Based Training of Non-Player Character Tactical Behaviors"
 date: 2016-01-01
+scholar_rank: 142
 authors:
   - "John Drake"
   - "Alla Safonova"

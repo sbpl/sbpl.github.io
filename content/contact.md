@@ -1,37 +1,42 @@
 ---
 title: "Contact"
 lead: "How to reach the Search-Based Planning Lab."
-date: 2014-01-01
+# The address was updated from the original sbpl.net contact page
+# (1612 Newell Simon Hall); confirm the current room before adding one.
 ---
 
-## Visit Us
+<div class="card-grid contact-grid">
+  <article class="info-card">
+    <h3 class="info-card-title">Visit Us</h3>
+    <address>
+      Newell-Simon Hall (NSH)<br>
+      Carnegie Mellon University<br>
+      5000 Forbes Avenue<br>
+      Pittsburgh, PA 15213
+    </address>
+    <div class="publication-links">
+      <a class="pub-link" href="https://www.google.com/maps/search/?api=1&amp;query=Newell-Simon+Hall%2C+Carnegie+Mellon+University" target="_blank" rel="noopener">Map</a>
+    </div>
+  </article>
 
-**Physical Address**
+  <article class="info-card">
+    <h3 class="info-card-title">Mail</h3>
+    <address>
+      Maxim Likhachev<br>
+      Carnegie Mellon University — Robotics Institute<br>
+      5000 Forbes Avenue<br>
+      Pittsburgh, PA 15213
+    </address>
+  </article>
 
-Newell-Simon Hall (NSH)
-Carnegie Mellon University
-5000 Forbes Avenue
-Pittsburgh, PA 15213
-
-## Mail
-
-Maxim Likhachev
-Carnegie Mellon University &mdash; Robotics Institute
-5000 Forbes Avenue
-Pittsburgh, PA 15213
-
-## Stay In Touch
-
-To get updates and announcements, please join the
-[**sbpl-users** mailing list](https://groups.google.com/forum/#!forum/sbpl-users).
-
-## Email
-
-For comments, questions, or collaboration enquiries, please contact
-the lab's principal investigator, [Maxim Likhachev](mailto:maxim@cs.cmu.edu).
-
----
-
-*The address above was updated from the original sbpl.net contact page
-(1612 Newell Simon Hall) — please confirm the current room before
-visiting in person.*
+  <article class="info-card">
+    <h3 class="info-card-title">Email</h3>
+    <p class="info-card-text">
+      For comments, questions, or collaboration enquiries, please contact
+      the lab's principal investigator, Maxim Likhachev.
+    </p>
+    <div class="publication-links">
+      <a class="pub-link" href="mailto:maxim@cs.cmu.edu">maxim@cs.cmu.edu</a>
+    </div>
+  </article>
+</div>

@@ -1,6 +1,7 @@
 ---
 title: "Path Clearance Using Multiple Scout Robots"
 date: 2006-01-01
+scholar_rank: 290
 authors:
   - "Maxim Likhachev"
   - "Anthony Stentz"

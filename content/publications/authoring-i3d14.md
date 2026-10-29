@@ -1,6 +1,7 @@
 ---
 title: "Stochastic Activity Authoring with Direct User Control"
 date: 2014-01-01
+scholar_rank: 176
 authors:
   - "Aline Normoyle"
   - "Maxim Likhachev"

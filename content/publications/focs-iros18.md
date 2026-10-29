@@ -1,6 +1,7 @@
 ---
 title: "FOCS: Planning by Fusion of Optimal Control and Search and its Application to Navigation"
 date: 2018-01-01
+scholar_rank: 128
 authors:
   - "Piero Micelli"
   - "Maxim Likhachev"

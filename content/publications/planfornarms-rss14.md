@@ -1,6 +1,7 @@
 ---
 title: "Planning Single-arm Manipulations with n-Arm Robots"
 date: 2014-01-01
+scholar_rank: 171
 authors:
   - "Benjamin Cohen"
   - "Mike Phillips"

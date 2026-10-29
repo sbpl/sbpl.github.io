@@ -1,6 +1,7 @@
 ---
 title: "Accelerating Search-Based Planning for Multi-Robot Manipulation by Leveraging Online-Generated Experiences"
 date: 2024-05-01
+scholar_rank: 36
 authors:
   - "Yorai Shaoul"
   - "Itamar Mishani"

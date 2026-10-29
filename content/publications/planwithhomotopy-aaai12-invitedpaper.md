@@ -1,6 +1,7 @@
 ---
 title: "Search-based Path Planning with Homotopy Class Constraints in 3D"
 date: 2012-01-01
+scholar_rank: 238
 authors:
   - "Subhrajit Bhattacharya"
   - "Maxim Likhachev"

@@ -4,7 +4,7 @@
 
   <p class="publication-meta">
     <strong>{{ .Params.venue }}</strong>
-    {{ with .Params.award }}<span class="publication-award">— {{ . }}</span>{{ end }}
+    {{ with .Params.award }}<span class="publication-award">– {{ . }}</span>{{ end }}
   </p>
 
   <p class="publication-authors">
@@ -13,7 +13,11 @@
 
   {{ with .Params.thumbnail }}
   <div class="publication-hero-image">
+    {{ if findRE `(?i)\.(mp4|webm)$` . }}
+    <video src="{{ . }}" autoplay muted loop playsinline controls></video>
+    {{ else }}
     <img src="{{ . }}" alt="{{ $.Title }}">
+    {{ end }}
   </div>
   {{ end }}
 
@@ -21,21 +25,13 @@
     {{ .Content }}
   </div>
 
+  {{ $paperURL := .Params.arxiv | default .Params.pdf | default .Params.doi | default .Params.abstract_html }}
   <div class="publication-links-large">
-    {{ with .Params.pdf }}
-      <a href="{{ . }}" target="_blank" role="button">📄 Read the paper (PDF)</a>
-    {{ end }}
-    {{ with .Params.arxiv }}
-      <a href="{{ . }}" target="_blank" role="button" class="outline">arXiv</a>
-    {{ end }}
-    {{ with .Params.abstract_html }}
-      <a href="{{ . }}" target="_blank" role="button" class="outline">Abstract</a>
+    {{ with $paperURL }}
+      <a href="{{ . }}" target="_blank" rel="noopener" role="button">Paper</a>
     {{ end }}
     {{ with .Params.project_page }}
-      <a href="{{ . }}" target="_blank" role="button" class="outline">🔗 Project Page</a>
-    {{ end }}
-    {{ with .Params.code }}
-      <a href="{{ . }}" target="_blank" role="button" class="outline">💻 Code</a>
+      <a href="{{ . }}" target="_blank" rel="noopener" role="button" class="outline">Project Page</a>
     {{ end }}
   </div>
 </article>

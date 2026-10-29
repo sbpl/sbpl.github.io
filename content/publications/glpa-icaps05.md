@@ -1,6 +1,7 @@
 ---
 title: "A Generalized Framework for Lifelong Planning A*"
 date: 2005-01-01
+scholar_rank: 299
 authors:
   - "Maxim Likhachev"
   - "Sven Koenig"

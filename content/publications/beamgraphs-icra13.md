@@ -1,6 +1,7 @@
 ---
 title: "Planning Under Topological Constraints Using Beam-Graphs"
 date: 2013-01-01
+scholar_rank: 189
 authors:
   - "Venkatraman Narayanan"
   - "Paul Vernaza"

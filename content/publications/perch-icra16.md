@@ -1,6 +1,7 @@
 ---
 title: "PERCH: Perception via Search for Multi-Object Recognition and Localization"
 date: 2016-01-01
+scholar_rank: 148
 authors:
   - "Venkatraman Narayanan"
   - "Maxim Likhachev"

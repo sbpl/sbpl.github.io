@@ -1,0 +1,18 @@
+{{/*
+  Tabs across the Archive section (Software, Videos, Tutorials).
+  Usage: {{ partial "archive-tabs.html" . }}
+  A page picks its tab with `archive_tab` in its front matter; tutorial pages
+  inherit it from content/archive/tutorials/_index.md.
+*/}}
+{{ $page := . }}
+{{ $tabs := slice
+  (dict "key" "software"  "label" "Software"  "url" "/archive/software/")
+  (dict "key" "videos"    "label" "Videos"    "url" "/archive/videos/")
+  (dict "key" "tutorials" "label" "Tutorials" "url" "/archive/tutorials/")
+}}
+<nav class="archive-tabs" aria-label="Archive">
+  {{ range $tabs }}
+    <a href="{{ .url }}"
+       {{- if eq .key $page.Params.archive_tab }} class="active"{{ if eq .url $page.RelPermalink }} aria-current="page"{{ end }}{{ end }}>{{ .label }}</a>
+  {{ end }}
+</nav>

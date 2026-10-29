@@ -1,0 +1,129 @@
+---
+title: "Arm Planning"
+aliases: ["/tutorials/arm-planning/"]
+weight: 9
+description: "Tutorials and repository links for the legacy PR2 arm planner."
+legacy_page: "/archive/legacy-drupal/content/pages/0055-arm-planning.html"
+---
+<h2 class="rtecenter" style="">
+	sbpl_arm_planning</h2>
+<h2>
+	<u>Repositories</u></h2>
+<div>
+	<strong>ROS Diamondback</strong></div>
+<div>
+	Arm Navigation</div>
+<div class="rteindent1">
+	svn co <a href="https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/diamondback/">https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/diamondback/</a></div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>ROS Electric</strong></div>
+<div>
+	Arm Navigation</div>
+<div class="rteindent1">
+	svn co <a href="https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/electric/">https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/electric/</a></div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>ROS Fuerte</strong></div>
+<div>
+	Arm Navigation</div>
+<div class="rteindent1">
+	svn co <a href="https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/fuerte_arm_navigation/" target="_blank">https://mediabox.grasp.<wbr />upenn.edu/svn/penn-ros-pkgs/<wbr />sbpl_arm_planning/branches/<wbr />fuerte_arm_navigation/</a></div>
+<div class="rteindent1">
+	(install documentation below)</div>
+<div>
+	MoveIt! (only compatible with June 2012)</div>
+<div class="rteindent1">
+	svn co <a href="https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/trunk/" target="_blank">https://mediabox.grasp.<wbr />upenn.edu/svn/penn-ros-pkgs/<wbr />sbpl_arm_planning/trunk/</a></div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>ROS Groovy</strong></div>
+<div>
+	C++ API</div>
+<div class="rteindent1">
+	git clone https://github.com/bcohen/sbpl_manipulation.git</div>
+<div class="rteindent1">
+	<a href="https://github.com/bcohen/sbpl_manipulation">install documentation</a></div>
+<div>
+	MoveIt!</div>
+<div class="rteindent1">
+	Coming soon!</div>
+<div>
+	&nbsp;</div>
+<h2>
+	<u>How to get started (ROS Fuerte):</u></h2>
+<p><u><strong>Download &amp; Compile:</strong></u></p>
+<div>
+	<div>
+		<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+			0) Install prerequisites:</div>
+		<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+			<span style="font-size: 12.727272033691406px;">sudo apt-get install&nbsp;ros-fuerte-pr2-</span><wbr style="font-size: 12.727272033691406px;" /><span style="font-size: 12.727272033691406px;">kinematics&nbsp;ros-fuerte-arm-</span><wbr style="font-size: 12.727272033691406px;" /><span style="font-size: 12.727272033691406px;">navigation ros-fuerte-arm-navigation-</span><wbr style="font-size: 12.727272033691406px;" /><span style="font-size: 12.727272033691406px;">experimental</span></div>
+		<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+			&nbsp;</div>
+	</div>
+	<div>
+		<span style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">1) Get the Arm Planner:</span></div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		<span style="font-size: 12.727272033691406px;">svn co&nbsp;</span><a href="https://mediabox.grasp.upenn.edu/svn/penn-ros-pkgs/sbpl_arm_planning/branches/fuerte_arm_navigation/" style="font-size: 12.727272033691406px; color: rgb(17, 85, 204);" target="_blank">https://mediabox.grasp.<wbr />upenn.edu/svn/penn-ros-pkgs/<wbr />sbpl_arm_planning/branches/<wbr />fuerte_arm_navigation/</a><span style="font-size: 12.727272033691406px;">&nbsp;sbpl_</span><wbr style="font-size: 12.727272033691406px;" /><span style="font-size: 12.727272033691406px;">arm_planning</span></div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		<div>
+			&nbsp;</div>
+		<div>
+			2) Get the SBPL:</div>
+	</div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		<span style="font-size: 12.727272033691406px;">git clone&nbsp;</span><a href="https://github.com/sbpl/sbpl.git" style="font-size: 12.727272033691406px; color: rgb(17, 85, 204);" target="_blank">https://github.com/sbpl/<wbr />sbpl.git</a></div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		&nbsp;</div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		3) Build the SBPL. Follow the directions here:</div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		<a href="https://github.com/sbpl/sbpl/blob/master/README.txt" style="font-size: 12.727272033691406px; color: rgb(17, 85, 204);" target="_blank">https://github.com/sbpl/sbpl/<wbr />blob/master/README.txt</a></div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		&nbsp;</div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		4) Build the Arm Planner:</div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		<span style="font-size: 12.727272033691406px;">rosmake sbpl_arm_planner_node</span></div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		&nbsp;</div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		<span style="font-size: 12.727272033691406px;">5) Build the test package (for testing the planner):</span></div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		rosmake simple_arm_utils</div>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		&nbsp;</div>
+	<p style="font-family: arial, sans-serif; font-size: 12.727272033691406px;"><strong style="font-size: 12.727272033691406px;"><u><span style="font-size: 12.727272033691406px;">Run Demo:</span></u></strong></p>
+	<div style="font-family: arial, sans-serif; font-size: 12.727272033691406px;">
+		<span style="font-family: Arial, Verdana, sans-serif; font-size: 12px;">Make sure you added this to your bashrc: export ROBOT=sim</span></div>
+</div>
+<div class="gmail_extra">
+	<div>
+		<b>Terminal 1 - Bring up Gazebo &amp; Right&nbsp;<span>Arm</span>&nbsp;Navigation Stack</b></div>
+	<div>
+		roslaunch simple_arm_control gazebo_with_right_arm_nav.<wbr />launch</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		<b>Terminal 2 - Bring up RViz</b>&nbsp;(add display for visualization markers)</div>
+	<div>
+		rosrun rviz rviz</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		<b>Terminal 3 - Launch the&nbsp;<span>planner</span>&nbsp;for the right&nbsp;<span>arm</span></b></div>
+	<div>
+		roslaunch sbpl_arm_planner_node sbpl_planning_right_arm.launch</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		<b>Terminal 4 - Request a motion plan</b></div>
+	<div>
+		roslaunch simple_arm_control goal1.launch&nbsp;</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

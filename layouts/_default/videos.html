@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{/* Videos page: thumbnails from the `groups` front matter. Each thumbnail links
+     to YouTube; with JavaScript it swaps in the player on click instead, so the
+     page doesn't load a dozen players up front. */}}
+<div class="page">
+  <h1 class="page-title">Archive</h1>
+  {{ partial "archive-tabs.html" . }}
+  {{ with .Params.lead }}<p class="page-lead">{{ . }}</p>{{ end }}
+  <div class="page-intro">{{ .Content }}</div>
+
+  {{ range .Params.groups }}
+  <section class="page-section">
+    <h2 id="{{ .name | urlize }}">{{ .name }}</h2>
+    <div class="video-grid">
+      {{ range .videos }}
+      <figure class="video-card">
+        <a class="video-thumb" href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener"
+           data-video="{{ .id }}" aria-label="Play: {{ .title }}">
+          <img src="https://i.ytimg.com/vi/{{ .id }}/hqdefault.jpg" alt="" loading="lazy">
+          <span class="video-play" aria-hidden="true"></span>
+        </a>
+        <figcaption>{{ .title }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</div>
+
+<script>
+  document.querySelectorAll('.video-thumb').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + link.dataset.video + '?autoplay=1';
+      frame.title = link.getAttribute('aria-label').replace('Play: ', '');
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+      frame.allowFullscreen = true;
+      link.replaceWith(frame);
+    });
+  });
+</script>
+{{ end }}

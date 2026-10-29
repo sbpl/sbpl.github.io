@@ -1,6 +1,7 @@
 ---
 title: "Disruption-Limited Planning for Robot Navigation in Dynamic Environments"
 date: 2021-01-01
+scholar_rank: 83
 authors:
   - "Sandip Aine"
   - "Yash Oza"

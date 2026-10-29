@@ -1,6 +1,7 @@
 ---
 title: "Planning with Approximate Preferences and its Application to Disambiguating Human Intentions in Navigation"
 date: 2013-01-01
+scholar_rank: 188
 authors:
   - "Bradford Neuman"
   - "Maxim Likhachev"

@@ -1,6 +1,7 @@
 ---
 title: "Cart Pushing with a Mobile Manipulation System: Towards Navigation with Moveable Objects"
 date: 2011-01-01
+scholar_rank: 250
 authors:
   - "Jonathan Scholz"
   - "Sachin Chitta"

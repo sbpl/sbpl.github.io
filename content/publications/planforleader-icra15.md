@@ -1,6 +1,7 @@
 ---
 title: "Planning for multi-agent teams with leader switching"
 date: 2015-01-01
+scholar_rank: 161
 authors:
   - "Siddharth Swaminathan"
   - "Mike Phillips"

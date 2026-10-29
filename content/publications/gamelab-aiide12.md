@@ -1,6 +1,7 @@
 ---
 title: "Game-based Data Capture for Player Metrics"
 date: 2012-01-01
+scholar_rank: 241
 authors:
   - "Aline Normoyle"
   - "John Drake"

@@ -1,6 +1,7 @@
 ---
 title: "Prioritized Computation for Numerical Sound Propagation"
 date: 2014-01-01
+scholar_rank: 178
 authors:
   - "John Drake"
   - "Maxim Likhachev"

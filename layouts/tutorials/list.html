@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{/* Tutorials index: one card per page in content/archive/tutorials/, in `weight` order */}}
+<div class="page">
+  <h1 class="page-title">Archive</h1>
+  {{ partial "archive-tabs.html" . }}
+  {{ with .Params.lead }}<p class="page-lead">{{ . }}</p>{{ end }}
+  <div class="page-intro">{{ .Content }}</div>
+
+  <section class="page-section">
+    <div class="card-grid">
+      {{ range $i, $t := .Pages.ByWeight }}
+      <a class="info-card info-card-link" href="{{ $t.RelPermalink }}">
+        <span class="info-card-step">{{ add $i 1 }}</span>
+        <h3 class="info-card-title">{{ $t.Title }}</h3>
+        {{ with $t.Description }}<p class="info-card-text">{{ . }}</p>{{ end }}
+      </a>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

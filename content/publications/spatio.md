@@ -1,6 +1,7 @@
 ---
 title: "Spatio-Temporal Case-Based Reasoning for Behavioral Selection"
 date: 2001-01-01
+scholar_rank: 319
 authors:
   - "Maxim Likhachev"
   - "Ronald C. Arkin"

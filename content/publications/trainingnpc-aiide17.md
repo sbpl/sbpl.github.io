@@ -1,6 +1,7 @@
 ---
 title: "Towards Adaptability of Demonstration-Based Training of NPC Behavior"
 date: 2017-01-01
+scholar_rank: 135
 authors:
   - "John Drake"
   - "Alla Safonova"

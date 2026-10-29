@@ -1,6 +1,7 @@
 ---
 title: "Motion Planning for Robotic Manipulators with Independent Wrist Joints"
 date: 2014-01-01
+scholar_rank: 173
 authors:
   - "Kalin Gochev"
   - "Venkatraman Narayanan"

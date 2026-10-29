@@ -1,6 +1,7 @@
 ---
 title: "Multi-Heuristic A*"
 date: 2015-01-01
+scholar_rank: 151
 authors:
   - "Sandip Aine"
   - "Siddharth Swaminathan"

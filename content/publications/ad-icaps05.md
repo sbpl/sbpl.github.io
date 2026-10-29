@@ -1,6 +1,7 @@
 ---
 title: "Anytime Dynamic A*: An Anytime, Replanning Algorithm"
 date: 2005-01-01
+scholar_rank: 300
 authors:
   - "Maxim Likhachev"
   - "Dave Ferguson"

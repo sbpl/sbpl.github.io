@@ -1,6 +1,7 @@
 ---
 title: "A New Principle for Incremental Heuristic Search: Theoretical Results"
 date: 2006-01-01
+scholar_rank: 292
 authors:
   - "Sven Koenig"
   - "Maxim Likhachev"

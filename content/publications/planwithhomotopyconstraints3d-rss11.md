@@ -1,6 +1,7 @@
 ---
 title: "Identification and Representation of Homotopy Classes of Trajectories for Search-based Path Planning in 3D"
 date: 2011-01-01
+scholar_rank: 248
 authors:
   - "Subhrajit Bhattacharya"
   - "Maxim Likhachev"

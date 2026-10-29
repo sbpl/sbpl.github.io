@@ -1,0 +1,31 @@
+{{/*
+  Returns the given publication pages in display order:
+    1. newest year first;
+    2. within a year, papers with a `thumbnail` (image or video) before those
+       without one;
+    3. then by venue, following `venue_order` in content/publications/_index.md
+       (matched against the first word of each paper's `venue`; unlisted venues
+       come last);
+    4. within a venue, in the order of Maxim Likhachev's Google Scholar profile
+       (`scholar_rank`: the paper's position on the profile sorted by year).
+       Papers without a rank, e.g. newly added ones, come first.
+  Usage: {{ $pubs := partial "sort-publications.html" $pages }}
+*/}}
+{{ $order := slice }}
+{{ with site.GetPage "/publications" }}{{ $order = .Params.venue_order | default slice }}{{ end }}
+{{ $keyed := slice }}
+{{ range . }}
+  {{ $noMedia := cond (ne (.Params.thumbnail | default "") "") 0 1 }}
+  {{ $venue := lower (index (split (.Params.venue | default "") " ") 0) }}
+  {{ $venueIdx := len $order }}
+  {{ range $i, $v := $order }}
+    {{ if eq (lower $v) $venue }}{{ $venueIdx = $i }}{{ end }}
+  {{ end }}
+  {{ $key := printf "%04d-%d-%03d-%06d" (sub 9999 .Date.Year) $noMedia $venueIdx (int (.Params.scholar_rank | default 0)) }}
+  {{ $keyed = $keyed | append (dict "key" $key "page" .) }}
+{{ end }}
+{{ $sorted := slice }}
+{{ range sort $keyed "key" }}
+  {{ $sorted = $sorted | append .page }}
+{{ end }}
+{{ return $sorted }}

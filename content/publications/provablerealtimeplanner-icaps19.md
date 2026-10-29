@@ -1,6 +1,7 @@
 ---
 title: "Provable Indefinite-Horizon Real-Time Planning for Repetitive Tasks"
 date: 2019-01-01
+scholar_rank: 126
 authors:
   - "Fahad Islam"
   - "Oren Salzman"

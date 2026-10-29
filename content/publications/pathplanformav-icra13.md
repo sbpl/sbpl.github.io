@@ -1,6 +1,7 @@
 ---
 title: "Path Planning for Non-Circular Micro Aerial Vehicles in Constrained Environments"
 date: 2013-01-01
+scholar_rank: 187
 authors:
   - "Brian MacAllister"
   - "Jonathan Butzke"

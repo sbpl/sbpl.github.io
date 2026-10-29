@@ -1,6 +1,7 @@
 ---
 title: "A-MHA*: Anytime Multi-Heuristic A*"
 date: 2019-01-01
+scholar_rank: 18
 authors:
   - "Ramkumar Natarajan"
   - "Muhammad Suhail Saleem"

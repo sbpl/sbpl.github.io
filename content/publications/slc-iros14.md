@@ -1,6 +1,7 @@
 ---
 title: "State Lattice with Controllers: Augmenting Lattice-Based Path Planning with Controller-Based Motion Primitives"
 date: 2014-01-01
+scholar_rank: 169
 authors:
   - "Jonathan Butzke"
   - "Krishna Sapkota"

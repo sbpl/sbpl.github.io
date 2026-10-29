@@ -1,6 +1,7 @@
 ---
 title: "Path Planning for a Tethered Robot Using Multi-Heuristic A* with Topology-Based Heuristics"
 date: 2015-01-01
+scholar_rank: 154
 authors:
   - "Soonkyum Kim"
   - "Maxim Likhachev"

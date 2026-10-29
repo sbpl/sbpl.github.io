@@ -1,6 +1,7 @@
 ---
 title: "Real-Time Adaptive A*"
 date: 2006-01-01
+scholar_rank: 293
 authors:
   - "Sven Koenig"
   - "Maxim Likhachev"

@@ -1,6 +1,7 @@
 ---
 title: "Fast Replanning for Navigation in Unknown Terrain"
 date: 2005-01-01
+scholar_rank: 298
 authors:
   - "Sven Koenig"
   - "Maxim Likhachev"

@@ -1,6 +1,7 @@
 ---
 title: "Planning for Autonomous Door Opening with a Mobile Manipulator"
 date: 2010-01-01
+scholar_rank: 268
 authors:
   - "Sachin Chitta"
   - "Benjamin Cohen"

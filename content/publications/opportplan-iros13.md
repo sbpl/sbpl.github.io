@@ -1,6 +1,7 @@
 ---
 title: "Planning for Opportunistic Surveillance with Multiple Robots"
 date: 2013-01-01
+scholar_rank: 179
 authors:
   - "Dinesh Thakur"
   - "Maxim Likhachev"

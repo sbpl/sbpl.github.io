@@ -1,52 +1,39 @@
 {{/*
-  Publication Card Partial
+  Publication Row Partial (modelled on the R-PAD lab's publication list)
   Usage: {{ partial "publication-card.html" . }}
-  Renders a card for a single publication with thumbnail, description, author list, and links.
-  Expects a Page object from the publications section.
+  One compact row: thumbnail on the left (only if the paper has one), then the
+  title, authors, venue and up to two links: [Paper] (arXiv, else the PDF, DOI
+  or abstract page) and [Project Page]. The title links to the project page,
+  else the paper, else the paper's page on this site.
+  `thumbnail` may be an image/GIF or a short .mp4/.webm clip, which loops
+  silently (the publications page plays it while it is on screen).
 */}}
-<article class="publication-card">
-  <div class="publication-card-inner">
-    {{ with .Params.thumbnail }}
-    <div class="publication-thumbnail">
-      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"
-           onerror="this.style.display='none'">
+{{ $p := .Params }}
+{{ $paperURL := $p.arxiv | default $p.pdf | default $p.doi | default $p.abstract_html }}
+{{ $titleURL := $p.project_page | default $paperURL | default .RelPermalink }}
+<div class="pub-item">
+  {{ with $p.thumbnail }}
+  <div class="pub-thumb">
+    {{ if findRE `(?i)\.(mp4|webm)$` . }}
+    <video class="pub-preview" src="{{ . }}" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    {{ else }}
+    <img src="{{ . }}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">
+    {{ end }}
+  </div>
+  {{ end }}
+  <div class="pub-body">
+    <a class="pub-title" href="{{ $titleURL }}"{{ if ne $titleURL .RelPermalink }} target="_blank" rel="noopener"{{ end }}>{{ .Title }}</a>
+    <div class="pub-authors">{{ partial "author-list.html" . }}</div>
+    <div class="pub-venue">
+      <strong>{{ $p.venue }}</strong>
+      {{- with $p.award }} <span class="publication-award">– {{ . }}</span>{{ end }}
+    </div>
+    {{ with $p.description }}<p class="pub-description">{{ . }}</p>{{ end }}
+    {{ if or $paperURL $p.project_page }}
+    <div class="pub-links">
+      {{ with $paperURL }}<a href="{{ . }}" target="_blank" rel="noopener">[Paper]</a>{{ end }}
+      {{ with $p.project_page }}<a href="{{ . }}" target="_blank" rel="noopener">[Project Page]</a>{{ end }}
     </div>
     {{ end }}
-    <div class="publication-info">
-      <h3 class="publication-title">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </h3>
-
-      <p class="publication-authors">
-        {{ partial "author-list.html" . }}
-      </p>
-
-      <p class="publication-venue">
-        <strong>{{ .Params.venue }}</strong>
-        {{ with .Params.award }}<span class="publication-award">— {{ . }}</span>{{ end }}
-      </p>
-
-      {{ with .Params.description }}
-        <p class="publication-description">{{ . }}</p>
-      {{ end }}
-
-      <div class="publication-links">
-        {{ with .Params.pdf }}
-          <a href="{{ . }}" target="_blank" class="pub-link">📄 PDF</a>
-        {{ end }}
-        {{ with .Params.arxiv }}
-          <a href="{{ . }}" target="_blank" class="pub-link">arXiv</a>
-        {{ end }}
-        {{ with .Params.abstract_html }}
-          <a href="{{ . }}" target="_blank" class="pub-link">Abstract</a>
-        {{ end }}
-        {{ with .Params.project_page }}
-          <a href="{{ . }}" target="_blank" class="pub-link">🔗 Project</a>
-        {{ end }}
-        {{ with .Params.code }}
-          <a href="{{ . }}" target="_blank" class="pub-link">💻 Code</a>
-        {{ end }}
-      </div>
-    </div>
   </div>
-</article>
+</div>

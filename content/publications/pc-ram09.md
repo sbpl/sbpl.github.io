@@ -1,6 +1,7 @@
 ---
 title: "Path Clearance"
 date: 2009-01-01
+scholar_rank: 273
 authors:
   - "Maxim Likhachev"
   - "Anthony Stentz"

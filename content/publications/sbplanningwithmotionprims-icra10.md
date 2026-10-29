@@ -1,6 +1,7 @@
 ---
 title: "Search-based Planning for Manipulation with Motion Primitives"
 date: 2010-01-01
+scholar_rank: 267
 authors:
   - "Benjamin Cohen"
   - "Sachin Chitta"

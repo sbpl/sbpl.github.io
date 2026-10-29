@@ -1,6 +1,7 @@
 ---
 title: "PPCP: Efficient Probabilistic Planning with Clear Preferences in Partially-Known Environments"
 date: 2006-01-01
+scholar_rank: 291
 authors:
   - "Maxim Likhachev"
   - "Anthony Stentz"

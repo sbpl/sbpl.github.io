@@ -1,6 +1,7 @@
 ---
 title: "Planning with Adaptive Dimensionality for Mobile Manipulation"
 date: 2012-01-01
+scholar_rank: 234
 authors:
   - "Kalin Gochev"
   - "Alla Safonova"

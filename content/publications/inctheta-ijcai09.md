@@ -1,6 +1,7 @@
 ---
 title: "Incremental Phi*: Incremental Any-Angle Path Planning on Grids"
 date: 2009-01-01
+scholar_rank: 272
 authors:
   - "Alex Nash"
   - "Sven Koenig"

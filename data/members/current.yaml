@@ -4,11 +4,18 @@
 # To add yourself:
 #   1. Copy one of the entries below
 #   2. Fill in your details
-#   3. Place a square headshot (400x400px) in static/images/members/
+#   3. Place a portrait headshot (2:3, e.g. 400x600px) in static/images/members/
 #      named firstname-lastname.jpg
-#   4. Make sure your "name" field EXACTLY matches how your name appears in
-#      publication files (content/publications/*.md) so your pubs auto-link
-#      to your profile page.
+#   Your name and photo on /people/ link to `links.website` (if set); there
+#   are no per-member pages. Only `links.website` is shown on /people/
+#   (Google Scholar is shown for the advisor only).
+#   4. Optionally set `enrollment` (e.g. "RI PhD, Fall 2024"): it is shown in
+#      grey next to your name on /people/. Without it, the role is shown.
+#   5. Optionally set `co_advisor` (`name` and `website`): shown on /people/
+#      as "(co-advised with <name>)", linking to their website.
+#
+# Entries can go in any order: /people/ lists each section alphabetically by
+# last name.
 #
 # Recognised categories (these control which subsection you appear under on
 # /people/):
@@ -24,15 +31,88 @@
 # the category if needed.
 # =============================================================================
 
+- name: "Eyal Weiss"
+  slug: "eyal-weiss"
+  category: "postdoc"
+  photo: "/images/members/eyal-weiss.jpg"
+  bio: >
+    Eyal's research interests span AI and robotics through the lens of
+    planning, search and optimization, including heuristic search, AI
+    planning, motion planning, and combinatorial optimization.
+  links:
+    website: "https://eyal-weiss.github.io/"
+    scholar: "https://scholar.google.com/citations?user=LO5sHMIAAAAJ&hl=en"
+
+- name: "Nayesha Gandotra"
+  slug: "nayesha-gandotra"
+  category: "phd"
+  enrollment: "RI PhD, Fall 2026"
+  photo: "/images/members/nayesha-gandotra.jpg"
+  bio: >
+    Nayesha is interested in combining search-based planning and learning to
+    make robots that can reliably handle objects, work in a team of
+    thousands, or operate safely around humans.
+  links:
+    website: "https://nayeshagandotra.github.io/"
+
+- name: "Amber Li"
+  slug: "amber-li"
+  category: "phd"
+  enrollment: "RI PhD, Fall 2024"
+  co_advisor:
+    name: "David Held"
+    website: "https://davheld.github.io/"
+  photo: "/images/members/amber-li.jpg"
+  bio: >
+    Amber is interested in creating intelligent embodied agents that can
+    learn and act in dynamic environments over long time horizons, and in
+    how we can efficiently plan and adapt robot policies and/or world models
+    based on observed outcomes.
+  links:
+    website: "https://amburger66.github.io/"
+    scholar: "https://scholar.google.com/citations?user=7KsLSG0AAAAJ&hl=en"
+
+- name: "Itamar Mishani"
+  slug: "itamar-mishani"
+  category: "phd"
+  enrollment: "RI PhD, Fall 2022"
+  photo: "/images/members/itamar-mishani.jpg"
+  bio: >
+    Itamar's research interests include multi-robot task and motion planning,
+    robotic manipulation, and generative models.
+  links:
+    github: "https://github.com/imishani"
+    website: "https://imishani.github.io"
+    scholar: "https://scholar.google.com/citations?user=rDCG1NAAAAAJ&hl=en"
+
+- name: "Kallol Saha"
+  slug: "kallol-saha"
+  category: "phd"
+  enrollment: "RI PhD, Fall 2026"
+  co_advisor:
+    name: "Jiaoyang Li"
+    website: "https://jiaoyangli.me/"
+  photo: "/images/members/kallol-saha.jpg"
+  bio: >
+    Kallol is interested in integrating learning and planning for
+    long-horizon multi-robot manipulation tasks that require physical interaction. 
+    He likes designing general methods that leverage prior experience (data) to 
+    continually learn and plan.
+  links:
+    website: "https://kallol-saha.github.io/"
+    scholar: "https://scholar.google.com/citations?user=D7kmZsYAAAAJ&hl=en"
+
 - name: "Yorai Shaoul"
   slug: "yorai-shaoul"
   category: "phd"
+  enrollment: "RI PhD, Fall 2022"
+  co_advisor:
+    name: "Jiaoyang Li"
+    website: "https://jiaoyangli.me/"
   photo: "/images/members/yorai-shaoul.jpg"
   bio: >
-    Yorai earned a B.Sc. in Electrical Engineering and Computer Science
-    from the Massachusetts Institute of Technology in 2021. His research
-    interests span multi-robot task and motion planning, robotic
-    manipulation, generative models, and computer vision. He works to
+    Yorai's research interests span multi-robot task and motion planning,
+    robotic manipulation, generative models, and computer vision. He works to
     harness insights from established planning algorithms to address
     messy real-world challenges in manipulation.
   links:
@@ -40,17 +120,30 @@
     website: "https://yoraish.com"
     scholar: "https://scholar.google.com/citations?user=aJHtbd4AAAAJ&hl=en"
 
-- name: "Itamar Mishani"
-  slug: "itamar-mishani"
-  category: "phd"
-  photo: "/images/members/itamar-mishani.jpg"
-  bio: >
-    Itamar is a PhD student in the Search-Based Planning Lab. His research
-    interests include multi-robot task and motion planning, robotic
-    manipulation, and generative models.
-  links:
-    github: "https://github.com/imishani"
-    website: "https://imishani.github.io"
+# Master's students are shown as a plain list: "Name (enrollment)".
+- name: "Mukund Krishnakumar"
+  slug: "mukund-krishnakumar"
+  category: "masters"
+  enrollment: "Robotics, CMU"
+  photo: "/images/members/placeholder.svg"
+
+- name: "Smrithi Siddagangaiah"
+  slug: "smrithi-siddagangaiah"
+  category: "masters"
+  enrollment: "ME, CMU"
+  photo: "/images/members/placeholder.svg"
+
+- name: "Benny Zhu"
+  slug: "benny-zhu"
+  category: "masters"
+  enrollment: "ME, CMU"
+  photo: "/images/members/placeholder.svg"
+
+- name: "Devansh Royal Jonnalagadda"
+  slug: "devansh-royal-jonnalagadda"
+  category: "masters"
+  enrollment: "ME, CMU"
+  photo: "/images/members/placeholder.svg"
 
 - name: "Aditya Pujara"
   slug: "aditya-pujara"

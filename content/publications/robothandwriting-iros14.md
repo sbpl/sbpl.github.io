@@ -1,6 +1,7 @@
 ---
 title: "Robotic Handwriting: Multi-Contact Manipulation Based on Reactional Internal Contact Hypothesis"
 date: 2014-01-01
+scholar_rank: 168
 authors:
   - "Sung-Kyun Kim"
   - "Joonhee Jo"

@@ -1,9 +1,104 @@
-{{ define "main" }}
-<!-- Hero Section -->
-<section class="hero">
-  {{ with .Site.Params.labLogo }}
-    <img src="{{ . }}" alt="Lab Logo" class="hero-logo">
+{{/* Homepage, laid out like the R-PAD lab site: a full-width photo carousel,
+     then the lab logo, name and description. */}}
+
+{{ define "banner" }}
+{{/* Lab photo carousel: every image in static/images/lab-photos/, in filename
+     order. Photos are shown whole on a black band (crop new ones to 4:3, e.g.
+     1600x1200). The content hash in each URL makes a replaced photo show up
+     immediately. */}}
+{{ $dir := "static/images/lab-photos" }}
+{{ $photos := slice }}
+{{ range os.ReadDir $dir }}
+  {{ if and (not .IsDir) (findRE `(?i)\.(jpe?g|png|webp|avif)$` .Name) }}
+    {{ $hash := substr (os.ReadFile (printf "%s/%s" $dir .Name) | md5) 0 8 }}
+    {{ $photos = $photos | append (printf "/images/lab-photos/%s?v=%s" .Name $hash) }}
   {{ end }}
+{{ end }}
+{{ with $photos }}
+<div class="lab-carousel" role="region" aria-roledescription="carousel" aria-label="Lab photos">
+  <div class="carousel-viewport">
+    {{ range $i, $src := . }}
+    <img class="carousel-slide{{ if eq $i 0 }} is-active{{ end }}" src="{{ $src }}"
+         alt="SBPL lab photo {{ add $i 1 }} of {{ len $photos }}"{{ if $i }} aria-hidden="true"{{ end }}>
+    {{ end }}
+    {{ if gt (len .) 1 }}
+    <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button type="button" class="carousel-arrow carousel-next" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="carousel-dots">
+      {{ range $i, $_ := . }}<button type="button" aria-label="Show photo {{ add $i 1 }}"{{ if eq $i 0 }} aria-current="true"{{ end }}></button>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.lab-carousel').forEach(function (carousel) {
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var dots = carousel.querySelectorAll('.carousel-dots button');
+    if (slides.length < 2) return;
+    var INTERVAL = 5000;  // ms each photo stays up before advancing on its own
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var current = 0, timer = null, paused = false;
+
+    function show(index) {
+      current = (index + slides.length) % slides.length;  // wrap around both ways
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle('is-active', i === current);
+        slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      });
+      dots.forEach(function (dot, i) {
+        if (i === current) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+    }
+
+    // Auto-advance, restarting the countdown after every manual change;
+    // paused while the pointer or keyboard focus is on the carousel
+    function restart() {
+      clearInterval(timer);
+      if (!paused && !reduceMotion) timer = setInterval(function () { show(current + 1); }, INTERVAL);
+    }
+    function go(index) { show(index); restart(); }
+    function pause(state) { paused = state; restart(); }
+
+    carousel.querySelector('.carousel-prev').addEventListener('click', function () { go(current - 1); });
+    carousel.querySelector('.carousel-next').addEventListener('click', function () { go(current + 1); });
+    dots.forEach(function (dot, i) { dot.addEventListener('click', function () { go(i); }); });
+    carousel.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft') go(current - 1);
+      if (event.key === 'ArrowRight') go(current + 1);
+    });
+    carousel.addEventListener('mouseenter', function () { pause(true); });
+    carousel.addEventListener('mouseleave', function () { pause(false); });
+    carousel.addEventListener('focusin', function () { pause(true); });
+    carousel.addEventListener('focusout', function () { pause(false); });
+
+    // Swipe left/right on touch screens
+    var startX = null;
+    carousel.addEventListener('touchstart', function (event) { startX = event.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', function (event) {
+      if (startX === null) return;
+      var dx = event.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) go(dx < 0 ? current + 1 : current - 1);
+      startX = null;
+    });
+
+    restart();
+  });
+</script>
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-logos">
+    {{ with .Site.Params.labLogo }}<img src="{{ . }}" alt="{{ $.Site.Params.labName }} logo" class="hero-logo">{{ end }}
+    {{ with .Site.Params.universityLogo }}<img src="{{ . }}" alt="{{ $.Site.Params.university }}" class="hero-logo">{{ end }}
+  </div>
   <hgroup>
     <h1>{{ .Site.Params.labFullName }}</h1>
     <p>{{ .Site.Params.department }}, {{ .Site.Params.university }}</p>
@@ -13,48 +108,35 @@
   {{ end }}
 </section>
 
-<!-- Recent Publications -->
-<section>
-  <h2>Recent Publications</h2>
-  <div class="publication-list">
-    {{ range first 3 (where .Site.RegularPages "Section" "publications").ByDate.Reverse }}
-      {{ partial "publication-card.html" . }}
-    {{ end }}
-  </div>
-  <p style="text-align: center; margin-top: 1rem;">
-    <a href="/publications/" role="button" class="outline">View All Publications →</a>
-  </p>
-</section>
-
-<!-- Our Team -->
-<section>
-  <h2>Our Team</h2>
-  <div class="team-preview">
-    {{/* PI */}}
-    {{ with .Site.Data.members.pi }}
-    <a href="/people/{{ .name | urlize }}/" class="pi-preview" style="text-decoration:none; color:inherit;">
-      <img src="{{ .photo }}" alt="{{ .name }}" class="member-photo-small" onerror="this.src='/images/members/placeholder.svg'">
-      <div>
-        <strong>{{ .name }}</strong><br>
-        <small>{{ .title }} — Principal Investigator</small>
-      </div>
-    </a>
-    {{ end }}
-
-    {{/* All current members */}}
-    <div class="team-grid">
-      {{ range .Site.Data.members.current }}
-      <a href="/people/{{ .slug }}/" class="team-member-mini">
-        <img src="{{ .photo }}" alt="{{ .name }}" class="member-photo-small" onerror="this.src='/images/members/placeholder.svg'">
-        <span>{{ .name }}</span>
-      </a>
+{{/* Research Demos: a clip/GIF for each paper listed under `demos` in
+     content/_index.md (the paper's `demo`, else its `thumbnail`), with no
+     text; each links to the paper's project page (else the paper). */}}
+{{ with .Params.demos }}
+<section class="demos" aria-labelledby="demos-title">
+  <h2 id="demos-title" class="demos-title">Research Demos</h2>
+  <div class="demos-grid">
+    {{ range . }}
+    {{ with site.GetPage (printf "/publications/%s" .) }}
+    {{ $pub := . }}
+    {{ $p := .Params }}
+    {{ $url := $p.project_page | default $p.arxiv | default $p.pdf | default $p.doi | default .RelPermalink }}
+    {{ with $p.demo | default $p.thumbnail }}
+    <a class="demo-tile" href="{{ $url }}"{{ if ne $url $pub.RelPermalink }} target="_blank" rel="noopener"{{ end }} aria-label="{{ $pub.Title }}">
+      {{ if findRE `(?i)\.(mp4|webm)$` . }}
+      <video class="pub-preview" src="{{ . }}" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+      {{ else }}
+      <img src="{{ . }}" alt="" loading="lazy">
       {{ end }}
-    </div>
-
-    <p style="margin-top: 1rem;">
-      {{ len .Site.Data.members.alumni }} alumni
-    </p>
-    <a href="/people/" role="button" class="outline">Meet the Full Team →</a>
+    </a>
+    {{ else }}
+    {{ warnf "Homepage demos: %s has no thumbnail" $pub.File.Path }}
+    {{ end }}
+    {{ else }}
+    {{ warnf "Homepage demos: no publication content/publications/%s.md" . }}
+    {{ end }}
+    {{ end }}
   </div>
 </section>
+{{ partial "play-previews.html" . }}
+{{ end }}
 {{ end }}
